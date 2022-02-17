@@ -1,7 +1,7 @@
 import Image from 'next/image'
 import logo from '../../assets/images/sendme-primary-logo.svg'
 
-const verification = () => {
+const forgotPassword = () => {
     return (
         <div>
            <div className='main'>
@@ -24,7 +24,7 @@ const verification = () => {
                         to reset your password to your inbox
                     </p>
 
-                   <input className="input-field" type={"text"} placeholder="Enter Code" />
+                   <input className="input-field" type={"text"} placeholder="Enter Email" />
                    <button className="red-button">Reset Password</button>
                </div>
            </div>
@@ -32,4 +32,4 @@ const verification = () => {
     )
 }
 
-export default verification
+export default forgotPassword
