@@ -20,8 +20,8 @@ const signin = () => (
             </div>
             <div className='sub-contents'>
                 <p className="page-header">Reset Password</p>
-                <InputField className="input-field" type={"text"} placeholder="Enter Email" />
-                <InputField className="input-field" type={"text"} placeholder="Enter Email" />
+                <InputField className="" type={"text"} placeholder="Create new passowrd" />
+                <InputField className="" type={"text"} placeholder="Confirm new password" />
                 <button className="red-button">Reset Password</button>
             </div>
         </div>
@@ -35,5 +35,6 @@ const InputPlaceHolder = styled.input`
 `
 
 const InputField = styled.input`
+    display: block;
     margin: 20px 0px 10px;
 `
