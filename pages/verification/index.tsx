@@ -20,7 +20,7 @@
                     <p className="page-subtitle">Enter verifcation code sent to you by the 
                         fulfillment center agent</p>
 
-                    <input className="input-field" type={"text"} name="Enter Code" />
+                    <input className="input-field" type={"text"} placeholder="Enter Code" />
                     <button className="red-button">Verify Code</button>
                 </div>
             </div>
