@@ -2,6 +2,18 @@ body{
     background-color: #eff0f3;
 }
 
+p{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+input {
+    background: transparent;
+    width: 100%;
+    border: none;
+    border-bottom: 1px solid #000000;
+}
+
+
 .main{
     max-width: 350px;
     margin: 0px auto;
@@ -20,8 +32,9 @@ body{
     max-width: 20px;
 }
 
-p{
-    font-family: Arial, Helvetica, sans-serif;
+
+.sub-contents{
+    margin: 20px 25px;
 }
 
 .page-header{
@@ -34,7 +47,7 @@ p{
 }
 
 .page-subtitle{
-    font-size: 14px;
+    font-size: 12px;
     font-style: normal;
     font-weight: 400;
     line-height: 19px;
@@ -45,13 +58,19 @@ p{
 
 .input-field{
     display: block;
+    
 }
 
 .red-button{
     /* primary color */
     background: #FF1B03;
     width: 300px;
+    height: 40px;
     /* btn */
     box-shadow: 0px 2px 10px rgba(255, 145, 139, 0.5);
     border-radius: 12px;
+    border: 0px;
+    margin: 20px 0px;
+    color: white;
+    font-size: 14px;
 }

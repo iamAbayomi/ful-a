@@ -15,12 +15,14 @@
                         layout="responsive" 
                     />
                 </div>
-                <p className="page-header">Verification</p>
-                <p className="page-subtitle">Enter verifcation code sent to you by the 
-                    fulfillment center agent</p>
+                <div className='sub-contents'>
+                    <p className="page-header">Verification</p>
+                    <p className="page-subtitle">Enter verifcation code sent to you by the 
+                        fulfillment center agent</p>
 
-                <input className="input-field" type={"input"} name="Enter Code" />
-                <button className="red-button">Verify Code</button>
+                    <input className="input-field" type={"text"} name="Enter Code" />
+                    <button className="red-button">Verify Code</button>
+                </div>
             </div>
          </div>
      )
