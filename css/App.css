@@ -60,7 +60,7 @@ input:focus, textarea:focus, select:focus, button:focus{
 }
 
 .icon-container{
-    max-width: 29px;   
+    max-width: 20px;   
 }
 
 .app-logo{
@@ -113,6 +113,6 @@ input:focus, textarea:focus, select:focus, button:focus{
 }
 
 .display-flex{
-    display: flex;
-    
+    /* display: flex; */
+    float: right;
 }
