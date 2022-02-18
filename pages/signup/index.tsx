@@ -1,9 +1,9 @@
 import Image from 'next/image'
 import styled from 'styled-components'
 import logo from '../../assets/images/sendme-primary-logo.svg'
-import Primary from '../../components/InputField/Primary'
-import Medium from '../../components/Typography/Medium'
-import Small from '../../components/Typography/Small'
+import Primary from '../../components/ui/InputField/Primary'
+import Medium from '../../components/ui/Typography/Medium'
+import Small from '../../components/ui/Typography/Small'
 
 const signup = () => (
     <div>

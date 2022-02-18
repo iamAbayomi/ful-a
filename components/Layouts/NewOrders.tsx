@@ -5,8 +5,8 @@ import Image from 'next/image'
 import redflag from '../../assets/images/red-flag.svg'
 import optionsMenu from '../../assets/images/options-menu.svg'
 import styled from 'styled-components'
-import Title from '../Typography/Title'
-import MulishFonts from '../MulishFonts'
+import Title from '../ui/Typography/Title'
+import MulishFonts from '../ui/MulishFonts'
 
 
 type Props = {

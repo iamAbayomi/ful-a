@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import Layout from "../../components/Layouts/NewOrders";
-import NewOrderCard from "../../components/NewOrderCard";
+import NewOrderCard from "../../components/ui/NewOrderCard";
 
 const NewOrders = () => (
     <Layout title="New Orders">
