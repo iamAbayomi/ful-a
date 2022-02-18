@@ -113,6 +113,12 @@ input:focus, textarea:focus, select:focus, button:focus{
 }
 
 .display-flex{
-    /* display: flex; */
-    float: right;
+    display: flex;
+    justify-content: space-between;
+}
+
+.card{
+    background-color: white;
+    padding: 20px 20px 10px 30px;
+    border-radius: 10px;
 }
