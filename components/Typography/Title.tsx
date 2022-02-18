@@ -17,10 +17,12 @@ export default Small
 
 const Text = styled.p`
     font-family: Mulish;
-    font-size: 27px;
+    font-size: 20px;
     font-style: normal;
     font-weight: 700;
     line-height: 34px;
     letter-spacing: 0.02em;
     text-align: left;
+    padding: 20px 20px;
+    color: #092443;
 `

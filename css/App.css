@@ -49,6 +49,10 @@ input:focus, textarea:focus, select:focus, button:focus{
     background-color: white;
 }
 
+.dashboard{
+    background-color: #E8E8E8;
+}
+
 .image-container{
     max-width: 97px;
     margin: auto;
