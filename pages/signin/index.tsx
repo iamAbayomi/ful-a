@@ -1,6 +1,7 @@
 import Image from 'next/image'
 import styled from 'styled-components'
 import logo from '../../assets/images/sendme-primary-logo.svg'
+import Primary from '../../components/InputField/Primary'
 
 const signin = () => (
     <div>
@@ -21,7 +22,7 @@ const signin = () => (
             <div className='sub-contents'>
                 <p className="page-header">Log In</p>
                 <InputField className="" type={"text"} placeholder="Mobile Number" />
-                <InputField className="" type={"text"} placeholder="Password" />
+                <Primary  type={"password"} placeholder="Password" />
                 <button className="red-button">Reset Password</button>
             </div>
         </div>

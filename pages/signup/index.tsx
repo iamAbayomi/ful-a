@@ -1,6 +1,7 @@
 import Image from 'next/image'
 import styled from 'styled-components'
 import logo from '../../assets/images/sendme-primary-logo.svg'
+import Primary from '../../components/InputField/Primary'
 import Medium from '../../components/Typography/Medium'
 import Small from '../../components/Typography/Small'
 
@@ -31,6 +32,12 @@ const signup = () => (
                 <Medium text={'08104859684'}/>
                 <Small text={'Email Address'} />
                 <Medium text={'TimiD@gmail.com'}/>
+                
+                <div>
+                    <Primary placeholder={'Create new password'} type={'password'} />
+                    <Primary placeholder={'Confirm new password'} type={'password'} />
+                </div>
+
                 <button className="red-button">Reset Password</button>
             </div>
         </div>
@@ -43,7 +50,3 @@ const InputPlaceHolder = styled.input`
     padding: 5px 0px 15px;
 `
 
-const InputField = styled.input`
-    display: block;
-    margin: 20px 0px 10px;
-`
