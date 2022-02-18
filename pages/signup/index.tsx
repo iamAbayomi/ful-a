@@ -1,6 +1,8 @@
 import Image from 'next/image'
 import styled from 'styled-components'
 import logo from '../../assets/images/sendme-primary-logo.svg'
+import Medium from '../../components/Typography/Medium'
+import Small from '../../components/Typography/Small'
 
 const signup = () => (
     <div>
@@ -20,8 +22,15 @@ const signup = () => (
             </div>
             <div className='sub-contents'>
                 <p className="page-header">Sign Up</p>
-                <InputField className="" type={"text"} placeholder="Mobile Number" />
-                <InputField className="" type={"text"} placeholder="Password" />
+                <p className="page-subtitle">
+                    Confirm your details and create password
+                    </p>
+                <Small text={'Full Name'} />
+                <Medium text={'Oluwabunmi Akinjide'}/>
+                <Small text={'Mobile Name'} />
+                <Medium text={'08104859684'}/>
+                <Small text={'Email Address'} />
+                <Medium text={'TimiD@gmail.com'}/>
                 <button className="red-button">Reset Password</button>
             </div>
         </div>
