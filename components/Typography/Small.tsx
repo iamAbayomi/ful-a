@@ -4,7 +4,7 @@ interface props{
     text: string
 }
 
-const Medium: React.FC<props> = (props) => (
+const Small: React.FC<props> = (props) => (
     <div>
         <Text className="page-subtitle">
             {props.text}
@@ -12,12 +12,12 @@ const Medium: React.FC<props> = (props) => (
     </div>
 )
 
-export default Medium
+export default Small
 
 
 const Text = styled.p`
-    font-size: 12px;
-    font-weight: 600;
-    margin: 0px 0px 0px;
-    color: #092443;
+    font-size: 10px;
+    margin: 20px 0px 5px;
+    color: #8F92A1;
+
 `
