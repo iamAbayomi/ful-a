@@ -26,17 +26,17 @@ const NewOrdersLayout = ({ children, title = 'This is the default title' }: Prop
     <Header>
         <Title text={'New Orders'} />
         <div className='display-flex'>
-            <div className='image-contaner'>
-                    <Image
-                        className='app-logo'
-                        src={redflag}
-                        alt="Picture of the author"
-                        width="50"
-                        height="39"
-                        layout="responsive" 
-                    />
+            <div className='icon-container'>
+                <Image
+                    className='app-logo'
+                    src={redflag}
+                    alt="Picture of the author"
+                    width="50"
+                    height="39"
+                    layout="responsive" 
+                />
             </div>
-            <div className='image-contaner'>
+            <div className='icon-container'>
                 <Image
                     className='app-logo'
                     src={optionsMenu}
@@ -56,5 +56,5 @@ const NewOrdersLayout = ({ children, title = 'This is the default title' }: Prop
 export default NewOrdersLayout
 
 const Header = styled.div`
-    // display: flex;
+
 `
