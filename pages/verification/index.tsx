@@ -20,7 +20,10 @@
                     />
                 </div>
                 <div className='sub-contents'>
-                    <p className="page-header">Verification</p>
+                    <div className='header-text'>
+                        <p className="page-header">Verification</p>
+                        <div className='red-line' />
+                    </div>
                     <p className="page-subtitle">Enter verifcation code sent to you by the 
                         fulfillment center agent</p>
 
