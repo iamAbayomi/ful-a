@@ -80,6 +80,7 @@ input:focus, textarea:focus, select:focus, button:focus{
     letter-spacing: 0em;
     text-align: left;
     color: #092443;
+    margin: 0px;
 }
 
 .page-subtitle{
@@ -90,7 +91,7 @@ input:focus, textarea:focus, select:focus, button:focus{
     letter-spacing: 0em;
     text-align: left;
     color: #596273;
-
+    clear: both;
 }
 
 .input-field{
@@ -138,4 +139,17 @@ input:focus, textarea:focus, select:focus, button:focus{
     /* Navy/300 */
 
     color: #777E96;
+}
+
+
+.header-text{
+    max-width: max-content;
+}
+
+.red-line{
+    width: 38px;
+    border: 3px solid red;
+    float: right;
+    border-radius: 10px;
+    margin: 0px 0px 20px;
 }
