@@ -19,9 +19,9 @@ const signin = () => (
                 />
             </div>
             <div className='sub-contents'>
-                <p className="page-header">Reset Password</p>
-                <InputField className="" type={"text"} placeholder="Create new passowrd" />
-                <InputField className="" type={"text"} placeholder="Confirm new password" />
+                <p className="page-header">Log In</p>
+                <InputField className="" type={"text"} placeholder="Mobile Number" />
+                <InputField className="" type={"text"} placeholder="Password" />
                 <button className="red-button">Reset Password</button>
             </div>
         </div>
