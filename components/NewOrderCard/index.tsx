@@ -6,9 +6,9 @@ const NewOrderCard = () => (
             <p>Order</p>
             <p>#1259</p>
         </div>
-        <p>Address </p>
+        <p className="highlight-text">Address </p>
         <p>No 26, Alaakia Road, Bodija</p>
-        <p>Delivery Time</p>
+        <p className="highlight-text" >Delivery Time</p>
         <p>3:00pm</p>
         
     </div>
