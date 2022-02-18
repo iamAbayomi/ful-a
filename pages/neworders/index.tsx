@@ -1,9 +1,17 @@
+import styled from "styled-components";
 import Layout from "../../components/Layouts/NewOrders";
+import NewOrderCard from "../../components/NewOrderCard";
 
 const NewOrders = () => (
     <Layout title="New Orders">
-        
+        <NewOrderContainer >
+                <NewOrderCard />
+        </NewOrderContainer>
     </Layout>
 )
 
 export default NewOrders
+
+const NewOrderContainer = styled.p`
+   margin: 20px;
+`
