@@ -68,6 +68,7 @@ input:focus, textarea:focus, select:focus, button:focus{
     line-height: 31px;
     letter-spacing: 0em;
     text-align: left;
+    color: #092443;
 }
 
 .page-subtitle{
