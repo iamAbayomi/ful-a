@@ -121,4 +121,21 @@ input:focus, textarea:focus, select:focus, button:focus{
     background-color: white;
     padding: 20px 20px 10px 30px;
     border-radius: 10px;
+    margin: 20px 0px;
+}
+
+.highlight-text{
+    font-family: Mulish;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14.3769px;
+    line-height: 15px;
+    /* identical to box height, or 107% */
+
+    display: flex;
+    align-items: center;
+
+    /* Navy/300 */
+
+    color: #777E96;
 }

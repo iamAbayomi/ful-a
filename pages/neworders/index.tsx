@@ -5,7 +5,11 @@ import NewOrderCard from "../../components/NewOrderCard";
 const NewOrders = () => (
     <Layout title="New Orders">
         <NewOrderContainer >
-                <NewOrderCard />
+            <NewOrderCard />
+            <NewOrderCard />
+            <NewOrderCard />
+            <NewOrderCard />
+            <NewOrderCard />
         </NewOrderContainer>
     </Layout>
 )
