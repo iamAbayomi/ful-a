@@ -25,7 +25,7 @@ const NewOrdersLayout = ({ children, title = 'This is the default title' }: Prop
     <MulishFonts />
     <Header>
         <Title text={'New Orders'} />
-        <div className='display-flex'>
+        {/* <div className='display-flex'>
             <div className='icon-container'>
                 <Image
                     className='app-logo'
@@ -46,7 +46,7 @@ const NewOrdersLayout = ({ children, title = 'This is the default title' }: Prop
                     layout="responsive" 
                 />
             </div>
-        </div>
+        </div> */}
         <NotificationText className="highlight-text">22 New Orders </NotificationText>
     </Header>
     
