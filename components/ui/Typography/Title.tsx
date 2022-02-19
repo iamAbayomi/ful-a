@@ -23,6 +23,6 @@ const Text = styled.p`
     line-height: 34px;
     letter-spacing: 0.02em;
     text-align: left;
-    padding: 20px 15px 0px;
+    padding: 40px 20px 0px;
     color: #092443;
 `
