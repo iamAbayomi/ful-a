@@ -1,18 +1,23 @@
 import Link from 'next/link'
+import { useRouter } from 'next/router'
+import { useEffect } from 'react'
 import Layout from '../components/Layout'
 import { NavItem } from '../storybook-ui-library/src/components/NavItem'
 import { Button } from '../storybook-ui-library/src/components/SimpleButton'
 
-const IndexPage = () => (
-  <Layout title="Home | Next.js + TypeScript Example">
-    <h1>Same here</h1>
-      <Button children={'dadl'} variant={'primary'} />
-    <p>
-      <Link href="/about">
-        <a>About</a>
-      </Link>
-    </p>
-  </Layout>
-)
+
+function IndexPage (){
+  const router = useRouter()
+
+  useEffect(()=>{
+    router.push('/verification')
+  })
+
+  return(
+    <div>
+      <p>Hello, I am here</p>
+    </div>
+  )
+}
 
 export default IndexPage
