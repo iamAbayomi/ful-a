@@ -47,8 +47,9 @@ const NewOrdersLayout = ({ children, title = 'This is the default title' }: Prop
                 />
             </div>
         </div>
+        <NotificationText className="highlight-text">22 New Orders </NotificationText>
     </Header>
-    <p className="highlight-text">22 New Orders </p>
+    
     {children}
     
   </div>
@@ -58,4 +59,9 @@ export default NewOrdersLayout
 
 const Header = styled.div`
 
+`
+
+const NotificationText = styled.p`
+  margin: 10px;
+  margin: 10px 20px 0px 15px;
 `
