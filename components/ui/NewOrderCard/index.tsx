@@ -4,7 +4,7 @@ const NewOrderCard = () => (
     <div className="card">
         <div className="display-flex">
             <p className="newordertitle" >Order</p>
-            <p>#1259</p>
+            <p className="neworderno">#1259</p>
         </div>
         <p className="highlight-text">Address </p>
         <p className="normal-text" >No 26, Alaakia Road, Bodija</p>
