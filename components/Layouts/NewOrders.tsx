@@ -48,6 +48,7 @@ const NewOrdersLayout = ({ children, title = 'This is the default title' }: Prop
             </div>
         </div>
     </Header>
+    <p className="highlight-text">22 New Orders </p>
     {children}
     
   </div>
