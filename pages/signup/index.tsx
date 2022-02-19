@@ -7,7 +7,7 @@ import Medium from '../../components/ui/Typography/Medium'
 import Small from '../../components/ui/Typography/Small'
 
 const signup = () => (
-    <Layout>
+    <Layout pageTitle={'Sign Up'} buttonTitle={' Done & Confirm'} nextPage='/signin'  >
         <p className="page-subtitle">
             Confirm your details and create password
             </p>
@@ -22,7 +22,7 @@ const signup = () => (
             <Primary placeholder={'Create new password'} type={'password'} />
             <Primary placeholder={'Confirm new password'} type={'password'} />
         </div>
-    <Layout/>
+    </Layout>
 )
 
 export default signup
