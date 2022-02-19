@@ -123,9 +123,13 @@ input:focus, textarea:focus, select:focus, button:focus{
 
 .card{
     background-color: white;
-    padding: 5px 20px 5px 20px;
     border-radius: 10px;
+    padding: 5px 20px 5px 20px;
     margin: 20px 10px;
+}
+
+.card-container{
+    
 }
 
 .highlight-text{
@@ -183,4 +187,9 @@ input:focus, textarea:focus, select:focus, button:focus{
     align-items: center;
     /* Navy/300 */
     color: #777E96;
+}
+
+.neworder-line{
+    border: 0.958457px solid #EDEDF9;
+    margin: -5px -20px 10px;
 }
