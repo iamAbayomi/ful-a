@@ -6,7 +6,7 @@ import logo from '../../assets/images/sendme-primary-logo.svg'
 type props ={
     children?: ReactNode,
     buttonTitle: string,
-    buttonOnClick: () => {}
+    buttonOnClick: () => void
 }
 
 const verification = ({ children, buttonTitle, buttonOnClick }: props ) => {
