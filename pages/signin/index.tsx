@@ -1,32 +1,15 @@
 import Image from 'next/image'
 import styled from 'styled-components'
 import logo from '../../assets/images/sendme-primary-logo.svg'
-import Primary from '../../components/InputField/Primary'
+import Layout from '../../components/Layouts/AuthenticationLayout'
+
+import Primary from '../../components/ui/InputField/Primary'
 
 const signin = () => (
-    <div>
-        <div className='main'>
-            <link rel="preconnect" href="https://fonts.googleapis.com"/>
-            <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="true"/>
-            <link href={`https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,300;0,400;0,500;0,700;0,800;1,400;1,500&display=swap`} rel="stylesheet"/>
-            <div className='image-container'>
-                <Image
-                    className='app-logo'
-                    src={logo}
-                    alt="Picture of the author"
-                    width="50"
-                    height="39"
-                    layout="responsive" 
-                />
-            </div>
-            <div className='sub-contents'>
-                <p className="page-header">Log In</p>
-                <InputField className="" type={"text"} placeholder="Mobile Number" />
-                <Primary  type={"password"} placeholder="Password" />
-                <button className="red-button">Reset Password</button>
-            </div>
-        </div>
-    </div>
+    <Layout pageTitle={'Log In'} buttonTitle={'Log In'} nextPage={'/forgot-password'}>
+        <InputField className="" type={"text"} placeholder="Mobile Number" />
+        <Primary  type={"password"} placeholder="Password" />
+    </Layout>
 )
 
 export default signin
