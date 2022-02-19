@@ -1,24 +1,30 @@
 import Image from 'next/image'
+import { useRouter } from 'next/router'
 import { type } from 'os'
 import React, { ReactNode } from 'react'
 import logo from '../../assets/images/sendme-primary-logo.svg'
+import MulishFonts from '../ui/MulishFonts'
 
 type props ={
     children?: ReactNode,
     pageTitle: string,
     buttonTitle: string,
-    buttonOnClick: () => void,
+    buttonOnClick?: () => void,
+    nextPage: string
 }
 
-const verification = ({ children, pageTitle, buttonTitle, buttonOnClick }: props ) => {
+const Layout = ({ children, pageTitle, buttonTitle, buttonOnClick, nextPage }: props ) => {
+    const router = useRouter()
+
+    function  moveToSingup() {
+        router.push(nextPage)
+    }
+
     return (
         <div>
            <div className='main'>
              <div className='image-container'>
-                   <link rel="preconnect" href="https://fonts.googleapis.com" />
-                   <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin='true' />
-                   <link href={`https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,300;0,400;0,500;0,700;1,400;1,500&display=swap`} rel="stylesheet" />
-
+                   <MulishFonts />
                    <Image
                        className='app-logo'
                        src={logo}
@@ -34,11 +40,11 @@ const verification = ({ children, pageTitle, buttonTitle, buttonOnClick }: props
                        <div className='red-line' />
                    </div>
                    {children}
-                   <button className="red-button" onClick={buttonOnClick}>{buttonTitle}</button>
+                   <button className="red-button" onClick={moveToSingup}>{buttonTitle}</button>
                </div>
            </div>
         </div>
     )
 }
 
-export default verification
+export default Layout
