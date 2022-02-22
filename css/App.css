@@ -52,7 +52,7 @@ input:focus, textarea:focus, select:focus, button:focus{
 }
 
 .dashboard{
-    background-color: #E8E8E8;
+    background-color: #F6F5F5;
     height: auto;
 }
 
@@ -63,7 +63,8 @@ input:focus, textarea:focus, select:focus, button:focus{
 }
 
 .icon-container{
-    max-width: 20px;   
+    max-width: 20px;  
+    padding: 0px 20px 0px; 
 }
 
 .app-logo{
@@ -121,6 +122,10 @@ input:focus, textarea:focus, select:focus, button:focus{
     justify-content: space-between;
 }
 
+.display-flex-withoutspace{
+    display: flex;
+}
+
 .card{
     background-color: white;
     border-radius: 10px;
@@ -157,6 +162,22 @@ input:focus, textarea:focus, select:focus, button:focus{
 
 .header-text{
     max-width: max-content;
+}
+.header-icon{
+    margin:  60px 0px 0px;
+}
+
+.red-flag-logo {
+    max-width: 16px;
+    height: 35px;
+    margin: 0px 0px 0px;
+}
+
+
+.app-logo {
+    max-width: 14px;
+    height: 6px;
+    margin: 13px 0px 0px;
 }
 
 .red-line{
