@@ -25,31 +25,22 @@ const NewOrdersLayout = ({ children, title = 'This is the default title' }: Prop
     <MulishFonts />
     <Header>
         <Title text={'New Orders'} />
-        <div className='display-flex'>
-            <div className='icon-container'>
+        <div className='display-flex header-icon'>
+            <div className='display-flex icon-container'>
                 <img
                     className='app-logo'
-                    src='../../public/images/options-menu.svg'
-                    // alt="Picture of the author"
-                    // width="50"
-                    // height="39"
-                    // layout="responsive" 
+                    src={redflag.src}
                 />
             </div>
             <div className='icon-container'>
                 <img
                     className='app-logo'
-                    src={optionsMenu}
-                    // alt="Picture of the author"
-                    // width="50"
-                    // height="39"
-                    // layout="responsive" 
+                    src={optionsMenu.src}
                 />
             </div>
         </div>
-        <NotificationText className="highlight-text">22 New Orders </NotificationText>
     </Header>
-    
+    <NotificationText className="highlight-text">22 New Orders </NotificationText>
     {children}
     
   </div>
@@ -58,10 +49,11 @@ const NewOrdersLayout = ({ children, title = 'This is the default title' }: Prop
 export default NewOrdersLayout
 
 const Header = styled.div`
-
+    display: flex;
+    justify-content: space-between;
+    margin: 10px 20px 0px 20px;
 `
 
 const NotificationText = styled.p`
-  margin: 10px;
-  margin: 10px 20px 0px 20px;
+    padding: 40px 20px 0px;
 `
