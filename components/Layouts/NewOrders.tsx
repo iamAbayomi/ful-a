@@ -28,7 +28,7 @@ const NewOrdersLayout = ({ children, title = 'This is the default title' }: Prop
         <div className='display-flex header-icon'>
             <div className='display-flex icon-container'>
                 <img
-                    className='app-logo'
+                    className='red-flag-logo'
                     src={redflag.src}
                 />
             </div>
@@ -55,5 +55,5 @@ const Header = styled.div`
 `
 
 const NotificationText = styled.p`
-    padding: 40px 20px 0px;
+    padding: 10px 30px 0px;
 `
