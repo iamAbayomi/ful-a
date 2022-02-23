@@ -1,5 +1,6 @@
 body{
-    background-color: #eff0f3;
+    /* background-color: #eff0f3; */
+    
 }
 
 p{
@@ -43,7 +44,7 @@ input:focus, textarea:focus, select:focus, button:focus{
   }
 
 .main{
-    max-width: 350px;
+    max-width: 380px;
     height: auto;
     margin: 0px auto;
     /* border: 1px solid gray; */
