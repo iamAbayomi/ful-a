@@ -12,6 +12,7 @@ import dashboardIcon from '../../assets/images/dashboard.svg'
 import styled from 'styled-components'
 import Title from '../ui/Typography/Title'
 import MulishFonts from '../ui/MulishFonts'
+import Bag from '../icons/Bag'
 
 
 type Props = {
@@ -48,7 +49,8 @@ const NewOrdersLayout = ({ children, title = 'This is the default title' }: Prop
     <NotificationText className="highlight-text">22 New Orders </NotificationText>
     {children}
     <div className='bottom-navbar'>
-        <img className='bottom-navbar-icon' src={newOrderIcon.src} />
+        {/* <img className='bottom-navbar-icon' src={newOrderIcon.src} /> */}
+        <Bag />
         <img className='bottom-navbar-icon' src={packageIcon.src} />
         <img className='bottom-navbar-icon' src={bicycleIcon.src} />
         <img className='bottom-navbar-icon' src={dashboardIcon.src} />
