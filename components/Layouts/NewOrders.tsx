@@ -76,8 +76,5 @@ const NotificationText = styled.p`
 `
 
 const BottomNavBar = styled.div`
-    background-color: white;
-    padding: 10px 5px 10px;
-    display: flex;
-    justify-content: space-between;
+    
 `
