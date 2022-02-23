@@ -5,6 +5,10 @@ const NewOrderCard = () => (
     <div className="card ">
         <div className="card-container">
             <div className="display-flex">
+                <label className="container">
+                    <input type="checkbox" />
+                    <span className="checkmark"></span>
+                </label>
                 <p className="newordertitle" >Order</p>
                 <div className="display-flex">
                     <p className="neworderno">#1259</p>
