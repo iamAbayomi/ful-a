@@ -53,7 +53,7 @@ input:focus, textarea:focus, select:focus, button:focus{
 
 .dashboard{
     /* background-color: #a59e9e8a; */
-    background-color: #F6F5F5;
+    background: #F6F5F5;
     height: auto;
 }
 
