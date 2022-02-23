@@ -7,11 +7,12 @@
 }
 
 .bottom-navbar-icon{
-    /* margin: 10px; */
+    margin: 10px 0px 0px 10px;
 } 
 
 .bottom-navbar-text{
     font-size: 10px;
+    margin: 5px 0px 0px 0px;
 }
 /* 
 .bottom-navbar-container{
