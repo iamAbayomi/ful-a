@@ -126,7 +126,7 @@ input:focus, textarea:focus, select:focus, button:focus{
     display: flex;
 }
 
-/* .card{
+.card{
     background-color: white;
     border-radius: 10px;
     padding: 5px 20px 5px 20px;
@@ -135,7 +135,7 @@ input:focus, textarea:focus, select:focus, button:focus{
 
 .card-container{
     
-} */
+}
 
 .highlight-text{
     font-weight: 400;
