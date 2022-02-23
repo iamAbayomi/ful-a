@@ -1,4 +1,5 @@
-import '../css/App.css'
+import '../assets/css/App.css'
+import '../assets/css/Dashboard.css'
 import React from 'react'
 import Head from 'next/head'
 
