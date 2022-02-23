@@ -1,0 +1,11 @@
+
+.bottom-navbar{
+    background-color: white;
+    padding: 10px 25px 10px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.bottom-navbar-icon{
+    margin: 10px;
+} 
