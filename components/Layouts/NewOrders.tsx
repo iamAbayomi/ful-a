@@ -4,6 +4,11 @@ import Head from 'next/head'
 import Image from 'next/image'
 import redflag from '../../assets/images/red-flag.svg'
 import optionsMenu from '../../assets/images/options-menu.svg'
+import newOrderIcon from '../../assets/images/bag.svg'
+import packageIcon from '../../assets/images/package.svg'
+import bicycleIcon from '../../assets/images/bicycle.svg'
+import dashboardIcon from '../../assets/images/dashboard.svg'
+
 import styled from 'styled-components'
 import Title from '../ui/Typography/Title'
 import MulishFonts from '../ui/MulishFonts'
@@ -42,7 +47,13 @@ const NewOrdersLayout = ({ children, title = 'This is the default title' }: Prop
     </Header>
     <NotificationText className="highlight-text">22 New Orders </NotificationText>
     {children}
-    
+    <div className='bottom-navbar'>
+        <img className='bottom-navbar-icon' src={newOrderIcon.src} />
+        <img className='bottom-navbar-icon' src={packageIcon.src} />
+        <img className='bottom-navbar-icon' src={bicycleIcon.src} />
+        <img className='bottom-navbar-icon' src={dashboardIcon.src} />
+
+    </div>
   </div>
 )
 
