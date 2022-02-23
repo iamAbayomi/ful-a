@@ -9,3 +9,12 @@
 .bottom-navbar-icon{
     margin: 10px;
 } 
+
+svg {
+    stroke: red;
+    display: block;
+}
+
+path{
+    stroke: red;
+}
