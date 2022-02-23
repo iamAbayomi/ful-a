@@ -22,6 +22,7 @@
     font-size: 10px;
     margin: 5px 0px 0px 0px;
     color: #8F92A1;;
+    
 }
 /* 
 .bottom-navbar-container{
@@ -62,3 +63,8 @@ line{
     color: #F55951;
 }
 
+.active a {
+    text-decoration: none;
+    /* text-decoration-color: #F55951;
+    text-decoration-thickness: 3px; */
+}
