@@ -73,3 +73,10 @@
   border-width: 0 3px 3px 0;
   transform: rotate(45deg);
 }
+
+.card-highlight{
+  background: rgba(221, 224, 228, 0.2);
+  border: 1.5px solid #CECECE;
+  box-sizing: border-box;
+  border-radius: 10px;
+}
