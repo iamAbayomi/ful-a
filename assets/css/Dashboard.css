@@ -6,6 +6,14 @@
     justify-content: space-between;   
 }
 
+.bottom-navbar li {
+    list-style-type: none;
+}
+
+.bottom-navbar a{
+    text-decoration: none;
+}
+
 .bottom-navbar-icon{
     margin: 10px 0px 0px 10px;
 } 
@@ -24,13 +32,33 @@
 } */
 
 svg {
-    stroke: #F55951;
+    stroke: #8F92A1;
 }
 
 path{
-    stroke: #F55951;
+    /* stroke: #F55951; */
+    stroke: #8F92A1;
 }
 
 line{
+    /* stroke: #F55951; */
+    stroke: #8F92A1;
+}
+
+
+.active svg{
     stroke: #F55951;
 }
+
+.active path{
+    stroke: #F55951;
+}
+
+.active line{
+    stroke: #F55951;
+}
+
+.active p {
+    color: #F55951;
+}
+

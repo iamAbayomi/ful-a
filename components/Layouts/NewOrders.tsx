@@ -16,6 +16,7 @@ import Bag from '../icons/Bag'
 import Package from '../icons/Package'
 import Bicycle from '../icons/Bicycle'
 import Dashboard from '../icons/Dashboard'
+import { useRouter } from 'next/router'
 
 
 type Props = {
@@ -23,45 +24,56 @@ type Props = {
   title?: string
 }
 
-const NewOrdersLayout = ({ children, title = 'This is the default title' }: Props) => (
-  <div className='main dashboard'>
-    <Head>
-      <title>{title}</title>
-      <meta charSet="utf-8" />
-      <meta name="viewport" content="initial-scale=1.0, width=device-width" />
-      
-    </Head>
-    <MulishFonts />
-    <Header>
-        <Title text={'New Orders'} />
-        <div className='display-flex header-icon'>
-            <div className='display-flex icon-container'>
-                <img
-                    className='red-flag-logo'
-                    src={redflag.src}
-                />
+const NewOrdersLayout = ({ children, title = 'This is the default title' }: Props) => {
+    const router = useRouter()
+
+  return(
+    <div className='main dashboard'>
+        <Head>
+        <title>{title}</title>
+        <meta charSet="utf-8" />
+        <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+        
+        </Head>
+        <MulishFonts />
+        <Header>
+            <Title text={'New Orders'} />
+            <div className='display-flex header-icon'>
+                <div className='display-flex icon-container'>
+                    <img
+                        className='red-flag-logo'
+                        src={redflag.src}
+                    />
+                </div>
+                <div className='icon-container'>
+                    <img
+                        className='app-logo'
+                        src={optionsMenu.src}
+                    />
+                </div>
             </div>
-            <div className='icon-container'>
-                <img
-                    className='app-logo'
-                    src={optionsMenu.src}
-                />
-            </div>
+        </Header>
+        <NotificationText className="highlight-text">22 New Orders </NotificationText>
+        <div className='test'>
+            {children}
         </div>
-    </Header>
-    <NotificationText className="highlight-text">22 New Orders </NotificationText>
-    <div className='test'>
-        {children}
+        <BottomNavBar className='bottom-navbar'>
+            <li className={router.pathname == "/neworders" ? "active" : "" }>
+                <Link href={'/neworders'}><a><Bag /></a></Link>
+            </li>
+            <li className={router.pathname == "/package" ? "active" : "" }>
+                <Link href={'/package'}><a><Package /></a></Link>
+            </li>
+            <li className={router.pathname == "/sentout" ? "active" : "" }>
+                <Link href={'/sentout'}><a><Bicycle /></a></Link>
+            </li>
+            <li className={router.pathname == "/dashboard" ? "active" : "" }>
+                <Link href={'/dashboard'}><a><Dashboard /></a></Link>
+            </li>
+        </BottomNavBar>
     </div>
-    <BottomNavBar className='bottom-navbar'>
-        {/* <img className='bottom-navbar-icon' src={newOrderIcon.src} /> */}
-        <Bag />
-        <Package />
-        <Bicycle />
-        <Dashboard />
-    </BottomNavBar>
-  </div>
-)
+    )
+}
 
 export default NewOrdersLayout
 
