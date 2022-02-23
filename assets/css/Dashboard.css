@@ -1,20 +1,31 @@
 
 .bottom-navbar{
-    background-color: white;
-    padding: 10px 25px 10px;
-    display: flex;
-    justify-content: space-between;
+    
 }
 
 .bottom-navbar-icon{
-    margin: 10px;
+    /* margin: 10px; */
 } 
 
+.bottom-navbar-text{
+    font-size: 10px;
+}
+/* 
+.bottom-navbar-container{
+    display: inline;
+    border-bottom: 1px solid #F55951;
+    border-bottom-width: 10px;
+    width: max-content;
+} */
+
 svg {
-    stroke: red;
-    display: block;
+    stroke: #F55951;
 }
 
 path{
-    stroke: red;
+    stroke: #F55951;
+}
+
+line{
+    stroke: #F55951;
 }

@@ -5,11 +5,12 @@ import NewOrderCard from "../../components/ui/NewOrderCard";
 const NewOrders = () => (
     <Layout title="New Orders">
         <NewOrderContainer >
+       { [1,2,3,4,3].map((item) => (<NewOrderCard />))}
+{/*             
             <NewOrderCard />
             <NewOrderCard />
             <NewOrderCard />
-            <NewOrderCard />
-            <NewOrderCard />
+            <NewOrderCard /> */}
         </NewOrderContainer>
     </Layout>
 )

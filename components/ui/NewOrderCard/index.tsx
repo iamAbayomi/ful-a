@@ -1,12 +1,14 @@
 import styled from "styled-components"
+import rightArrow from '../../../assets/images/right-arrow.svg'
 
 const NewOrderCard = () => (
-    <div className="card">
+    <div className="card ">
         <div className="card-container">
             <div className="display-flex">
                 <p className="newordertitle" >Order</p>
                 <div className="display-flex">
                     <p className="neworderno">#1259</p>
+                    <RightArrowImage  src={rightArrow.src} />
                 </div>
             </div>
             <div className="neworder-line"/>
@@ -24,4 +26,8 @@ export default NewOrderCard
 
 const Card = styled.div`
 
+`
+
+const RightArrowImage = styled.img`
+    margin: 0px 0px 0px 20px;
 `
