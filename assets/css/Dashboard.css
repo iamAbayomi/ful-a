@@ -125,3 +125,26 @@ line{
     /* Navy/300 */
     color: #777E96;
 }
+
+.order-section{
+    margin: 10px 0px 20px 0px;
+}
+
+.order-row{
+    margin: 40px 0px 10px;
+    /* border-bottom: 1px solid gray; */
+}
+
+.badge{
+    max-width: max-content;
+    height: 15px;
+    padding: 5px 10px 5px 10px;
+    background: rgba(255, 213, 211, 0.37);
+    border-radius: 30px;
+}
+
+.badge-text{
+    margin: 0px;
+    color: #F55951;
+    font-size: 12px;
+}
