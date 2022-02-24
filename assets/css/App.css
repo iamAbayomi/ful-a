@@ -242,6 +242,7 @@ input:focus, textarea:focus, select:focus, button:focus{
     font-weight: bold;
     font-size: 20px;
     line-height: 25px;
+    margin: 40px 0px 0px;
     /* identical to box height */
     /* letter-spacing: 0.02em; */
     color: #092443;
