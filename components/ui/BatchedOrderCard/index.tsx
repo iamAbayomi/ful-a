@@ -4,6 +4,8 @@ import downArrow from "../../../assets/images/down-arrow.svg"
 import upArrow from "../../../assets/images/up-arrow.svg"
 import bicycle from "../../../assets/images/bicycle.svg"
 import bag from "../../../assets/images/bag.svg"
+import styled from 'styled-components'
+import OrderRow from '../OrderRow'
 
 const BatchedOrderCard = () => {
     return (
@@ -19,29 +21,35 @@ const BatchedOrderCard = () => {
                 <img src={bag.src} />
                 <p className="orders-notification">3 orders</p>
             </div>
-            <div className={"display-flex"}>
+            <RidersNameContainer className={"display-flex"}>
                 <div className="display-flex-withoutspace">
                     <img src={bicycle.src} />
                     <p className="orders-notification">Timi Busola</p>
                 </div>
                 <img src={downArrow.src} />
                 {/* <img src={upArrow.src} /> */}
-            </div>
-            <div className="order-row">
-                <div className='display-flex'>
-                    <div className="order-number">
-                        <p className='neworderheading'>Order 4</p>
-                        <p className='neworderno'>#1270</p>
-                    </div>
-                    <div className='badge'>
-                        <p className="badge-text"> Package </p>
-                    </div>
-                </div>
-                <div className='neworder-line'></div>
-            </div>
+            </RidersNameContainer>
+            <OrderRowContainer >
+                <OrderRow />
+                <OrderRow/>
+            </OrderRowContainer>
         </div>
     )
 }
 
 
 export default BatchedOrderCard
+
+
+const NewOrderNo = styled.p`
+    margin: 10px 0px 20px;
+`
+
+
+const OrderRowContainer = styled.div`
+    margin: 0px 0px 0px;
+`
+
+const RidersNameContainer = styled.div`
+    padding: 0px 0px 20px;
+`
