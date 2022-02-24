@@ -18,6 +18,7 @@ import Package from '../icons/Package'
 import Bicycle from '../icons/Bicycle'
 import Dashboard from '../icons/Dashboard'
 import { useRouter } from 'next/router'
+import BottomNavBar from '../ui/BottomNavBar'
 
 
 type Props = {
@@ -64,20 +65,7 @@ const NewOrdersLayout = ({ children, title = 'This is the default title' }: Prop
         <div className='test'>
             {children}
         </div>
-        <BottomNavBar className='bottom-navbar'>
-            <li className={router.pathname == "/neworders" ? "active" : "" }>
-                <Link href={'/neworders'}><a><Bag /></a></Link>
-            </li>
-            <li className={router.pathname == "/package" ? "active" : "" }>
-                <Link href={'/package'}><a><Package /></a></Link>
-            </li>
-            <li className={router.pathname == "/sentout" ? "active" : "" }>
-                <Link href={'/sentout'}><a><Bicycle /></a></Link>
-            </li>
-            <li className={router.pathname == "/dashboard" ? "active" : "" }>
-                <Link href={'/dashboard'}><a><Dashboard /></a></Link>
-            </li>
-        </BottomNavBar>
+        <BottomNavBar />
     </div>
     )
 }
@@ -98,9 +86,6 @@ const NotificationOrderText = styled.p`
     margin: 10px 20px 10px 20px;
 `
 
-const BottomNavBar = styled.div`
-    
-`
 
 const HeaderSection = styled.div`
     margin: 10px 30px 0px 30px;

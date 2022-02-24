@@ -16,6 +16,7 @@ import Bag from '../icons/Bag'
 import Package from '../icons/Package'
 import Bicycle from '../icons/Bicycle'
 import Dashboard from '../icons/Dashboard'
+import BottomNavBar from '../ui/BottomNavBar'
 
 
 type Props = {
@@ -53,13 +54,7 @@ const DashbordLayout = ({ children, title = 'This is the default title' }: Props
     <div className='test'>
         {children}
     </div>
-    <BottomNavBar className='bottom-navbar'>
-        {/* <img className='bottom-navbar-icon' src={newOrderIcon.src} /> */}
-        <Bag />
-        <Package />
-        <Bicycle />
-        <Dashboard />
-    </BottomNavBar>
+    <BottomNavBar />
   </div>
 )
 
@@ -73,8 +68,4 @@ const Header = styled.div`
 
 const NotificationText = styled.p`
     padding: 10px 30px 0px;
-`
-
-const BottomNavBar = styled.div`
-    
 `
