@@ -1,6 +1,7 @@
 import '../assets/css/App.css'
 import '../assets/css/Dashboard.css'
 import '../assets/css/Checkbox.css'
+import '../assets/css/CreateNewBatch.css'
 import React from 'react'
 import Head from 'next/head'
 
