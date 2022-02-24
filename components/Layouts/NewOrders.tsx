@@ -116,6 +116,6 @@ const RedButton = styled.div`
     font-family: Mulish;
     font-style: normal;
     font-weight: 600;
-    font-size: 15px;
+    font-size: 12px;
     line-height: 19px;
 `
