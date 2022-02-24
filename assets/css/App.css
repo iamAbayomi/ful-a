@@ -135,6 +135,13 @@ input:focus, textarea:focus, select:focus, button:focus{
     margin: 20px 10px;
 }
 
+.card-elevated{
+    background-color: white;
+    border-radius: 10px;
+    padding: 5px 20px 5px 20px;
+    margin: 20px 10px;
+}
+
 .card-container{
     
 }
@@ -215,4 +222,9 @@ input:focus, textarea:focus, select:focus, button:focus{
 .neworder-line{
     border: 0.958457px solid #EDEDF9;
     margin: -5px -20px 10px;
+}
+
+
+.orders-notification{
+    margin: 0px 10px 0px 10px;;
 }
