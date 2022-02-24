@@ -9,45 +9,69 @@ const BatchedOrderDetails = () => {
         <div className='main'>
             <img src={navArrow.src} />
             <div className='batched-order-container'>
-                <Bag />
-                <p>Batch 3</p>
-                <BatchOrderDiv className='display-flex'>
-                    <p>Order 4</p>
-                    <p>#1289</p>
-                </BatchOrderDiv>
+                <BatchOrderSection className='display-flex'>
+                    <Bag />
+                    <BatchOrderTitle className=''>
+                        <PageTitle className='page-title'>Batch 3</PageTitle>
+                        <BatchOrderDiv className='display-flex'>
+                            <p className='neworderheading'>Order 4</p>
+                            <p className='highlight-text'>#1289</p>
+                        </BatchOrderDiv>
+                    </BatchOrderTitle>
+                </BatchOrderSection>
                 <div className='details display-flex'>
-                    <p>Details</p>
+                    <p className='body-normal-text'>DETIALS</p>
                     <img src={menuOptions.src}/>
                 </div>
-                <div className='display-flex'>
-                    <p>Name</p>
-                    <p>Ajayi Bunmi</p>
+                <div className='display-flex-withoutspace'>
+                    <SmallText className='small-text'>Name</SmallText>
+                    <p className='medium-text'>Ajayi Bunmi</p>
                 </div>
-                <div className='display-flex'>
-                    <p>Address</p>
-                    <p>No 26, Alaakia Road Bodija</p>
+                <div className='display-flex-withoutspace'>
+                    <SmallText className='small-text'>Address</SmallText>
+                    <p className='medium-text'>No 26, Alaakia Road Bodija</p>
                 </div>
-                <div className='display-flex'>
-                    <p>Order Items</p>
-                    <div>
-                        <p>Boneless beef</p>
+                <div className='display-flex-withoutspace'>
+                    <SmallText className='small-text'>Order Items</SmallText>
+                    <div className='order-items'>
+                        <div>
+                            <p className='medium-text'>Boneless beef</p>
+                            <div className='display-flex'>
+                                <p className='small-text'> 2pieces </p>
+                                <p className='small-text'> 2kg</p>
+                            </div>
+                        </div>
+                        <div>
+                            <p className='medium-text'>Ponmo</p>
+                            <div className='display-flex'>
+                                <p className='small-text'> 2pieces </p>
+                                <p className='small-text'> 1kg</p>
+                            </div>
+                        </div>
+                        <div>
+                            <p className='medium-text'>Beefy Meaty</p>
+                            <div className='display-flex'>
+                                <p className='small-text'> 2pieces </p>
+                                <p className='small-text'> 2kg</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
-                <div className='display-flex'>
-                    <p>Total Price</p>
-                    <p>#10,000</p>
+                <div className='display-flex-withoutspace'>
+                    <SmallText className='small-text'>Total Price</SmallText>
+                    <p className='medium-text'>#10,000</p>
                 </div>
-                <div className='display-flex'>
-                    <p>Payment Status</p>
-                    <p>Paid</p>
+                <div className='display-flex-withoutspace'>
+                    <SmallText className='small-text'>Payment Status</SmallText>
+                    <p className='medium-text'>Paid</p>
                 </div>
-                <div className='display-flex'>
-                    <p>Payment Mode</p>
-                    <p>Cash</p>
+                <div className='display-flex-withoutspace'>
+                    <SmallText className='small-text' >Payment Mode</SmallText>
+                    <p className='medium-text'>Cash</p>
                 </div>
-                <div className='display-flex'>
-                    <p>Rider</p>
-                    <p>Adams Muhammed</p>
+                <div className='display-flex-withoutspace'>
+                    <SmallText className='small-text'>Rider</SmallText>
+                    <p className='body-text'>Adams Muhammed</p>
                 </div>
             </div>
             <button className='red-button'>Order Package</button>
@@ -60,4 +84,24 @@ export default BatchedOrderDetails
 
 const BatchOrderDiv = styled.div`
     max-width: max-content;
+    margin: 0px;
+`
+
+const BatchOrderSection = styled.div`
+    max-width: max-content;
+    margin: 20px 0px;
+`
+
+const SmallText = styled.p`
+    margin-right: 124px
+`
+
+
+const BatchOrderTitle = styled.div`
+    margin: 0px 20px;
+`
+
+
+const PageTitle = styled.p`
+    margin: 10px 0px 5px;
 `
