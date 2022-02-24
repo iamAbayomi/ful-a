@@ -5,10 +5,12 @@ const BackDrop = () =>{
     return (
         <div>
             <div className="main backdropdown">
-                <div className="border-line"></div>
-                <p>Select Order</p>
+                <div className="backdropdown-line"></div>
+                <p className="backdropdown-text">Select Order</p>
                 <CheckboxSelectedComponent />
-                <NewOrderCard />
+                {[1,2,3,4,5].map(() => 
+                    <NewOrderCard />
+                )}
             </div>
         </div>
     )
