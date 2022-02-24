@@ -13,8 +13,8 @@ const BottomNavBar = () => {
             <li className={router.pathname == "/neworders" ? "active" : "" }>
                 <Link href={'/neworders'}><a><Bag /></a></Link>
             </li>
-            <li className={router.pathname == "/package" ? "active" : "" }>
-                <Link href={'/package'}><a><Package /></a></Link>
+            <li className={router.pathname == "/batched" ? "active" : "" }>
+                <Link href={'/batched'}><a><Package /></a></Link>
             </li>
             <li className={router.pathname == "/sentout" ? "active" : "" }>
                 <Link href={'/sentout'}><a><Bicycle /></a></Link>
