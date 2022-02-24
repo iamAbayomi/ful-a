@@ -77,12 +77,11 @@ line{
     max-width: max-content;
     font-family: 'Mulish';
     color: white;
-    padding: 10px;
+    padding: 0px 20px 0px 20px;
     font-family: Mulish;
     font-style: normal;
     font-weight: 600;
     font-size: 12px;
-    line-height: 19px;
 }
 
 .header-section{
