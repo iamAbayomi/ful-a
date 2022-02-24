@@ -8,6 +8,7 @@ import newOrderIcon from '../../assets/images/bag.svg'
 import packageIcon from '../../assets/images/package.svg'
 import bicycleIcon from '../../assets/images/bicycle.svg'
 import dashboardIcon from '../../assets/images/dashboard.svg'
+import closeButton from '../../assets/images/close-button.svg'
 
 import styled from 'styled-components'
 import Title from '../ui/Typography/Title'
@@ -53,7 +54,13 @@ const NewOrdersLayout = ({ children, title = 'This is the default title' }: Prop
                 </div>
             </div>
         </Header>
-        <NotificationText className="highlight-text">22 New Orders </NotificationText>
+        {/* <NotificationText className="highlight-text">22 New Orders </NotificationText> */}
+        <HeaderSection className='display-flex'>
+            <button>Add to new batch</button>
+            <NotificationOrderText className="highlight-text">22 New Orders </NotificationOrderText>
+            <img src={closeButton.src}  />
+        </HeaderSection>
+
         <div className='test'>
             {children}
         </div>
@@ -87,6 +94,14 @@ const NotificationText = styled.p`
     padding: 10px 30px 0px;
 `
 
+const NotificationOrderText = styled.p`
+    margin: 10px 20px 10px 20px;
+`
+
 const BottomNavBar = styled.div`
     
+`
+
+const HeaderSection = styled.div`
+    margin: 10px 30px 0px 30px;
 `
