@@ -248,3 +248,50 @@ input:focus, textarea:focus, select:focus, button:focus{
     /* letter-spacing: 0.02em; */
     color: #092443;
 }
+
+
+.small-text{
+    font-size: 13px;
+    line-height: 16px;
+    display: flex;
+    align-items: center;
+    /* Navy/300 */
+    color: #777E96;
+}
+
+
+
+.medium-text{
+    font-family: Mulish;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 15px;
+    line-height: 19px;
+    /* identical to box height */
+    text-align: left;
+    /* Header txt color */
+    color: #092443;
+}
+
+
+.body-text {
+    font-family: Mulish;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 15px;
+    line-height: 19px;
+    /* identical to box height */
+    display: flex;
+    align-items: center;
+    /* grey bold */
+    color: #596273;
+}
+
+
+.body-normal-text{
+    font-weight: normal;
+    font-size: 15px;
+    line-height: 19px;
+    color: #092443;
+
+}
