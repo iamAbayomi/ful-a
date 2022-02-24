@@ -8,30 +8,30 @@ import bag from "../../../assets/images/bag.svg"
 const BatchedOrderCard = () => {
     return (
         <div className="card-elevated">
-                <div className="display-flex">
-                    <p>Batch 2</p>
-                    <p>#C267</p>
-                    <img src={optionsMenu.src} />
+            <div className="display-flex">
+                <p>Batch 2</p>
+                <p>#C267</p>
+                <img src={optionsMenu.src} />
+            </div>
+            <div className="order-section display-flex-withoutspace">
+                <img src={bag.src} />
+                <p className="orders-notification">3 orders</p>
+            </div>
+            <div className={"display-flex"}>
+                <div className="display-flex-withoutspace">
+                    <img src={bicycle.src} />
+                    <p className="orders-notification">Timi Busola</p>
                 </div>
-                <div className="order-section display-flex-withoutspace">
-                    <img src={bag.src} />
-                    <p className="orders-notification">3 orders</p>
+                <img src={downArrow.src} />
+                {/* <img src={upArrow.src} /> */}
+            </div>
+            {/* <div className="order-row display-flex">
+                <div className="order-number">
+                    <p>Order 4</p>
+                    <p>#1270</p>
                 </div>
-                <div className={"display-flex"}>
-                    <div className="display-flex-withoutspace">
-                        <img src={bicycle.src} />
-                        <p className="orders-notification">Timi Busola</p>
-                    </div>
-                    <img src={downArrow.src} />
-                    {/* <img src={upArrow.src} /> */}
-                </div>
-                <div className="order-row display-flex">
-                    <div className="order-number">
-                        <p>Order 4</p>
-                        <p>#1270</p>
-                    </div>
-                    <p className="badge"> Package </p>
-                </div>
+                <p className="badge"> Package </p>
+            </div> */}
         </div>
     )
 }
