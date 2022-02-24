@@ -42,5 +42,5 @@ const Header = styled.div`
 `
 
 const NotificationText = styled.p`
-    padding: 10px 30px 0px;
+    padding: 10px 0px 0px;
 `
