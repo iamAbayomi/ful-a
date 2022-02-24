@@ -41,6 +41,7 @@ const Batched = () => {
                 <NotificationText className="highlight-text">2 batched orders </NotificationText>
             </div>
             <BatchedOrderCard />
+            <BatchedOrderCard/>
         </Layout>
 
         
