@@ -33,7 +33,7 @@ const DashbordLayout = ({ children, title = 'This is the default title' }: Props
       
     </Head>
     <MulishFonts />
-    <Header>
+    {/* <Header>
         <Title text={'New Orders'} />
         <div className='display-flex header-icon'>
             <div className='display-flex icon-container'>
@@ -50,7 +50,7 @@ const DashbordLayout = ({ children, title = 'This is the default title' }: Props
             </div>
         </div>
     </Header>
-    <NotificationText className="highlight-text">22 New Orders </NotificationText>
+    <NotificationText className="highlight-text">22 New Orders </NotificationText> */}
     <div className='test'>
         {children}
     </div>
