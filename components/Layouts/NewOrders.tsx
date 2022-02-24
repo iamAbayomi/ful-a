@@ -56,7 +56,7 @@ const NewOrdersLayout = ({ children, title = 'This is the default title' }: Prop
         </Header>
         {/* <NotificationText className="highlight-text">22 New Orders </NotificationText> */}
         <HeaderSection className='display-flex'>
-            <button>Add to new batch</button>
+            <RedButton>Add to new batch</RedButton>
             <NotificationOrderText className="highlight-text">22 New Orders </NotificationOrderText>
             <img src={closeButton.src}  />
         </HeaderSection>
@@ -104,4 +104,18 @@ const BottomNavBar = styled.div`
 
 const HeaderSection = styled.div`
     margin: 10px 30px 0px 30px;
+`
+
+const RedButton = styled.div`
+    background: #FF1B03;
+    border-radius: 5px;
+    max-width: max-content;
+    font-family: 'Mulish';
+    color: white;
+    padding: 10px;
+    font-family: Mulish;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 15px;
+    line-height: 19px;
 `
