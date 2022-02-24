@@ -57,7 +57,7 @@ const NewOrdersLayout = ({ children, title = 'This is the default title' }: Prop
         {/* <NotificationText className="highlight-text">22 New Orders </NotificationText> */}
         <HeaderSection className='display-flex'>
             <RedButton>Add to new batch</RedButton>
-            <NotificationOrderText className="highlight-text">22 New Orders </NotificationOrderText>
+            <NotificationOrderText className="highlight-text">3 orders selected </NotificationOrderText>
             <img src={closeButton.src}  />
         </HeaderSection>
 
