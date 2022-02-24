@@ -68,3 +68,27 @@ line{
     /* text-decoration-color: #F55951;
     text-decoration-thickness: 3px; */
 }
+
+.dashboard-red-button{
+    display: flex;
+    background: #FF1B03;
+    border: 1px solid #FF1B03;
+    border-radius: 5px;
+    max-width: max-content;
+    font-family: 'Mulish';
+    color: white;
+    padding: 10px;
+    font-family: Mulish;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 19px;
+}
+
+.header-section{
+    margin: 10px 30px 0px 30px;
+}
+
+.add-icon{
+    margin: 12px 10px 0px 0px
+}
