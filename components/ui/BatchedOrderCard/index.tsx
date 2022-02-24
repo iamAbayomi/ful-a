@@ -27,13 +27,18 @@ const BatchedOrderCard = () => {
                 <img src={downArrow.src} />
                 {/* <img src={upArrow.src} /> */}
             </div>
-            {/* <div className="order-row display-flex">
-                <div className="order-number">
-                    <p>Order 4</p>
-                    <p>#1270</p>
+            <div className="order-row">
+                <div className='display-flex'>
+                    <div className="order-number">
+                        <p className='neworderheading'>Order 4</p>
+                        <p className='neworderno'>#1270</p>
+                    </div>
+                    <div className='badge'>
+                        <p className="badge-text"> Package </p>
+                    </div>
                 </div>
-                <p className="badge"> Package </p>
-            </div> */}
+                <div className='neworder-line'></div>
+            </div>
         </div>
     )
 }
