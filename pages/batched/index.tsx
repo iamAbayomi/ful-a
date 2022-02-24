@@ -54,7 +54,7 @@ export default Batched
 const Header = styled.div`
     display: flex;
     justify-content: space-between;
-    margin: 10px 20px 0px 20px;
+    // margin: 10px 20px 0px 20px;
 `
 
 const NotificationText = styled.p`
