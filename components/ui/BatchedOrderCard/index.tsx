@@ -9,8 +9,10 @@ const BatchedOrderCard = () => {
     return (
         <div className="card-elevated">
             <div className="display-flex">
-                <p>Batch 2</p>
-                <p>#C267</p>
+                <div className='batched-order-no-container'>
+                    <p className='batched-order-heading'>Batch 2</p>
+                    <p className='batched-order-no'>#C267</p>
+                </div>
                 <img src={optionsMenu.src} />
             </div>
             <div className="order-section display-flex-withoutspace">
