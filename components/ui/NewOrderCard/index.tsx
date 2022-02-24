@@ -16,7 +16,7 @@ const NewOrderCard = () => {
                         <input type="checkbox" onClick={changeCardBackgroundColor}/>
                         <span className="checkmark"></span>
                     </label>
-                    <p className="newordertitle" >Order</p>
+                    <p className="neworderheading" >Order</p>
                     <div className="display-flex">
                         <p className="neworderno">#1259</p>
                         <RightArrowImage  src={rightArrow.src} />
