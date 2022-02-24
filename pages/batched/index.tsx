@@ -49,6 +49,13 @@ const Batched = () => {
                     <img src={downArrow.src} />
                     {/* <img src={upArrow.src} /> */}
                 </div>
+                <div className="order-row">
+                    <div className="order-number">
+                        <p>Order 4</p>
+                        <p>#1270</p>
+                    </div>
+                    <p className="badge"> Package </p>
+                </div>
             </div>
         </Layout>
 
