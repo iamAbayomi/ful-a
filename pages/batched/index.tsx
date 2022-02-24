@@ -3,6 +3,7 @@ import Layout from "../../components/Layouts/DashboardLayout"
 import redflag from '../../assets/images/red-flag.svg'
 import optionsMenu from '../../assets/images/options-menu.svg'
 import Title from "../../components/ui/Typography/Title"
+import addIcon from "../../assets/images/add.svg"
 
 const Batched = () => {
     return(
@@ -16,15 +17,15 @@ const Batched = () => {
                         src={redflag.src}
                     />
                 </div>
-                {/* <div className='icon-container'>
-                    <img
-                        className='app-logo'
-                        src={optionsMenu.src}
-                    />
-                </div> */}
             </div>
         </Header>
-        <NotificationText className="highlight-text">22 New Orders </NotificationText>
+        <div className="header-section">
+            <button className="dashboard-red-button">
+                <img className="add-icon" src={addIcon.src} />
+                <p>Create New Batch</p>
+            </button>
+            <NotificationText className="highlight-text">2 batched orders </NotificationText>
+        </div>
         </Layout>
 
         
