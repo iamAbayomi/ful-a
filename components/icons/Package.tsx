@@ -7,7 +7,7 @@ const Package =() => {
                 <path d="M22.5679 7.07744L12.2125 12.9987L1.61328 7.07617" stroke="#8F92A1" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/>
                 <path d="M17.7543 15.3623V9.82983L7.06055 3.85449" stroke="#8F92A1" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/>
             </svg>
-            <p className="bottom-navbar-text">Package</p>
+            <p className="bottom-navbar-text">Batched</p>
         </div>
     )
 }
