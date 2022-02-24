@@ -33,25 +33,8 @@ const DashbordLayout = ({ children, title = 'This is the default title' }: Props
       
     </Head>
     <MulishFonts />
-    {/* <Header>
-        <Title text={'New Orders'} />
-        <div className='display-flex header-icon'>
-            <div className='display-flex icon-container'>
-                <img
-                    className='red-flag-logo'
-                    src={redflag.src}
-                />
-            </div>
-            <div className='icon-container'>
-                <img
-                    className='app-logo'
-                    src={optionsMenu.src}
-                />
-            </div>
-        </div>
-    </Header>
-    <NotificationText className="highlight-text">22 New Orders </NotificationText> */}
-    <div className='test'>
+    
+    <div className='dashboard-contents'>
         {children}
     </div>
     <BottomNavBar />
