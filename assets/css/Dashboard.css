@@ -164,3 +164,8 @@ line{
 .input-text:disabled{
     background: #DFDFDF;
 }
+   
+.navigation-arrow {
+    width: 21px;
+    margin: 20px -5px 0px;
+}
