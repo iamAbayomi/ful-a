@@ -96,3 +96,32 @@ line{
 .dashboard-contents{
     margin: 10px 20px 0px;
 }
+
+
+.batched-order-no-container{
+    display: flex;
+    max-width: max-content;
+}
+
+.batched-order-heading{
+    /* H6 semibold */
+    font-family: Mulish;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 20px;
+    /* line-height: 25px; */
+    /* identical to box height */
+    color: #092443;
+}
+
+.batched-order-no{
+    font-weight: normal;
+    font-size: 15px;
+    /* line-height: 16px; */
+    /* identical to box height, or 107% */
+    margin: 0px 10px 0px 30px;
+    display: flex;
+    align-items: center;
+    /* Navy/300 */
+    color: #777E96;
+}
