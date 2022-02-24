@@ -235,3 +235,14 @@ input:focus, textarea:focus, select:focus, button:focus{
 .createnewbatch{
     background-color: white;
 }
+
+.page-title{
+    font-family: Mulish;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 25px;
+    /* identical to box height */
+    /* letter-spacing: 0.02em; */
+    color: #092443;
+}
