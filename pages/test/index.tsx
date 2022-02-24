@@ -6,8 +6,8 @@ const index = () => {
     return(
         <div>
             {/* <BatchedOrderDetails /> */}
-            {/* <BackDrop /> */}
-            <Modal />
+            <BackDrop />
+            {/* <Modal /> */}
         </div>
     )
 }
