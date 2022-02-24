@@ -4,8 +4,8 @@ body{
 }
 
 p{
-    font-family: Arial, Helvetica, sans-serif;
     font-family: Mulish;
+    font-style: normal;
 }
 
 input {
@@ -140,7 +140,7 @@ input:focus, textarea:focus, select:focus, button:focus{
     /* super-soft */
     box-shadow: 0 3px 10px rgb(0 0 0 / 12%);
     border-radius: 10px;
-    padding: 5px 20px 5px 20px;
+    padding: 5px 20px 20px 20px;
     margin: 20px 0px;
 }
 
@@ -199,7 +199,7 @@ input:focus, textarea:focus, select:focus, button:focus{
     margin: 0px 0px 20px;
 }
 
-.newordertitle{
+.neworderheading{
     font-weight: bold;
     font-size: 18.9794px;
     line-height: 24px;
@@ -228,7 +228,8 @@ input:focus, textarea:focus, select:focus, button:focus{
 
 
 .orders-notification{
-    margin: 0px 10px 0px 10px;;
+    margin: 0px 10px 0px 20px;
+    color: #596273;
 }
 
 .createnewbatch{
