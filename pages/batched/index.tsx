@@ -11,6 +11,7 @@ import upArrow from "../../assets/images/up-arrow.svg"
 import bicycle from "../../assets/images/bicycle.svg"
 import bag from "../../assets/images/bag.svg"
 import { useRouter } from "next/router"
+import Notifications from "../../components/ui/Notifications"
 
 
 const Batched = () => {
@@ -38,6 +39,7 @@ const Batched = () => {
                     <img className="add-icon" src={addIcon.src} />
                     <p>Create New Batch</p>
                 </button>
+                <Notifications/>
                 <NotificationText className="highlight-text">2 batched orders </NotificationText>
             </div>
             <BatchedOrderCard />
