@@ -22,7 +22,7 @@ const NotificationOrderText = styled.p`
 
 
 const HeaderSection = styled.div`
-    margin: 10px 30px 0px 30px;
+    margin: 10px 0px 0px 0px;
 `
 
 const RedButton = styled.div`
