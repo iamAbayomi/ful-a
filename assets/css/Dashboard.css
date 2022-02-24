@@ -85,7 +85,7 @@ line{
 }
 
 .header-section{
-    margin: 10px 30px 0px 30px;
+    margin: 10px 0px 0px 0px;
 }
 
 .add-icon{
@@ -93,3 +93,6 @@ line{
 }
 
 
+.dashboard-contents{
+    margin: 10px 20px 0px;
+}
