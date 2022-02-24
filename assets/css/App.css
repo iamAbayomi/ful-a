@@ -132,14 +132,16 @@ input:focus, textarea:focus, select:focus, button:focus{
     background-color: white;
     border-radius: 10px;
     padding: 5px 20px 5px 20px;
-    margin: 20px 10px;
+    margin: 20px 0px;
 }
 
 .card-elevated{
-    background-color: white;
+    background: #FFFFFF;
+    /* super-soft */
+    box-shadow: 0 3px 10px rgb(0 0 0 / 12%);
     border-radius: 10px;
     padding: 5px 20px 5px 20px;
-    margin: 20px 10px;
+    margin: 20px 0px;
 }
 
 .card-container{
@@ -229,3 +231,6 @@ input:focus, textarea:focus, select:focus, button:focus{
     margin: 0px 10px 0px 10px;;
 }
 
+.createnewbatch{
+    background-color: white;
+}
