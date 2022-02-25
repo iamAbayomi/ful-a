@@ -6,15 +6,19 @@ import MulishFonts from '../../components/ui/MulishFonts'
 const CreateNewBatch =() => {
     const router = useRouter()
 
-    function moveToBatch() {
+    function moveToPage(page : any) {
         router.push('/batched')
+    }
+
+    function moveToSelectOrder(){
+        router.push('/selectorder')
     }
 
     return (
         <Background className="main dashboard">
             <MulishFonts />
             <div className='contents'>
-                <img className='navigation-arrow' src={navArrow.src} onClick={moveToBatch} />
+                <img className='navigation-arrow' src={navArrow.src} onClick={moveToPage} />
                 <p className='page-title'>Create New Batch</p>
                 <CreateNewBatchContainer className='createnewbatch-contents'>  
                     <div className='batch-number-container'>
@@ -32,7 +36,7 @@ const CreateNewBatch =() => {
                         <input type="name" className='input-text' />
                     </div>
 
-                    <RedButton className='red-button'> Create Batch</RedButton>
+                    <RedButton className='red-button' onClick={moveToSelectOrder}> Create Batch</RedButton>
                 </CreateNewBatchContainer>
             </div>
         </Background>
