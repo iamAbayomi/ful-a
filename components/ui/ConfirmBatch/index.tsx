@@ -1,7 +1,16 @@
+import { useRouter } from "next/router"
 import styled from "styled-components"
 import checkedBag from "../../../assets/images/checked-bag.svg"
 import closeButton from "../../../assets/images/close-button.svg"
+
+
 const ConfirmBatch =() => {
+    const router = useRouter()
+
+    function confirmBatch(){
+        router.push("/neworders")
+    }
+
     return(
         <Container className="main">
             <div>
@@ -12,7 +21,7 @@ const ConfirmBatch =() => {
                 <p className="heading-text">Confirm Batch 3 has been sent out</p>
             </div>
             <div className="center-div">
-                <RedButton className="red-button">Yes! I confirm</RedButton>
+                <RedButton onClick={confirmBatch} className="red-button">Yes! I confirm</RedButton>
             </div>
         </Container>
     )
