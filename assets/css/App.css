@@ -295,3 +295,11 @@ input:focus, textarea:focus, select:focus, button:focus{
     color: #092443;
 
 }
+
+
+.caption-text{
+    font-size: 10px;
+    line-height: 16px;
+    /* Navy/300 */
+    color: #777E96;    
+}
