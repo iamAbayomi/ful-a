@@ -40,7 +40,9 @@ const Layout = ({ children, pageTitle, buttonTitle, buttonOnClick, nextPage }: p
                        <div className='red-line' />
                    </div>
                    {children}
-                   <button className="red-button" onClick={moveToSingup}>{buttonTitle}</button>
+                   <div className='center-div'>
+                        <button className="red-button" onClick={moveToSingup}>{buttonTitle}</button>
+                   </div>
                </div>
            </div>
         </div>
