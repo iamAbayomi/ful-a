@@ -1,7 +1,14 @@
+import { useRouter } from "next/router"
 import styled from "styled-components"
 import OrderItemsComponent from "../../components/ui/OrderItemsComponent"
 
 const index = () => {
+    const router = useRouter()
+
+    function proceedToNextOrder(){
+        router.push('/test')
+    }
+
     return (
         <Container className="main backdropdown">
             <div className="backdropdown-line"></div>
@@ -9,7 +16,9 @@ const index = () => {
             <p className="body-text">Input items in the package to confirm order items</p>
             <input className="input-text" type="name" placeholder="Type item here" />
             <OrderItemsComponent />
-            <button className="red-button">Verify</button>
+            <div className='center-div'>
+                <button onClick={proceedToNextOrder} className="red-button">Verify</button>
+            </div>
             
         </Container>
     )

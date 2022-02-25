@@ -1,11 +1,16 @@
+import { useRouter } from "next/router"
 import styled from "styled-components"
 import closeButton from '../../../assets/images/close-button.svg'
 
 const CheckboxSelectedComponent =() =>{
+    const router = useRouter()
+    function moveToBatch(){
+        router.push("/batched")
+    }
     return (
         <div>
             <HeaderSection className ="display-flex">
-                <RedButton className='dashboard-red-button'>Add to new batch</RedButton>
+                <RedButton onClick={moveToBatch} className='dashboard-red-button'>Add to new batch</RedButton>
                 <NotificationOrderText className="highlight-text">3 orders selected </NotificationOrderText>
                 <img src={closeButton.src}  />
             </HeaderSection>

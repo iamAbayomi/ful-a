@@ -3,10 +3,18 @@ import redBag from '../../assets/images/red-bag.svg'
 //import  from '../../icons/Bag'
 import menuOptions from '../../assets/images/options-menu.svg'
 import styled from 'styled-components'
+import { useRouter } from 'next/router'
 
 const BatchedOrderDetails = () => {
+
+    const router = useRouter()
+
+    function verifypackage() {
+        router.push('/verifypackage')
+    }
+
     return(
-        <div className='main'>
+        <Container className='main'>
             <img src={navArrow.src} />
             <div className='batched-order-container'>
                 <BatchOrderSection className='display-flex'>
@@ -74,13 +82,19 @@ const BatchedOrderDetails = () => {
                     <p className='body-text'>Adams Muhammed</p>
                 </div>
             </div>
-            <button className='red-button'>Order Package</button>
-        </div>
+            <div className='center-div'>
+                <button onClick={verifypackage} className='red-button'>Order Package</button>
+            </div>
+        </Container>
     )
 }
 
 export default BatchedOrderDetails
 
+
+const Container = styled.p`
+    margin-top: 20px;
+`
 
 const BatchOrderDiv = styled.div`
     max-width: max-content;

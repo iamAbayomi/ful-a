@@ -4,7 +4,7 @@ import logo from '../../assets/images/sendme-primary-logo.svg'
 import Layout from '../../components/Layouts/AuthenticationLayout'
 
 const resetpassowrd = () => (
-    <Layout pageTitle={'Reset Password'} buttonTitle={'Reset Password'} nextPage={'/'}>
+    <Layout pageTitle={'Reset Password'} buttonTitle={'Reset Password'} nextPage={'/neworders'}>
         <InputField className="" type={"text"} placeholder="Create new passowrd" />
         <InputField className="" type={"text"} placeholder="Confirm new password" />
     </Layout>

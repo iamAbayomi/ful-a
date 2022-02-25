@@ -6,8 +6,13 @@ import bicycle from "../../../assets/images/bicycle.svg"
 import bag from "../../../assets/images/bag.svg"
 import styled from 'styled-components'
 import OrderRow from '../OrderRow'
+import { useRouter } from 'next/router'
 
 const BatchedOrderCard = () => {
+    const router = useRouter()
+    function moveToBatchedDetails(){
+        router.push("/batchedorderdetails")
+    }
     return (
         <div className="card-elevated">
             <div className="display-flex">
@@ -29,10 +34,10 @@ const BatchedOrderCard = () => {
                 <img src={downArrow.src} />
                 {/* <img src={upArrow.src} /> */}
             </RidersNameContainer>
-            {/* <OrderRowContainer >
+            <OrderRowContainer onClick={moveToBatchedDetails} >
                 <OrderRow />
                 <OrderRow/>
-            </OrderRowContainer> */}
+            </OrderRowContainer>
         </div>
     )
 }
