@@ -101,7 +101,8 @@ line{
 
 
 .dashboard-contents{
-    margin: 10px 20px 0px;
+    margin: 95px 20px 75px;
+    padding: 10px 0px;
 }
 
 
@@ -193,3 +194,5 @@ line{
     font-size: 14px;
     text-align: center;
 }
+
+
