@@ -48,6 +48,15 @@ const OrderDescription = () => {
 export default OrderDescription
 
 
+
+const Container = styled.div`
+    padding: 20px;
+    border: 1px solid #777e964f;
+    border-radius: 20px;
+    height: auto;
+`
+
+
 const BatchOrderDiv = styled.div`
     max-width: max-content;
     margin: 0px auto;
@@ -56,13 +65,6 @@ const BatchOrderDiv = styled.div`
 const ImageContainer = styled.div`
     max-width: max-content;
     margin: 10px auto 5px;
-`
-
-const Container = styled.div`
-    padding: 20px;
-    border: 1px solid #777e964f;
-    border-radius: 20px;
-
 `
 
 const RedButton = styled.button`
