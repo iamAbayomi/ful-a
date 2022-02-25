@@ -1,5 +1,6 @@
 import BackDrop from "../../components/ui/BackDrop"
 import BatchedOrderDetails from "../../components/ui/BatchedOrderDetails"
+import ConfirmBatch from "../../components/ui/ConfirmBatch"
 import Modal from "../../components/ui/Modal"
 import OrderDescription from "../../components/ui/OrderDescription"
 
@@ -9,7 +10,8 @@ const index = () => {
             {/* <BatchedOrderDetails /> */}
             {/* <BackDrop /> */}
             {/* <Modal /> */}
-            <OrderDescription />
+            {/* <OrderDescription /> */}
+            <ConfirmBatch />
         </div>
     )
 }
