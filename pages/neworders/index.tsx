@@ -18,5 +18,5 @@ const NewOrders = () => (
 export default NewOrders
 
 const NewOrderContainer = styled.p`
-   margin: 20px;
+//    margin: 20px;
 `
