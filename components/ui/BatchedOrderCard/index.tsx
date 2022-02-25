@@ -29,10 +29,10 @@ const BatchedOrderCard = () => {
                 <img src={downArrow.src} />
                 {/* <img src={upArrow.src} /> */}
             </RidersNameContainer>
-            <OrderRowContainer >
+            {/* <OrderRowContainer >
                 <OrderRow />
                 <OrderRow/>
-            </OrderRowContainer>
+            </OrderRowContainer> */}
         </div>
     )
 }
