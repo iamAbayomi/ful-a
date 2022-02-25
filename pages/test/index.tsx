@@ -8,10 +8,10 @@ const index = () => {
     return(
         <div>
             {/* <BatchedOrderDetails /> */}
-            {/* <BackDrop /> */}
+            <BackDrop />
             {/* <Modal /> */}
             {/* <OrderDescription /> */}
-            <ConfirmBatch />
+            {/* <ConfirmBatch /> */}
         </div>
     )
 }
