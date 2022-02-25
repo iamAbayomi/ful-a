@@ -20,21 +20,26 @@ import BottomNavBar from '../ui/BottomNavBar'
 
 
 type Props = {
+  head?: any
   children?: ReactNode
   title?: string
 }
 
-const DashbordLayout = ({ children, title = 'This is the default title' }: Props) => (
+const DashbordLayout = ({ children, title, head }: Props) => (
   <div className='main dashboard'>
-    <Head>
-      <title>{title}</title>
-      <meta charSet="utf-8" />
-      <meta name="viewport" content="initial-scale=1.0, width=device-width" />
-      
-    </Head>
-    <MulishFonts />
-    
-    <div className='dashboard-contents'>
+    <Header>
+        <Title text={title} />
+        <div className='display-flex header-icon'>
+            <div className='display-flex icon-container'>
+                <img
+                    className='red-flag-logo'
+                    src={redflag.src}
+                />
+            </div>
+        </div>
+    </Header>
+
+    <div className=' dashboard-contents'>
         {children}
     </div>
     <BottomNavBar />
@@ -43,10 +48,15 @@ const DashbordLayout = ({ children, title = 'This is the default title' }: Props
 
 export default DashbordLayout
 
+
 const Header = styled.div`
     display: flex;
     justify-content: space-between;
-    margin: 10px 20px 0px 20px;
+    // margin: 0px 20px 0px 20px;
+    position: fixed;
+    top: 0%;
+    width: 100%;
+    background: #f6f5f5;
 `
 
 const NotificationText = styled.p`
