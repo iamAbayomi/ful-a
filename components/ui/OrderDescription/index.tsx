@@ -34,6 +34,7 @@ const OrderDescription = () => {
             </div>
             <NextOrderContainer className="">
                 <p className="info-link">Print Package list</p>
+                <p className="green-text">You have packaged all the order in this batch</p>
                 <div className="center-div">
                     <RedButton className="red-button">Proceed to next order</RedButton>
                 </div>
