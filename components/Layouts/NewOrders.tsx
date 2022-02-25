@@ -62,7 +62,7 @@ const NewOrdersLayout = ({ children, title = 'This is the default title' }: Prop
             <img src={closeButton.src}  />
         </HeaderSection> */}
 
-        <div className='test'>
+        <div className='dashboard-contents'>
             {children}
         </div>
         <BottomNavBar />
@@ -75,7 +75,11 @@ export default NewOrdersLayout
 const Header = styled.div`
     display: flex;
     justify-content: space-between;
-    margin: 0px 20px 0px 20px;
+    // margin: 0px 20px 0px 20px;
+    position: fixed;
+    top: 0%;
+    width: 100%;
+    background: #f6f5f5;
 `
 
 const NotificationText = styled.p`
