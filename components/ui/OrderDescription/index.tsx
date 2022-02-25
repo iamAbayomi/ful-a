@@ -1,7 +1,13 @@
+import { useRouter } from "next/router"
 import styled from "styled-components"
 import redBag from '../../../assets/images/red-bag.svg'
 
 const OrderDescription = () => {
+    const router = useRouter()
+
+    function confirmBatch(){
+        router.push('/confirmbatch')
+    }
     return(
         <Container className="main">
             <ImageContainer className="">
@@ -36,7 +42,7 @@ const OrderDescription = () => {
                 <p className="info-link">Print Package list</p>
                 <p className="green-text">You have packaged all the order in this batch</p>
                 <div className="center-div">
-                    <RedButton className="red-button">Proceed to next order</RedButton>
+                    <RedButton onClick={confirmBatch} className="red-button">Proceed to next order</RedButton>
                 </div>
                 <p className="info-link">Back to batched orders</p>
             </NextOrderContainer>
