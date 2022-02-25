@@ -22,18 +22,8 @@ const Batched = () => {
     }
 
     return(
-        <Layout>
-            <Header>
-                <Title text={'Batched Orders'} />
-                <div className='display-flex header-icon'>
-                    <div className='display-flex icon-container'>
-                        <img
-                            className='red-flag-logo'
-                            src={redflag.src}
-                        />
-                    </div>
-                </div>
-            </Header>
+        <Layout title="Batched Orders">
+            
             <div className="header-section">
                 <button className="dashboard-red-button" onClick={createNewBatch}>
                     <img className="add-icon" src={addIcon.src} />
@@ -54,9 +44,6 @@ export default Batched
 
 
 const Header = styled.div`
-    display: flex;
-    justify-content: space-between;
-    // margin: 10px 20px 0px 20px;
 `
 
 const NotificationText = styled.p`
