@@ -13,7 +13,7 @@ const CreateNewBatch =() => {
     return (
         <Background className="main dashboard">
             <MulishFonts />
-            <div className='dashboard-contents'>
+            <div className='contents'>
                 <img className='navigation-arrow' src={navArrow.src} onClick={moveToBatch} />
                 <p className='page-title'>Create New Batch</p>
                 <CreateNewBatchContainer className='createnewbatch-contents'>  

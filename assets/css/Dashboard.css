@@ -105,7 +105,9 @@ line{
     padding: 10px 0px;
 }
 
-
+.contents{
+    margin: 10px 20px;
+}
 .batched-order-no-container{
     display: flex;
     max-width: max-content;
