@@ -56,11 +56,11 @@ const NewOrdersLayout = ({ children, title = 'This is the default title' }: Prop
             </div>
         </Header>
         {/* <NotificationText className="highlight-text">22 New Orders </NotificationText> */}
-        <HeaderSection className='display-flex'>
+        {/* <HeaderSection className='display-flex'>
             <RedButton className='dashboard-red-button'>Add to new batch</RedButton>
             <NotificationOrderText className="highlight-text">3 orders selected </NotificationOrderText>
             <img src={closeButton.src}  />
-        </HeaderSection>
+        </HeaderSection> */}
 
         <div className='test'>
             {children}
@@ -75,7 +75,7 @@ export default NewOrdersLayout
 const Header = styled.div`
     display: flex;
     justify-content: space-between;
-    margin: 10px 20px 0px 20px;
+    margin: 0px 20px 0px 20px;
 `
 
 const NotificationText = styled.p`
