@@ -11,22 +11,25 @@ const NewOrderCard = () => {
     return(
         <div className={`card ${checkboxState ? "card-highlight" : ''}` } >
             <div className="card-container">
+                
                 <div className="display-flex">
-                    <label className="container">
+                    {/* <label className="container">
                         <input type="checkbox" onClick={changeCardBackgroundColor}/>
                         <span className="checkmark"></span>
-                    </label>
+                    </label> */}
                     <p className="neworderheading" >Order</p>
                     <div className="display-flex">
                         <p className="neworderno">#1259</p>
                         <RightArrowImage  src={rightArrow.src} />
                     </div>
                 </div>
+
                 <div className="neworder-line"/>
                 <p className="highlight-text">Address </p>
                 <p className="normal-text" >No 26, Alaakia Road, Bodija</p>
                 <p className="highlight-text" >Delivery Time</p>
                 <p className="normal-text">3:00pm</p>
+
             </div>
         </div>
     )
