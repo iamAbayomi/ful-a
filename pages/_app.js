@@ -9,14 +9,17 @@ import React from 'react'
 import Head from 'next/head'
 import { ChakraProvider  } from "@chakra-ui/react";
 import MulishFonts from '../components/ui/MulishFonts'
-
+import { Provider } from 'react-redux'
+import {store} from '../redux/store'
 
 // This default export is required in a new `pages/_app.js` file.
 export default function MyApp({ Component, pageProps }) {
   return (
-      <ChakraProvider resetCSS={true}>
-        <MulishFonts />
-        <Component {...pageProps} />
+      <ChakraProvider resetCSS={false}>
+        <Provider store={store}  >
+          <MulishFonts />
+          <Component {...pageProps} />
+        </Provider>
       </ChakraProvider>
   )
 }
