@@ -1,22 +1,28 @@
 import { useState } from "react"
 import styled from "styled-components"
 import rightArrow from '../../../assets/images/right-arrow.svg'
+import { useAppSelector } from "../../../redux/hook"
+import { getNewOrderCheckbox } from "../../../redux/reducers/NewOrderSlice"
 
 const NewOrderCard = () => {
     const [checkboxState, setCheckboxState ] = useState<boolean>(false)
+    
+    const selectNewOrder = useAppSelector(getNewOrderCheckbox)
+
     function changeCardBackgroundColor() {
         let temp = checkboxState
         setCheckboxState(!temp)
     }
+    
+    
     return(
         <div className={`card ${checkboxState ? "card-highlight" : ''}` } >
             <div className="card-container">
-                
                 <div className="display-flex">
-                    {/* <label className="container">
+                    <label className={`container ${selectNewOrder ?  "" : 'hide-checkbox' }`}>
                         <input type="checkbox" onClick={changeCardBackgroundColor}/>
                         <span className="checkmark"></span>
-                    </label> */}
+                    </label>
                     <p className="neworderheading" >Order</p>
                     <div className="display-flex">
                         <p className="neworderno">#1259</p>
