@@ -5,7 +5,8 @@ const newOrderAdapter = createEntityAdapter()
 
 const initialState = newOrderAdapter.getInitialState({
     showNewOrdersCheckbox: false,
-    noOfOrdersSelected: 0
+    noOfOrdersSelected: 0,
+    clearAllOrderSelected: true
 })
 
 
@@ -21,6 +22,12 @@ const newOrderSlice = createSlice({
         },
         reduceNoOfOrder(state, action){
             state.noOfOrdersSelected = --state.noOfOrdersSelected
+        },
+        resetNoOfOrder(state){
+            state.noOfOrdersSelected = 0
+        },
+        clearAllOrderSelected(state){
+            state.clearAllOrderSelected = !state.clearAllOrderSelected
         }
     }
 })
@@ -28,7 +35,9 @@ const newOrderSlice = createSlice({
 export const {
     toggleNewOrdersCheckbox,
     increaseNoOfOrder,
-    reduceNoOfOrder
+    reduceNoOfOrder,
+    resetNoOfOrder,
+    clearAllOrderSelected
 } = newOrderSlice.actions
 
 export const getNewOrderCheckbox = (state : any) => {
@@ -37,6 +46,10 @@ export const getNewOrderCheckbox = (state : any) => {
 
 export const getNoOfOrdersSelected = (state: any) => {
     return state.newOrders.noOfOrdersSelected
+}
+
+export const getOrderSelectedState = (state: any) => {
+    return state.newOrders.clearAllOrderSelected
 }
 
 export default newOrderSlice.reducer
