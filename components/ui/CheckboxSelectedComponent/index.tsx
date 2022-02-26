@@ -1,9 +1,14 @@
 import { useRouter } from "next/router"
 import styled from "styled-components"
 import closeButton from '../../../assets/images/close-button.svg'
+import { useAppSelector } from "../../../redux/hook"
+import { getNoOfOrdersSelected } from "../../../redux/reducers/NewOrderSlice"
 
 const CheckboxSelectedComponent =() =>{
     const router = useRouter()
+
+    const noOfOrders = useAppSelector(getNoOfOrdersSelected)
+
     function moveToBatch(){
         router.push("/batched")
     }
@@ -11,7 +16,7 @@ const CheckboxSelectedComponent =() =>{
         <div>
             <HeaderSection className ="display-flex">
                 <RedButton onClick={moveToBatch} className='dashboard-red-button'>Add to new batch</RedButton>
-                <NotificationOrderText className="highlight-text">3 orders selected </NotificationOrderText>
+                <NotificationOrderText className="highlight-text"> {noOfOrders} orders selected </NotificationOrderText>
                 <img src={closeButton.src}  />
             </HeaderSection>
         </div>
