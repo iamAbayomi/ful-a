@@ -3,7 +3,7 @@ import newOrderReducer from './reducers/NewOrderSlice'
 
 export const store = configureStore({
     reducer: {
-        newOrder: newOrderReducer
+        newOrders: newOrderReducer
     }
 })
 
