@@ -22,6 +22,7 @@ import BottomNavBar from '../ui/BottomNavBar'
 import KebabMenuDropdown from '../ui/KebabMenuDropdown'
 import { useAppDispatch } from '../../redux/hook'
 import { toggleNewOrdersCheckbox } from '../../redux/reducers/NewOrderSlice'
+import CheckboxSelectedComponent from '../ui/CheckboxSelectedComponent'
 
 
 type Props = {
@@ -47,18 +48,21 @@ const NewOrdersLayout = ({ children, title = 'This is the default title' }: Prop
             </Head>
             <MulishFonts />
             <Header>
-                <Title text={'New Orders'} />
-                <div className='display-flex header-icon'>
-                    <div className='display-flex icon-container'>
-                        <img
-                            className='red-flag-logo'
-                            src={redflag.src}
-                        />
-                    </div>
-                    <div className='icon-container'>
-                        <KebabMenuDropdown menuItems={['Select', 'Auto Batch Order']} menuItemMethod={selectOrders} />
+                <div className='display-flex'>
+                    <Title text={'New Orders'} />
+                    <div className='display-flex header-icon'>
+                        <div className='display-flex icon-container'>
+                            <img
+                                className='red-flag-logo'
+                                src={redflag.src}
+                            />
+                        </div>
+                        <div className='icon-container'>
+                            <KebabMenuDropdown menuItems={['Select', 'Auto Batch Order']} menuItemMethod={selectOrders} />
+                        </div>
                     </div>
                 </div>
+                <CheckboxSelectedComponent />
             </Header>
             {/* <NotificationText className="highlight-text">22 New Orders </NotificationText> */}
             {/* <HeaderSection className='display-flex'>
@@ -78,9 +82,10 @@ const NewOrdersLayout = ({ children, title = 'This is the default title' }: Prop
 export default NewOrdersLayout
 
 const Header = styled.div`
-    display: flex;
-    justify-content: space-between;
-    // margin: 0px 20px 0px 20px;
+    // display: flex;
+    // justify-content: space-between;
+    padding: 0px 20px 0px 20px;
+    box-sizing: border-box;
     position: fixed;
     top: 0%;
     width: 100%;
