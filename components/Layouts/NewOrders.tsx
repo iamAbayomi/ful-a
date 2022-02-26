@@ -20,6 +20,8 @@ import Dashboard from '../icons/Dashboard'
 import { useRouter } from 'next/router'
 import BottomNavBar from '../ui/BottomNavBar'
 import KebabMenuDropdown from '../ui/KebabMenuDropdown'
+import { useAppDispatch } from '../../redux/hook'
+import { toggleNewOrdersCheckbox } from '../../redux/reducers/NewOrderSlice'
 
 
 type Props = {
@@ -29,9 +31,10 @@ type Props = {
 
 const NewOrdersLayout = ({ children, title = 'This is the default title' }: Props) => {
     const router = useRouter()
-
-    function selectOrders (){
-
+    const dispatch = useAppDispatch()
+    
+    function selectOrders (item: any){
+        dispatch(toggleNewOrdersCheckbox(true))
     }
 
     return(
