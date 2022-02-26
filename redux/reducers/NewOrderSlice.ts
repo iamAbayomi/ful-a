@@ -4,7 +4,7 @@ import { createEntityAdapter, createSlice } from "@reduxjs/toolkit";
 const newOrderAdapter = createEntityAdapter()
 
 const initialState = newOrderAdapter.getInitialState({
-    selectOrders: false
+    showNewOrdersCheckbox: false
 })
 
 
@@ -12,15 +12,18 @@ const newOrderSlice = createSlice({
     name: 'New Order',
     initialState,
     reducers: {
-        selectOrders(state, action){
-            state.selectOrders = !state.selectOrders
+        toggleNewOrdersCheckbox(state, action){
+            state.showNewOrdersCheckbox = !state.showNewOrdersCheckbox
         }
     }
 })
 
 export const {
-    selectOrders 
+    toggleNewOrdersCheckbox 
 } = newOrderSlice.actions
 
+export const getNewOrderCheckbox = (state : any) => {
+    return state.newOrders.showNewOrdersCheckbox
+}
 
 export default newOrderSlice.reducer
