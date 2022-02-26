@@ -328,3 +328,8 @@ input:focus, textarea:focus, select:focus{
 .clear-float{
     clear: both;
 }
+
+
+.hide{
+    display: none;
+}
