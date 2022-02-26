@@ -1,17 +1,19 @@
 import { useState } from "react"
 import styled from "styled-components"
 import rightArrow from '../../../assets/images/right-arrow.svg'
-import { useAppSelector } from "../../../redux/hook"
-import { getNewOrderCheckbox } from "../../../redux/reducers/NewOrderSlice"
+import { useAppDispatch, useAppSelector } from "../../../redux/hook"
+import {  getNewOrderCheckbox, increaseNoOfOrder, reduceNoOfOrder } from "../../../redux/reducers/NewOrderSlice"
 
 const NewOrderCard = () => {
     const [checkboxState, setCheckboxState ] = useState<boolean>(false)
-    
     const selectNewOrder = useAppSelector(getNewOrderCheckbox)
+    const dispatch = useAppDispatch()
 
     function changeCardBackgroundColor() {
         let temp = checkboxState
         setCheckboxState(!temp)
+        temp == false ? dispatch(increaseNoOfOrder(true)) : dispatch(reduceNoOfOrder(false))
+        
     }
     
     
