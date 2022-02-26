@@ -52,10 +52,11 @@ export default DashbordLayout
 const Header = styled.div`
     display: flex;
     justify-content: space-between;
-    // margin: 0px 20px 0px 20px;
+    padding: 0px 20px 0px 20px;
     position: fixed;
     top: 0%;
     width: 100%;
+    box-sizing// margin:border-box;
     max-width: 380px;
     background: #f6f5f5;
 `
