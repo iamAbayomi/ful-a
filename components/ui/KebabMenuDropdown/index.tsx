@@ -5,7 +5,7 @@ type props = {
     menuItems: string [],
     menuItemMethod: (item: any) =>  void
 }
-//['Select', 'Auto Batch Order']
+
 const KebabMenuDropdown = ({ menuItems, menuItemMethod } : props)  => {
     
     
@@ -17,8 +17,7 @@ const KebabMenuDropdown = ({ menuItems, menuItemMethod } : props)  => {
                 icon={<KebabMenu/>}
             />    
             <MenuList>
-                {
-                    menuItems.map((item: any) => {
+                {menuItems.map((item: any) => {
                         return <MenuItem  onClick={() => menuItemMethod(item)}>{item}</MenuItem>
                     })
                 }
