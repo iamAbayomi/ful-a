@@ -1,4 +1,4 @@
-import { Button, IconButton, Menu, MenuButton, MenuItem, MenuList } from "@chakra-ui/react"
+
 import Bag from "../../components/icons/Bag"
 import KebabMenu from "../../components/icons/KebabMenu"
 import BackDrop from "../../components/ui/BackDrop"
@@ -15,18 +15,7 @@ const index = () => {
             {/* <Modal /> */}
             {/* <OrderDescription /> */}
             {/* <ConfirmBatch /> */}
-            <Menu>
-                <MenuButton 
-                    as={IconButton} 
-                    // rightIcon={<KebabMenu/>}
-                    colorScheme='white'
-                    icon={<KebabMenu/>}
-                />    
-                <MenuList>
-                    <MenuItem>Download</MenuItem>
-                    <MenuItem>Create a Copy</MenuItem>
-                </MenuList>
-            </Menu>
+            
         </div>
     )
 }
