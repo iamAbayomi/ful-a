@@ -1,23 +1,33 @@
 import { useRouter } from "next/router"
+import { useRef } from "react"
+import { useDispatch } from "react-redux"
 import styled from "styled-components"
 import closeButton from '../../../assets/images/close-button.svg'
 import { useAppSelector } from "../../../redux/hook"
-import { getNoOfOrdersSelected } from "../../../redux/reducers/NewOrderSlice"
+import { getNoOfOrdersSelected, resetNoOfOrder } from "../../../redux/reducers/NewOrderSlice"
 
 const CheckboxSelectedComponent =() =>{
     const router = useRouter()
-
     const noOfOrders = useAppSelector(getNoOfOrdersSelected)
+    const closeButtonRef = useRef(null)
+    const dispatch = useDispatch()
+
 
     function moveToBatch(){
         router.push("/batched")
     }
+
+    function closeCheckboxComponent(){
+        //closeButtonRef.current.classList.toggle("hide")
+        dispatch(resetNoOfOrder())
+    }
+
     return (
         <div>
-            <HeaderSection className ={`display-flex ${noOfOrders == 0 ? 'hide': ''}`}>
+            <HeaderSection ref={closeButtonRef} className ={`display-flex ${noOfOrders == 0 ? 'hide': ''}`}>
                 <RedButton onClick={moveToBatch} className='dashboard-red-button'>Add to new batch</RedButton>
                 <NotificationOrderText className="highlight-text"> {noOfOrders} orders selected </NotificationOrderText>
-                <img src={closeButton.src}  />
+                <img src={closeButton.src}  onClick={closeCheckboxComponent}  />
             </HeaderSection>
         </div>
     )
