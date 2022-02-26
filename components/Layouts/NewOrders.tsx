@@ -19,6 +19,7 @@ import Bicycle from '../icons/Bicycle'
 import Dashboard from '../icons/Dashboard'
 import { useRouter } from 'next/router'
 import BottomNavBar from '../ui/BottomNavBar'
+import KebabMenuDropdown from '../ui/KebabMenuDropdown'
 
 
 type Props = {
@@ -48,10 +49,11 @@ const NewOrdersLayout = ({ children, title = 'This is the default title' }: Prop
                     />
                 </div>
                 <div className='icon-container'>
-                    <img
+                    {/* <img
                         className='app-logo'
                         src={optionsMenu.src}
-                    />
+                    /> */}
+                    <KebabMenuDropdown />
                 </div>
             </div>
         </Header>
