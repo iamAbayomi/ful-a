@@ -80,3 +80,8 @@
   box-sizing: border-box;
   border-radius: 10px;
 }
+
+
+.show-checkbox{
+  display: none;
+}
