@@ -1,5 +1,6 @@
-import { Button, Menu, MenuButton, MenuItem, MenuList } from "@chakra-ui/react"
+import { Button, IconButton, Menu, MenuButton, MenuItem, MenuList } from "@chakra-ui/react"
 import Bag from "../../components/icons/Bag"
+import KebabMenu from "../../components/icons/KebabMenu"
 import BackDrop from "../../components/ui/BackDrop"
 import BatchedOrderDetails from "../../components/ui/BatchedOrderDetails"
 import ConfirmBatch from "../../components/ui/ConfirmBatch"
@@ -15,15 +16,15 @@ const index = () => {
             {/* <OrderDescription /> */}
             {/* <ConfirmBatch /> */}
             <Menu>
-                <MenuButton as={Button} rightIcon={<Bag/>}>
-                    Actions
-                </MenuButton>
+                <MenuButton 
+                    as={IconButton} 
+                    // rightIcon={<KebabMenu/>}
+                    colorScheme='white'
+                    icon={<KebabMenu/>}
+                />    
                 <MenuList>
                     <MenuItem>Download</MenuItem>
                     <MenuItem>Create a Copy</MenuItem>
-                    <MenuItem>Mark as Draft</MenuItem>
-                    <MenuItem>Delete</MenuItem>
-                    <MenuItem>Attend a Workshop</MenuItem>
                 </MenuList>
             </Menu>
         </div>
