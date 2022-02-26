@@ -83,6 +83,7 @@ const Header = styled.div`
     width: 100%;
     max-width: 380px;
     background: #f6f5f5;
+    z-index:10;
 `
 
 const NotificationText = styled.p`
