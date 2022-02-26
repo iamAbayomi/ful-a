@@ -14,7 +14,7 @@ const CheckboxSelectedComponent =() =>{
     }
     return (
         <div>
-            <HeaderSection className ="display-flex">
+            <HeaderSection className ={`display-flex ${noOfOrders == 0 ? 'hide': ''}`}>
                 <RedButton onClick={moveToBatch} className='dashboard-red-button'>Add to new batch</RedButton>
                 <NotificationOrderText className="highlight-text"> {noOfOrders} orders selected </NotificationOrderText>
                 <img src={closeButton.src}  />
