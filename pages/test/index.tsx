@@ -1,3 +1,5 @@
+import { Button, Menu, MenuButton, MenuItem, MenuList } from "@chakra-ui/react"
+import Bag from "../../components/icons/Bag"
 import BackDrop from "../../components/ui/BackDrop"
 import BatchedOrderDetails from "../../components/ui/BatchedOrderDetails"
 import ConfirmBatch from "../../components/ui/ConfirmBatch"
@@ -6,12 +8,24 @@ import OrderDescription from "../../components/ui/OrderDescription"
 
 const index = () => {
     return(
-        <div>
+        <div className="main dashboard">
             {/* <BatchedOrderDetails /> */}
             {/* <BackDrop /> */}
             {/* <Modal /> */}
-            <OrderDescription />
+            {/* <OrderDescription /> */}
             {/* <ConfirmBatch /> */}
+            <Menu>
+                <MenuButton as={Button} rightIcon={<Bag/>}>
+                    Actions
+                </MenuButton>
+                <MenuList>
+                    <MenuItem>Download</MenuItem>
+                    <MenuItem>Create a Copy</MenuItem>
+                    <MenuItem>Mark as Draft</MenuItem>
+                    <MenuItem>Delete</MenuItem>
+                    <MenuItem>Attend a Workshop</MenuItem>
+                </MenuList>
+            </Menu>
         </div>
     )
 }

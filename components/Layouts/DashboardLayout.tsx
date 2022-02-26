@@ -56,6 +56,7 @@ const Header = styled.div`
     position: fixed;
     top: 0%;
     width: 100%;
+    max-width: 380px;
     background: #f6f5f5;
 `
 

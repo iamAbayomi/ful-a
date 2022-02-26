@@ -18,7 +18,7 @@ input {
 }
 
 
-input:focus, textarea:focus, select:focus, button:focus{
+input:focus, textarea:focus, select:focus{
     outline: #d62626;
     border-bottom: 1px solid #d10a0a;
     box-shadow: 0 0 0px #d10a0a;
@@ -72,7 +72,7 @@ input:focus, textarea:focus, select:focus, button:focus{
 
 .icon-container{
     max-width: 20px;  
-    padding: 0px 40px 0px; 
+    padding: 0px 20px 0px; 
 }
 
 .app-logo{
