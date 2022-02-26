@@ -19,7 +19,7 @@ const KebabMenuDropdown = ({ menuItems, menuItemMethod } : props)  => {
             <MenuList>
                 {
                     menuItems.map((item: any) => {
-                        <MenuItem onClick={() => menuItemMethod(item)}></MenuItem>
+                        return <MenuItem  onClick={() => menuItemMethod(item)}>{item}</MenuItem>
                     })
                 }
             </MenuList>
