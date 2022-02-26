@@ -1,17 +1,27 @@
 import { Button, IconButton, Menu, MenuButton, MenuItem, MenuList } from "@chakra-ui/react"
 import KebabMenu from "../../icons/KebabMenu"
-const KebabMenuDropdown = ()  => {
+
+type props = {
+    menuItems: string [],
+    menuItemMethod: (item: any) =>  void
+}
+//['Select', 'Auto Batch Order']
+const KebabMenuDropdown = ({ menuItems, menuItemMethod } : props)  => {
+    
+    
     return(
         <Menu>
             <MenuButton 
                 as={IconButton} 
-                // rightIcon={<KebabMenu/>}
                 colorScheme='white'
                 icon={<KebabMenu/>}
             />    
             <MenuList>
-                <MenuItem>Select</MenuItem>
-                <MenuItem>Auto Batch Order</MenuItem>
+                {
+                    menuItems.map((item: any) => {
+                        <MenuItem onClick={() => menuItemMethod(item)}></MenuItem>
+                    })
+                }
             </MenuList>
         </Menu>
     )
