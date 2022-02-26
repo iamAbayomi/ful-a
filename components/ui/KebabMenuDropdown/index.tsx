@@ -10,8 +10,8 @@ const KebabMenuDropdown = ()  => {
                 icon={<KebabMenu/>}
             />    
             <MenuList>
-                <MenuItem>Download</MenuItem>
-                <MenuItem>Create a Copy</MenuItem>
+                <MenuItem>Select</MenuItem>
+                <MenuItem>Auto Batch Order</MenuItem>
             </MenuList>
         </Menu>
     )
