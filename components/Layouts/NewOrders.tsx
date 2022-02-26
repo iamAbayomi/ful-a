@@ -30,46 +30,46 @@ type Props = {
 const NewOrdersLayout = ({ children, title = 'This is the default title' }: Props) => {
     const router = useRouter()
 
-  return(
-    <div className='main dashboard'>
-        <Head>
-        <title>{title}</title>
-        <meta charSet="utf-8" />
-        <meta name="viewport" content="initial-scale=1.0, width=device-width" />
-        
-        </Head>
-        <MulishFonts />
-        <Header>
-            <Title text={'New Orders'} />
-            <div className='display-flex header-icon'>
-                <div className='display-flex icon-container'>
-                    <img
-                        className='red-flag-logo'
-                        src={redflag.src}
-                    />
-                </div>
-                <div className='icon-container'>
-                    {/* <img
-                        className='app-logo'
-                        src={optionsMenu.src}
-                    /> */}
-                    <KebabMenuDropdown />
-                </div>
-            </div>
-        </Header>
-        {/* <NotificationText className="highlight-text">22 New Orders </NotificationText> */}
-        {/* <HeaderSection className='display-flex'>
-            <RedButton className='dashboard-red-button'>Add to new batch</RedButton>
-            <NotificationOrderText className="highlight-text">3 orders selected </NotificationOrderText>
-            <img src={closeButton.src}  />
-        </HeaderSection> */}
+    function selectOrders (){
 
-        <div className='dashboard-contents'>
-            {children}
+    }
+
+    return(
+        <div className='main dashboard'>
+            <Head>
+            <title>{title}</title>
+            <meta charSet="utf-8" />
+            <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+            
+            </Head>
+            <MulishFonts />
+            <Header>
+                <Title text={'New Orders'} />
+                <div className='display-flex header-icon'>
+                    <div className='display-flex icon-container'>
+                        <img
+                            className='red-flag-logo'
+                            src={redflag.src}
+                        />
+                    </div>
+                    <div className='icon-container'>
+                        <KebabMenuDropdown menuItems={['Select', 'Auto Batch Order']} menuItemMethod={selectOrders} />
+                    </div>
+                </div>
+            </Header>
+            {/* <NotificationText className="highlight-text">22 New Orders </NotificationText> */}
+            {/* <HeaderSection className='display-flex'>
+                <RedButton className='dashboard-red-button'>Add to new batch</RedButton>
+                <NotificationOrderText className="highlight-text">3 orders selected </NotificationOrderText>
+                <img src={closeButton.src}  />
+            </HeaderSection> */}
+
+            <div className='dashboard-contents'>
+                {children}
+            </div>
+            <BottomNavBar />
         </div>
-        <BottomNavBar />
-    </div>
-    )
+        )
 }
 
 export default NewOrdersLayout
