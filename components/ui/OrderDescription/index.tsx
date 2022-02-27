@@ -56,7 +56,7 @@ const OrderDescription = () => {
                 <ModalOverlay />
                 <ModalContent>
                     <ModalBody>
-                        <ConfirmBatch />
+                        <ConfirmBatch method={onClose} />
                     </ModalBody>
                 </ModalContent>
             </Modal>

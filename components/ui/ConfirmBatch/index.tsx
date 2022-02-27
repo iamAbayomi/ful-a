@@ -3,8 +3,11 @@ import styled from "styled-components"
 import checkedBag from "../../../assets/images/checked-bag.svg"
 import closeButton from "../../../assets/images/close-button.svg"
 
+type props ={
+    method: any
+}
 
-const ConfirmBatch =() => {
+const ConfirmBatch =({method}: props) => {
     const router = useRouter()
 
     function confirmBatch(){
@@ -14,7 +17,7 @@ const ConfirmBatch =() => {
     return(
         <Container className="main">
             <div>
-                <Close src={closeButton.src} />
+                <Close onClick={method} src={closeButton.src} />
                 <div className="center-div clear-float">
                     <img src={checkedBag.src} />
                 </div>
@@ -36,7 +39,7 @@ const RedButton = styled.button`
 `
 
 const Container = styled.div`
-    border: 1px solid #777e964f;
+    // border: 1px solid #777e964f;
     height: auto;
     margin: 80px auto;
     padding: 20px 10px 5px;
