@@ -1,12 +1,16 @@
+import { Modal, ModalOverlay, ModalContent, ModalBody, useDisclosure } from "@chakra-ui/react"
 import { useRouter } from "next/router"
 import styled from "styled-components"
 import redBag from '../../../assets/images/red-bag.svg'
+import ConfirmBatch from "../ConfirmBatch"
 
 const OrderDescription = () => {
     const router = useRouter()
-
+    const {isOpen, onOpen, onClose } = useDisclosure()
+    
     function confirmBatch(){
-        router.push('/confirmbatch')
+        //router.push('/confirmbatch')
+        onOpen()
     }
     return(
         <Container className="main">
@@ -48,6 +52,14 @@ const OrderDescription = () => {
                 </div>
                 <p className="info-link">Back to batched orders</p>
             </NextOrderContainer>
+            <Modal blockScrollOnMount={true} isOpen={isOpen} onClose={onClose}>
+                <ModalOverlay />
+                <ModalContent>
+                    <ModalBody>
+                        <ConfirmBatch />
+                    </ModalBody>
+                </ModalContent>
+            </Modal>
         </Container>
         
     )

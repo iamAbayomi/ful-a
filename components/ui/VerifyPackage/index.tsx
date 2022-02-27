@@ -1,14 +1,23 @@
+import { Modal, ModalOverlay, ModalContent, ModalBody, useDisclosure } from "@chakra-ui/react"
 import { useRouter } from "next/router"
 import styled from "styled-components"
+import OrderDescription from "../OrderDescription"
 import OrderItemsComponent from "../OrderItemsComponent"
 
+type props = {
+    method: any
+}
 
-const index = () => {
+const index = ({method}: props) => {
     const router = useRouter()
-
+    const {isOpen, onOpen, onClose } = useDisclosure()
     function proceedToNextOrder(){
-        router.push('/test')
+        //router.push('/test')
+        onOpen()
+        //method()
+
     }
+
 
     return (
         <Container className="main backdropdown">
@@ -20,6 +29,14 @@ const index = () => {
             <div className='center-div'>
                 <button onClick={proceedToNextOrder} className="red-button">Verify</button>
             </div>
+            <Modal blockScrollOnMount={true} isOpen={isOpen} onClose={onClose}>
+                    <ModalOverlay />
+                    <ModalContent>
+                        <ModalBody>
+                            <OrderDescription />
+                        </ModalBody>
+                    </ModalContent>
+            </Modal>
             
         </Container>
     )

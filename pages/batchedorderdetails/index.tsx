@@ -109,7 +109,7 @@ const BatchedOrderDetails = () => {
                     <ModalOverlay />
                     <ModalContent>
                         <ModalBody>
-                            <VerifyPackage/>
+                            <VerifyPackage method={onClose}/>
                         </ModalBody>
                     </ModalContent>
                 </Modal>

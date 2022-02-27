@@ -258,9 +258,10 @@ input:focus, textarea:focus, select:focus{
 
 .small-text{
     font-size: 13px;
-    line-height: 16px;
+    /* line-height: 16px; */
     /* Navy/300 */
     color: #777E96;
+    margin: 18px 0px;
 }
 
 
@@ -275,6 +276,7 @@ input:focus, textarea:focus, select:focus{
     text-align: left;
     /* Header txt color */
     color: #092443;
+    margin: 16px 0px;
 }
 
 
@@ -314,6 +316,7 @@ input:focus, textarea:focus, select:focus{
     text-align: center;
     text-decoration-line: underline;
     color: #8F92A1;
+    margin: 16px 0px;
 }
 
 
