@@ -12,6 +12,7 @@
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
+  box-sizing: content-box;
 }
 
 /* Hide the browser's default checkbox */
@@ -30,19 +31,22 @@
   left: 0;
   height: 17px;
   width: 19px;
-  margin: 15px 10px 10px 0px;
+  margin: 8px 10px 15px 0px;
   border: 1px solid rgba(179, 168, 168, 0.493);
   background-color: white;
+  box-sizing: content-box;
 }
 
 /* On mouse-over, add a grey background color */
 .container:hover input ~ .checkmark {
   background-color: white;
+  box-sizing: content-box;
 }
 
 /* When the checkbox is checked, add a blue background */
 .container input:checked ~ .checkmark {
     background: #367BF7;
+    box-sizing: content-box;
 
 }
 
@@ -56,11 +60,13 @@
   content: "";
   position: absolute;
   display: none;
+  box-sizing: content-box;
 }
 
 /* Show the checkmark when checked */
 .container input:checked ~ .checkmark:after {
   display: block;
+  box-sizing: content-box;
 }
 
 /* Style the checkmark/indicator */
