@@ -2,6 +2,7 @@ import { useRouter } from "next/router"
 import { useRef } from "react"
 import { useDispatch } from "react-redux"
 import styled from "styled-components"
+import eventBus  from "../../../utils/eventBus"
 import closeButton from '../../../assets/images/close-button.svg'
 import { useAppSelector } from "../../../redux/hook"
 import { getNoOfOrdersSelected, resetNoOfOrder, clearAllOrderSelected, changeSingleCheckboxState, toggleNewOrdersCheckbox  } from "../../../redux/reducers/NewOrderSlice"
@@ -18,18 +19,10 @@ const CheckboxSelectedComponent =() =>{
     }
 
     function closeCheckboxComponent(){
-        dispatch(resetNoOfOrder())
-        dispatch(toggleNewOrdersCheckbox())
-        dispatch(clearAllOrderSelected())
-        
-    }
-
-    function closeCheckbox(){
-        //closeButtonRef.current.checked = false
-        //dispatch(closeButtonRef.current.checked = false)
-        //dispatc
-
-        dispatch(changeSingleCheckboxState())
+        // dispatch(resetNoOfOrder())
+        //dispatch(toggleNewOrdersCheckbox())
+        //dispatch(clearAllOrderSelected())
+        eventBus.dispatch("closeNewOrders", { message: "close Orders"})
     }
 
     return (

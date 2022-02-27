@@ -23,6 +23,7 @@ import KebabMenuDropdown from '../ui/KebabMenuDropdown'
 import { useAppDispatch } from '../../redux/hook'
 import { toggleNewOrdersCheckbox } from '../../redux/reducers/NewOrderSlice'
 import CheckboxSelectedComponent from '../ui/CheckboxSelectedComponent'
+import eventBus from '../../utils/eventBus'
 
 
 type Props = {
@@ -36,7 +37,7 @@ const NewOrdersLayout = ({ children, title = 'This is the default title' }: Prop
     const dispatch = useAppDispatch()
     
     function selectOrders (item: any){
-        dispatch(toggleNewOrdersCheckbox())
+        eventBus.dispatch("closeNewOrders", { message: "close Orders"})
     }
 
     return(
