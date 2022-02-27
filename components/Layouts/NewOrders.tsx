@@ -59,7 +59,7 @@ const NewOrdersLayout = ({ children, title = 'This is the default title' }: Prop
                                 src={redflag.src}
                             />
                         </div>
-                        <div className='icon-container'>
+                        <div className='icon-container' style={ {margin: '0px 20px 0px 0px'}}>
                             <KebabMenuDropdown menuItems={['Select', 'Auto Batch Order']} menuItemMethod={selectOrders} />
                         </div>
                     </div>
@@ -78,9 +78,7 @@ const NewOrdersLayout = ({ children, title = 'This is the default title' }: Prop
 export default NewOrdersLayout
 
 const Header = styled.div`
-    // display: flex;
-    // justify-content: space-between;
-    padding: 0px 20px 0px 20px;
+    padding: 0px 20px 20px 20px;
     box-sizing: border-box;
     position: fixed;
     top: 0%;

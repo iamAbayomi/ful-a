@@ -17,7 +17,8 @@ import {store} from '../redux/store'
 // This default export is required in a new `pages/_app.js` file.
 export default function MyApp({ Component, pageProps }) {
   return (
-      <ChakraProvider resetCSS={false}>
+      <ChakraProvider resetCSS={true}>
+      {/* // <ChakraProvider resetCSS={false}> */}
         <Provider store={store}  >
           <MulishFonts />
           <Component {...pageProps} />

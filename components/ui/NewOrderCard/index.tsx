@@ -55,17 +55,13 @@ const NewOrderCard = () => {
     
     
     return(
-        // <div ref={highNewOrderRef} className={`card ${checkboxState  && newOrderCheckbox ? "card-highlight" : ''}` } >
         <div ref={highNewOrderRef} className={`card ${checkboxState ? "card-highlight" : ''}` } >
             <div className="card-container">
-                <div className="display-flex">
-                    {/* <label ref={checkboxContainerRef} className={`container ${newOrderCheckbox ?  "" : 'hide-checkbox' }`}> */}
+                <NewOrderCardHeader className="display-flex">
                     <label ref={checkboxContainerRef} className="container hide-checkbox">
                         <input 
                             id="checkbox"
                             type="checkbox" 
-                            // checked={checkboxState}
-                            // onChange={changeOrdersState}
                             ref={closeButtonRef}
                             onClick={changeOrdersState}
                               />
@@ -76,7 +72,7 @@ const NewOrderCard = () => {
                         <p className="neworderno">#1259</p>
                         <RightArrowImage  src={rightArrow.src} />
                     </div>
-                </div>
+                </NewOrderCardHeader>
 
                 <div className="neworder-line"/>
                 <p className="highlight-text">Address </p>
@@ -99,4 +95,10 @@ const Card = styled.div`
 
 const RightArrowImage = styled.img`
     margin: 0px 0px 0px 20px;
+    width: 7px;
+`
+
+
+const NewOrderCardHeader = styled.div`
+    margin: 5px 0px 10px;
 `

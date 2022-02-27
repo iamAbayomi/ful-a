@@ -137,7 +137,7 @@ input:focus, textarea:focus, select:focus{
 .card{
     background-color: white;
     border-radius: 10px;
-    padding: 5px 20px 5px 20px;
+    padding: 10px 20px 15px 20px;
     margin: 20px 0px;
 }
 
@@ -187,7 +187,7 @@ input:focus, textarea:focus, select:focus{
 .red-flag-logo {
     max-width: 20px;
     height: 35px;
-    margin: 0px 0px 0px;
+    margin: 5px 0px 0px;
 }
 
 
@@ -215,7 +215,7 @@ input:focus, textarea:focus, select:focus{
     text-align: center;
     /* grey bold */
     color: #596273;
-    margin: 0px;
+    margin: 5px 0px 5px;
 }
 
 .neworderno{

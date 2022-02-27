@@ -6,7 +6,7 @@ interface props{
 
 const Small: React.FC<props> = (props) => (
     <div>
-        <Text className="page-subtitle">
+        <Text className="">
             {props.text}
         </Text>
     </div>
@@ -21,8 +21,9 @@ const Text = styled.p`
     font-style: normal;
     font-weight: 700;
     line-height: 34px;
+    margin: 22px 0px 0px;
+    padding: 20px 0px 0px;
     letter-spacing: 0.02em;
     text-align: left;
-    padding: 20px 0px 0px;
     color: #092443;
 `
