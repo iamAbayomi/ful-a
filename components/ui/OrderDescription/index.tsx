@@ -25,18 +25,18 @@ const OrderDescription = () => {
                 <table className="table-div" style={{width: '100%'}}>
                         <tr>
                             <td><p className="medium-text">Baneless beef</p></td>
-                            <td><p className="table-text">2 pieces</p></td>
-                            <td><p className="table-text">2kg</p></td>
+                            <td><p className="table-light-text">2 pieces</p></td>
+                            <td><p className="table-light-text">2kg</p></td>
                         </tr>
                         <tr>
                             <td><p className="medium-text">Ponmo</p></td>
-                            <td><p className="table-text">2 pieces</p></td> 
-                            <td><p className="table-text">1kg</p></td>
+                            <td><p className="table-light-text">2 pieces</p></td> 
+                            <td><p className="table-light-text">1kg</p></td>
                         </tr>
                         <tr>
                             <td><p className="medium-text">Beefy Meaty</p></td>
-                            <td><p className="table-text">2 pieces</p></td>
-                            <td><p className="table-text">2kg</p></td>
+                            <td><p className="table-light-text">2 pieces</p></td>
+                            <td><p className="table-light-text">2kg</p></td>
                         </tr>
                 </table>
             </div>

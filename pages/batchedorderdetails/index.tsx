@@ -100,6 +100,7 @@ export default BatchedOrderDetails
 
 const Container = styled.p`
     margin-top: 20px;
+    padding: 0px 20px; 
 `
 
 const BatchOrderDiv = styled.div`
