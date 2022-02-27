@@ -18,7 +18,7 @@ import {store} from '../redux/store'
 export default function MyApp({ Component, pageProps }) {
   return (
       <ChakraProvider resetCSS={true}>
-      {/* // <ChakraProvider resetCSS={false}> */}
+      {/* <ChakraProvider resetCSS={false}> */}
         <Provider store={store}  >
           <MulishFonts />
           <Component {...pageProps} />
