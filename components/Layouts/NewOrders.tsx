@@ -27,7 +27,8 @@ import CheckboxSelectedComponent from '../ui/CheckboxSelectedComponent'
 
 type Props = {
   children?: ReactNode
-  title?: string
+  title?: string,
+  onClickMethod?: () => void
 }
 
 const NewOrdersLayout = ({ children, title = 'This is the default title' }: Props) => {
@@ -35,7 +36,7 @@ const NewOrdersLayout = ({ children, title = 'This is the default title' }: Prop
     const dispatch = useAppDispatch()
     
     function selectOrders (item: any){
-        dispatch(toggleNewOrdersCheckbox(true))
+        dispatch(toggleNewOrdersCheckbox())
     }
 
     return(
@@ -65,12 +66,6 @@ const NewOrdersLayout = ({ children, title = 'This is the default title' }: Prop
                 <CheckboxSelectedComponent />
             </Header>
             {/* <NotificationText className="highlight-text">22 New Orders </NotificationText> */}
-            {/* <HeaderSection className='display-flex'>
-                <RedButton className='dashboard-red-button'>Add to new batch</RedButton>
-                <NotificationOrderText className="highlight-text">3 orders selected </NotificationOrderText>
-                <img src={closeButton.src}  />
-            </HeaderSection> */}
-
             <div className='dashboard-contents'>
                 {children}
             </div>

@@ -1,12 +1,19 @@
 import { createEntityAdapter, createSlice } from "@reduxjs/toolkit";
 
+interface newOrderState {
+    useRef : any
+}
 
-const newOrderAdapter = createEntityAdapter()
+const newOrderAdapter = createEntityAdapter<newOrderState>({
+    
+})
 
 const initialState = newOrderAdapter.getInitialState({
     showNewOrdersCheckbox: false,
     noOfOrdersSelected: 0,
-    clearAllOrderSelected: true
+    clearAllOrderSelected: false,
+    useRef: "",
+    singleCheckboxState: false
 })
 
 
@@ -14,7 +21,7 @@ const newOrderSlice = createSlice({
     name: 'New Order',
     initialState,
     reducers: {
-        toggleNewOrdersCheckbox(state, action){
+        toggleNewOrdersCheckbox(state){
             state.showNewOrdersCheckbox = !state.showNewOrdersCheckbox
         },
         increaseNoOfOrder(state, action){
@@ -28,6 +35,12 @@ const newOrderSlice = createSlice({
         },
         clearAllOrderSelected(state){
             state.clearAllOrderSelected = !state.clearAllOrderSelected
+        },
+        passRef(state, action){
+            state.useRef = action.payload
+        },
+        changeSingleCheckboxState(state){
+            state.singleCheckboxState = !state.singleCheckboxState
         }
     }
 })
@@ -37,7 +50,8 @@ export const {
     increaseNoOfOrder,
     reduceNoOfOrder,
     resetNoOfOrder,
-    clearAllOrderSelected
+    clearAllOrderSelected,
+    changeSingleCheckboxState
 } = newOrderSlice.actions
 
 export const getNewOrderCheckbox = (state : any) => {
@@ -48,8 +62,16 @@ export const getNoOfOrdersSelected = (state: any) => {
     return state.newOrders.noOfOrdersSelected
 }
 
-export const getOrderSelectedState = (state: any) => {
+export const getAllOrderSelectedState = (state: any) => {
     return state.newOrders.clearAllOrderSelected
+}
+
+export const getRef = (state: any) =>{
+    return state.newOrders.useRef
+}
+
+export const getSingleCheckboxState = (state: any) => {
+    return state.newOrders.singleCheckboxState
 }
 
 export default newOrderSlice.reducer
