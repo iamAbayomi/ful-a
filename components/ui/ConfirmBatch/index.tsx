@@ -4,7 +4,7 @@ import checkedBag from "../../../assets/images/checked-bag.svg"
 import closeButton from "../../../assets/images/close-button.svg"
 
 type props ={
-    method: any
+    method?: any
 }
 
 const ConfirmBatch =({method}: props) => {
