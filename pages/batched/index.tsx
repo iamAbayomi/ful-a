@@ -12,6 +12,7 @@ import bicycle from "../../assets/images/bicycle.svg"
 import bag from "../../assets/images/bag.svg"
 import { useRouter } from "next/router"
 import Notifications from "../../components/ui/Notifications"
+import Dashboard from "../../components/icons/Dashboard"
 
 
 const Batched = () => {
@@ -23,11 +24,10 @@ const Batched = () => {
 
     return(
         <Layout title="Batched Orders">
-            
             <div className="header-section">
                 <button className="dashboard-red-button" onClick={createNewBatch}>
                     <img className="add-icon" src={addIcon.src} />
-                    <p>Create New Batch</p>
+                    <DashboardButtonText>Create New Batch</DashboardButtonText>
                 </button>
                 <Notifications/>
                 <NotificationText className="highlight-text">2 batched orders </NotificationText>
@@ -48,4 +48,9 @@ const Header = styled.div`
 
 const NotificationText = styled.p`
     padding: 10px 0px 0px;
+`
+
+
+const DashboardButtonText = styled.p`
+    margin: 10px 0px 10px;
 `
