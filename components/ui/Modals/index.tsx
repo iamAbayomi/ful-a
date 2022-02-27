@@ -1,6 +1,6 @@
 import { Modal, ModalBody, ModalContent, ModalOverlay, useDisclosure } from "@chakra-ui/react"
 import React, { useState } from "react"
-import './Modal.css'
+
 type props= {
     children: any
 }

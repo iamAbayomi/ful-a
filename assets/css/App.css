@@ -287,6 +287,7 @@ input:focus, textarea:focus, select:focus{
     /* identical to box height */
     /* grey bold */
     color: #596273;
+    margin: 16px 0px;
 }
 
 

@@ -5,13 +5,20 @@ import menuOptions from '../../assets/images/options-menu.svg'
 import styled from 'styled-components'
 import { useRouter } from 'next/router'
 import KebabMenuDropdownVert from '../../components/ui/KebabMenuDropdownVert'
+import { useRef } from 'react'
+import Modals from '../../components/ui/Modals'
+import VerifyPackage from '../../components/ui/VerifyPackage'
+import { Modal, ModalOverlay, ModalContent, ModalBody, useDisclosure } from '@chakra-ui/react'
 
 const BatchedOrderDetails = () => {
-
     const router = useRouter()
+    const modalRef = useRef(null)
+    const {isOpen, onOpen, onClose } = useDisclosure()
 
     function verifypackage() {
-        router.push('/verifypackage')
+        // router.push('/verifypackage')
+        modalRef.current.classList.toggle('hide')
+        
     }
 
 
@@ -95,8 +102,18 @@ const BatchedOrderDetails = () => {
                 </table>
             </div>
             <div className='center-div'>
-                <button onClick={verifypackage} className='red-button'>Order Package</button>
+                <button onClick={onOpen} className='red-button'>Order Package</button>
             </div>
+            {/* <div ref={modalRef} className='hide'> */}
+                <Modal blockScrollOnMount={true} isOpen={isOpen} onClose={onClose}>
+                    <ModalOverlay />
+                    <ModalContent>
+                        <ModalBody>
+                            <VerifyPackage/>
+                        </ModalBody>
+                    </ModalContent>
+                </Modal>
+            {/* </div> */}
         </Container>
     )
 }
