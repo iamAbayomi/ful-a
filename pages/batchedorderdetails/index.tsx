@@ -13,9 +13,14 @@ const BatchedOrderDetails = () => {
         router.push('/verifypackage')
     }
 
+
+    function moveBack(){
+        router.push('/batched')
+    }
+
     return(
         <Container className='main'>
-            <img src={navArrow.src} />
+            <BackArrow onClick={moveBack} src={navArrow.src} />
             <div className='batched-order-container'>
                 <BatchOrderSection className='display-flex'>
                     <img src={redBag.src}/>
@@ -100,7 +105,7 @@ export default BatchedOrderDetails
 
 const Container = styled.p`
     margin-top: 20px;
-    padding: 0px 20px; 
+    padding: 0px 25px; 
 `
 
 const BatchOrderDiv = styled.div`
@@ -130,4 +135,9 @@ const PageTitle = styled.p`
 
 const OrderHeading = styled.p`
     margin-right: 20px;
+`
+
+const BackArrow = styled.img`
+    margin: 0px -10px;
+    width: 20px;
 `
