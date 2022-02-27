@@ -9,8 +9,10 @@
 .backdropdown-line{
     max-width: 67px;
     margin: 0px auto;
-    /* grey bold */
-    border: 2px solid #596273;
+    max-width: 67px;
+    margin: 0px auto;
+    border: none;
+    border-bottom: 4px solid #596273;
 }
 
 .backdropdown-text{

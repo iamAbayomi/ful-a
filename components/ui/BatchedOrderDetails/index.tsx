@@ -3,11 +3,18 @@ import Bag from '../../icons/Bag'
 //import  from '../../icons/Bag'
 import menuOptions from '../../../assets/images/options-menu.svg'
 import styled from 'styled-components'
+import { useRouter } from 'next/router'
 
 const BatchedOrderDetails = () => {
+    const router = useRouter()
+
+    function moveBack(){
+        router.push('/batched')
+    }
+
     return(
         <div className='main'>
-            <img src={navArrow.src} />
+            <img onClick={moveBack} src={navArrow.src} />
             <div className='batched-order-container'>
                 <BatchOrderSection className='display-flex'>
                     <Bag />
