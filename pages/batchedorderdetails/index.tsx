@@ -31,56 +31,62 @@ const BatchedOrderDetails = () => {
                     <p className='body-normal-text'>DETIALS</p>
                     <img src={menuOptions.src}/>
                 </div>
-                <div className='display-flex-withoutspace'>
-                    <SmallText className='small-text'>Name</SmallText>
-                    <p className='medium-text'>Ajayi Bunmi</p>
-                </div>
-                <div className='display-flex-withoutspace'>
-                    <SmallText className='small-text'>Address</SmallText>
-                    <p className='medium-text'>No 26, Alaakia Road Bodija</p>
-                </div>
-                <div className='display-flex-withoutspace'>
-                    <SmallText className='small-text'>Order Items</SmallText>
-                    <div className='order-items'>
-                        <div>
-                            <p className='medium-text'>Boneless beef</p>
-                            <div className='display-flex'>
-                                <p className='small-text'> 2pieces </p>
-                                <p className='small-text'> 2kg</p>
+                <table style={ { width: '100%' }}>
+                    <tr>
+                        <td className='small-text'>Name</td>
+                        <td className='table-text' >Ajayi Bunmi</td>
+                    </tr>
+                    <tr>
+                        <td className='small-text' >Address</td>
+                        <td className='table-text' >No 26, Alaakia Road Bodija</td>
+                    </tr>
+                    <tr>
+                        <td className='small-text' >Order Items</td>
+                        <td>
+                        <p className='table-text'>Boneless Beef</p>
+                            <div className='display-flex-withoutspace'>
+                                <p className='small-text' style={{ margin: '0px 0px 5px 0px' }}> 2pieces </p>
+                                <p className='small-text' style={{ margin: '0px 0px 5px 10px' }}> 1kg</p>
                             </div>
-                        </div>
-                        <div>
-                            <p className='medium-text'>Ponmo</p>
-                            <div className='display-flex'>
-                                <p className='small-text'> 2pieces </p>
-                                <p className='small-text'> 1kg</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td >
+                            <p className='table-text'>Ponmo</p>
+                            <div className='display-flex-withoutspace'>
+                                <p className='small-text' style={{ margin: '0px 0px 5px 0px' }}> 2pieces </p>
+                                <p className='small-text' style={{ margin: '0px 0px 5px 10px' }}> 1kg</p>
                             </div>
-                        </div>
-                        <div>
-                            <p className='medium-text'>Beefy Meaty</p>
-                            <div className='display-flex'>
-                                <p className='small-text'> 2pieces </p>
-                                <p className='small-text'> 2kg</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td >
+                            <p className='table-text'>Beefy Meaty</p>
+                            <div className='display-flex-withoutspace'>
+                                <p className='small-text' style={{ margin: '0px 0px 5px 0px' }}> 2pieces </p>
+                                <p className='small-text' style={{ margin: '0px 0px 5px 10px' }}> 1kg</p>
                             </div>
-                        </div>
-                    </div>
-                </div>
-                <div className='display-flex-withoutspace'>
-                    <SmallText className='small-text'>Total Price</SmallText>
-                    <p className='medium-text'>#10,000</p>
-                </div>
-                <div className='display-flex-withoutspace'>
-                    <SmallText className='small-text'>Payment Status</SmallText>
-                    <p className='medium-text'>Paid</p>
-                </div>
-                <div className='display-flex-withoutspace'>
-                    <SmallText className='small-text' >Payment Mode</SmallText>
-                    <p className='medium-text'>Cash</p>
-                </div>
-                <div className='display-flex-withoutspace'>
-                    <SmallText className='small-text'>Rider</SmallText>
-                    <p className='body-text'>Adams Muhammed</p>
-                </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td className='small-text' >Total Price</td>
+                        <td className='table-text'  >#10,000</td>
+                    </tr>
+                    <tr>
+                        <td className='small-text' >Payment Status</td>
+                        <td className='table-text' >Paid</td>
+                    </tr>
+                    <tr>
+                        <td className='small-text' >Payment Mode</td>
+                        <td className='table-text' >Cash</td>
+                    </tr>
+                    <tr>
+                        <td className='small-text' >Rider</td>
+                        <td className='body-text' >Adams Muhammed</td>
+                    </tr>
+                </table>
             </div>
             <div className='center-div'>
                 <button onClick={verifypackage} className='red-button'>Order Package</button>

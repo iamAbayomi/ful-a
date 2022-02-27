@@ -1,0 +1,30 @@
+
+.table-div {
+    /* height: 40px; */
+}
+
+.medium-text{
+    /* margin: 20px; */
+}
+
+table tr{
+    height: 40px;
+}
+
+table, th, tr, td{
+    /* border: 1px solid black; */
+}
+
+.table-text{
+    font-family: Mulish;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 15px;
+    line-height: 19px;
+    /* identical to box height */
+    text-align: left;
+    /* Header txt color */
+    color: #092443;
+    /* margin: 0px; */
+}
+

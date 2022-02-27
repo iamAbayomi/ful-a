@@ -13,7 +13,7 @@ const index = () => {
             {/* <BatchedOrderDetails /> */}
             {/* <BackDrop /> */}
             {/* <Modal /> */}
-            {/* <OrderDescription /> */}
+            <OrderDescription />
             {/* <ConfirmBatch /> */}
             
         </div>

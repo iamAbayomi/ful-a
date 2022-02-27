@@ -4,26 +4,40 @@ import closeButton from  "../../../assets/images/close-button.svg"
 const OrderItemsComponent = () => {
     return (
         <Container>
-            <div className="order-items-header display-flex"> 
-                <p className="caption-text">ORDER ITEMS</p>
-                <p className="caption-text">TOTAL WEIGHT</p>
-                <p className="caption-text">QUANTITY</p>
-            </div>
-            <div className="order-items-row display-flex">
-                <div className="order-items-name">
-                    <OrderItemsName>Boneless Beef</OrderItemsName>
-                    <Subtitle className="subtitle">1kg/unit</Subtitle>
-                </div>
-                <TotalWeight>2kg</TotalWeight>
-                <OrderItemQuantity className="order-items-quantity">
-                    {/* <img src={""}/> */}
-                    <QuantityButton>-</QuantityButton>
-                    <Quantity>2</Quantity>
-                    <QuantityButton>+</QuantityButton>
-                    {/* <img src={""}/> */}
-                </OrderItemQuantity>
-                <img src={closeButton.src}/>
-            </div>
+            {/* <div className="order-items-header display-flex"> 
+                
+            </div> */}
+            <table style={{width: '100%'}} >
+                <tr>
+                    <th><p className="caption-text">ORDER ITEMS</p></th>
+                    <th><p className="caption-text">TOTAL WEIGHT</p></th>
+                    <th><p className="caption-text">QUANTITY</p></th>
+                    <th></th>
+                </tr>
+                <tr>
+                    <td>
+                        <OrderItemsName>Boneless Beef</OrderItemsName>
+                        <Subtitle className="subtitle">1kg/unit</Subtitle>
+                    </td>
+                    <td>
+                    <TotalWeight>2kg</TotalWeight>
+                    </td>
+                    <td>
+                        <OrderItemQuantity className="order-items-quantity">
+                            {/* <img src={""}/> */}
+                            <QuantityButton>-</QuantityButton>
+                            <Quantity>2</Quantity>
+                            <QuantityButton>+</QuantityButton>
+                            {/* <img src={""}/> */}
+                        </OrderItemQuantity>
+                    </td>
+                    <td>
+                        <img src={closeButton.src}/>
+                    </td>
+                </tr>
+                
+                
+            </table>
         </Container>
     )
 }

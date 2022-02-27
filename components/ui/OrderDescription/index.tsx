@@ -22,21 +22,23 @@ const OrderDescription = () => {
                     <p className="small-text">ORDER ITEMS</p>
                     <p className="green-text"> Package Verified</p>
                 </div>
-                <div className="display-flex">
-                    <p className="medium-text">Baneless beef</p>
-                    <p className="table-text">2 pieces</p>
-                    <p className="table-text">2kg</p>
-                </div>
-                <div className="display-flex">
-                    <p className="medium-text">Ponmo</p>
-                    <p className="table-text">2 pieces</p>
-                    <p className="table-text">1kg</p>
-                </div>
-                <div className="display-flex">
-                    <p className="medium-text">Beefy Meaty</p>
-                    <p className="table-text">2 pieces</p>
-                    <p className="table-text">2kg</p>
-                </div>
+                <table className="table-div" style={{width: '100%'}}>
+                        <tr>
+                            <td><p className="medium-text">Baneless beef</p></td>
+                            <td><p className="table-text">2 pieces</p></td>
+                            <td><p className="table-text">2kg</p></td>
+                        </tr>
+                        <tr>
+                            <td><p className="medium-text">Ponmo</p></td>
+                            <td><p className="table-text">2 pieces</p></td> 
+                            <td><p className="table-text">1kg</p></td>
+                        </tr>
+                        <tr>
+                            <td><p className="medium-text">Beefy Meaty</p></td>
+                            <td><p className="table-text">2 pieces</p></td>
+                            <td><p className="table-text">2kg</p></td>
+                        </tr>
+                </table>
             </div>
             <NextOrderContainer className="">
                 <p className="info-link">Print Package list</p>
