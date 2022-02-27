@@ -85,6 +85,7 @@ line{
     font-family: 'Mulish';
     color: white;
     padding: 0px 20px 0px 20px;
+    margin: 10px 0px 0px;
     font-family: Mulish;
     font-style: normal;
     font-weight: 600;
@@ -151,6 +152,7 @@ line{
     padding: 5px 10px 5px 10px;
     background: rgba(255, 213, 211, 0.37);
     border-radius: 30px;
+    box-sizing: content-box;
 }
 
 .badge-text{
@@ -187,6 +189,7 @@ line{
     padding: 10px 10px 10px 10px;
     background: rgba(183, 241, 182, 0.53);
     border-radius: 5px;
+    box-sizing: content-box;
 }
 
 .notifications-text{
