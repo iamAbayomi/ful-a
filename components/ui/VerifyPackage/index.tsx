@@ -31,5 +31,5 @@ export default index
 const Container = styled.div`
     background-color: white ;
     // border: 1px solid rgb(0 0 0 / 12%);
-    height: 90vh;
+    height: auto;
 `
