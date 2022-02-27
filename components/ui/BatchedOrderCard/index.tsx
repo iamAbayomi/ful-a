@@ -15,13 +15,13 @@ const BatchedOrderCard = () => {
     }
     return (
         <div className="card-elevated">
-            <div className="display-flex">
+            <BatchedOrderHeader className="display-flex">
                 <div className='batched-order-no-container'>
                     <p className='batched-order-heading'>Batch 2</p>
                     <p className='batched-order-no'>#C267</p>
                 </div>
                 <img src={optionsMenu.src} />
-            </div>
+            </BatchedOrderHeader>
             <div className="order-section display-flex-withoutspace">
                 <img src={bag.src} />
                 <p className="orders-notification">3 orders</p>
@@ -52,9 +52,15 @@ const NewOrderNo = styled.p`
 
 
 const OrderRowContainer = styled.div`
-    margin: 0px 0px 0px;
+    margin: 0px -20px 0px;
+    background: #F9F9F9;
+    padding: 0px 20px;
 `
 
 const RidersNameContainer = styled.div`
     padding: 0px 0px 20px;
+`
+
+const BatchedOrderHeader = styled.div`
+    margin: 20px 0px;
 `
