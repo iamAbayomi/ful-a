@@ -4,6 +4,7 @@ import redBag from '../../assets/images/red-bag.svg'
 import menuOptions from '../../assets/images/options-menu.svg'
 import styled from 'styled-components'
 import { useRouter } from 'next/router'
+import KebabMenuDropdownVert from '../../components/ui/KebabMenuDropdownVert'
 
 const BatchedOrderDetails = () => {
 
@@ -34,7 +35,7 @@ const BatchedOrderDetails = () => {
                 </BatchOrderSection>
                 <div className='details display-flex'>
                     <p className='body-normal-text'>DETIALS</p>
-                    <img src={menuOptions.src}/>
+                    <KebabMenuDropdownVert menuItems={['Remove from batch', 'Cancel Order', 'Postpone order']} menuItemMethod={()=> {}} />
                 </div>
                 <table style={ { width: '100%' }}>
                     <tr>

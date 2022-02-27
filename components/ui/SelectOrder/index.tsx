@@ -1,5 +1,5 @@
 import CheckboxSelectedComponent from "../CheckboxSelectedComponent"
-import Modal from "../Modal"
+import Modal from "../Modals"
 import NewOrderCard from "../NewOrderCard"
 
 const selectOrder = () => {
