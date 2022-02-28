@@ -1,7 +1,13 @@
 import redFlag from "../../assets/images/red-flag.svg"
 import DashboardMenuItem from "../../components/ui/DashbordMenuITem"
 import styled from "styled-components"
-import Title from "../../components/ui/Typography/Title"
+import {
+    Slider,
+    SliderTrack,
+    SliderFilledTrack,
+    SliderThumb,
+    SliderMark,
+  } from '@chakra-ui/react'
 
 
 
@@ -21,8 +27,16 @@ const Dashboard = () => {
                 <DashboardMenuItem menuItemImage={""} menuItemTitle={"Account Reconcilliation"} />
                 <DashboardMenuItem menuItemImage={""} menuItemTitle={"Riders"} />
                 <DashboardMenuItem menuItemImage={""} menuItemTitle={"Agent Profile"} />
-
             </div>
+            <SliderContainer>
+                <Slider aria-label='slider-ex-1' size={"lg"} >
+                    <SliderTrack>
+                        <SliderFilledTrack />
+                    </SliderTrack>
+                    <SliderThumb width={"25px"} height={"25px"}  />
+                </Slider>
+            </SliderContainer>
+            
         </Container>
     )
 }
@@ -47,4 +61,9 @@ const PageTitle = styled.p`
     /* identical to box height */
     /* Header txt color */
     color: #092443;
+`
+
+const SliderContainer= styled.p`
+    margin: 40px 0px;
+    max-width: 50px;
 `
