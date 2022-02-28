@@ -4,6 +4,7 @@ import bicycle from  "../../../assets/images/bicycle.svg"
 import downArrow from "../../../assets/images/down-arrow.svg"
 import OrderRow from "../OrderRow"
 import { useRouter } from "next/router"
+import Badge from "../Badge"
 //"/../../assets/images/bicycle.svg"
 
 const SentOutOrdersCard = () => {
@@ -14,9 +15,10 @@ const SentOutOrdersCard = () => {
     return(
         <div className="card-elevated sentoutorder-card">
             <BatchedOrderHeader className="display-flex">
-                <div className='batched-order-no-container'>
+                <div className='display-flex batched-order-no-container'>
                     <p className='batched-order-heading'>Batch 2</p>
                     <p className='batched-order-no'>#C267</p>
+                    <Badge badgeColor="#B7F1B687" badgeText={"Sent Out"} />
                 </div>
             </BatchedOrderHeader>
             <div className="order-section display-flex-withoutspace">
