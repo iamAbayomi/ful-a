@@ -52,7 +52,7 @@ const NewOrderNo = styled.p`
 `
 
 const RidersName = styled.p`
-    margin-left: -10px;
+    margin-left: 10px;
 `
 
 const OrderRowContainer = styled.div`
