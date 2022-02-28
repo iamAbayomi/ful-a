@@ -1,27 +1,23 @@
-
-import optionsMenu from '../../../assets/images/options-menu.svg'
-import downArrow from "../../../assets/images/down-arrow.svg"
-import upArrow from "../../../assets/images/up-arrow.svg"
-import bicycle from "../../../assets/images/bicycle.svg"
 import bag from "../../../assets/images/bag.svg"
-import styled from 'styled-components'
-import OrderRow from '../OrderRow'
-import { useRouter } from 'next/router'
-import KebabMenuDropdownVert from '../KebabMenuDropdownVert'
+import styled from "styled-components"
+import bicycle from  "../../../assets/images/bicycle.svg"
+import downArrow from "../../../assets/images/down-arrow.svg"
+import OrderRow from "../OrderRow"
+import { useRouter } from "next/router"
+//"/../../assets/images/bicycle.svg"
 
-const BatchedOrderCard = () => {
+const SentOutOrdersCard = () => {
     const router = useRouter()
     function moveToBatchedDetails(){
         router.push("/batchedorderdetails")
     }
-    return (
-        <div className="card-elevated">
+    return(
+        <div className="card-elevated sentoutorder-card">
             <BatchedOrderHeader className="display-flex">
                 <div className='batched-order-no-container'>
                     <p className='batched-order-heading'>Batch 2</p>
                     <p className='batched-order-no'>#C267</p>
                 </div>
-                <KebabMenuDropdownVert menuItems={['Edit Batch', 'Confirm Sent Out']} menuItemMethod={() => {}} />
             </BatchedOrderHeader>
             <div className="order-section display-flex-withoutspace">
                 <img src={bag.src} />
@@ -43,17 +39,14 @@ const BatchedOrderCard = () => {
     )
 }
 
+export default SentOutOrdersCard
 
-export default BatchedOrderCard
 
 
 const NewOrderNo = styled.p`
     margin: 10px 0px 20px;
 `
 
-const RidersName = styled.p`
-    margin-left: -10px;
-`
 
 const OrderRowContainer = styled.div`
     margin: 0px -20px 0px;
@@ -67,4 +60,8 @@ const RidersNameContainer = styled.div`
 
 const BatchedOrderHeader = styled.div`
     margin: 20px 0px;
+`
+
+const RidersName = styled.p`
+    // margin-left: -10px;
 `
