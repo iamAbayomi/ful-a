@@ -5,7 +5,10 @@ import downArrow from "../../../assets/images/down-arrow.svg"
 import OrderRow from "../OrderRow"
 import { useRouter } from "next/router"
 import Badge from "../Badge"
+
 //"/../../assets/images/bicycle.svg"
+
+
 
 const SentOutOrdersCard = () => {
     const router = useRouter()
