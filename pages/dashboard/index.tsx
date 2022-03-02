@@ -19,14 +19,14 @@ const Dashboard = () => {
                 <PageTitle>Dashboard</PageTitle>
             </Header>
             <div className="">
-                <DashboardMenuItem menuItemImage={redFlag.src} menuItemTitle={"Red Flags"} />
+                <DashboardMenuItem menuItemImage={redFlag.src} menuItemTitle={"Red Flags"} menuUrl={"/redflags"} />
                 <DashboardMenuItem menuItemImage={""} menuItemTitle={"Products"} />
                 <DashboardMenuItem menuItemImage={""} menuItemTitle={"New Arrivals"} />
                 <DashboardMenuItem menuItemImage={""} menuItemTitle={"Request Products"} />
                 <DashboardMenuItem menuItemImage={""} menuItemTitle={"Money Flow"}/>
                 <DashboardMenuItem menuItemImage={""} menuItemTitle={"Account Reconcilliation"} />
-                <DashboardMenuItem menuItemImage={""} menuItemTitle={"Riders"} />
-                <DashboardMenuItem menuItemImage={""} menuItemTitle={"Agent Profile"} />
+                <DashboardMenuItem menuItemImage={""} menuItemTitle={"Riders"} menuUrl="/riders" />
+                <DashboardMenuItem menuItemImage={""} menuItemTitle={"Agent Profile"} menuUrl="/agentprofile" />
             </div>
             <SliderContainer>
                 <Slider aria-label='slider-ex-1' size={"lg"} >
