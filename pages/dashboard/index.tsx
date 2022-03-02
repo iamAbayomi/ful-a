@@ -3,6 +3,7 @@ import document from "../../assets/images/document.svg"
 import profile from "../../assets/images/profile.svg"
 import wallet from "../../assets/images/wallet.svg"
 import riders from "../../assets/images/bicycle.svg"
+import closeButton from "../../assets/images/close-button.svg"
 import DashboardMenuItem from "../../components/ui/DashbordMenuITem"
 import styled from "styled-components"
 import {
@@ -13,15 +14,23 @@ import {
     SliderMark,
   } from '@chakra-ui/react'
 import Bicycle from "../../components/icons/Bicycle"
+import { useRouter } from "next/router"
+
+
 
 
 
 
 const Dashboard = () => {
+    const router = useRouter()
+    function goBack(){
+        router.back()
+    }
     return (
         <Container>
             <Header>
                 <PageTitle>Dashboard</PageTitle>
+                <img src={closeButton.src} onClick={goBack} />
             </Header>
             <div className="">
                 <DashboardMenuItem menuItemImage={redFlag.src} menuItemTitle={"Red Flags"} menuUrl={"/redflags"} />
@@ -57,6 +66,8 @@ const Container = styled.div`
 
 const Header = styled.div`
     margin: 30px 0px 20px;
+    display: flex;
+    justify-content: space-between;
 `
 
 const PageTitle = styled.p`
