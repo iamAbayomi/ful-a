@@ -23,7 +23,7 @@ const BatchedOrderDetails = () => {
 
 
     function moveBack(){
-        router.push('/batched')
+        router.back()
     }
 
     return(
