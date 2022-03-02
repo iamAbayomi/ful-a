@@ -1,4 +1,8 @@
-import redFlag from "../../assets/images/red-flag.svg"
+import redFlag from "../../assets/images/redflag.svg"
+import document from "../../assets/images/document.svg"
+import profile from "../../assets/images/profile.svg"
+import wallet from "../../assets/images/wallet.svg"
+import riders from "../../assets/images/bicycle.svg"
 import DashboardMenuItem from "../../components/ui/DashbordMenuITem"
 import styled from "styled-components"
 import {
@@ -8,6 +12,7 @@ import {
     SliderThumb,
     SliderMark,
   } from '@chakra-ui/react'
+import Bicycle from "../../components/icons/Bicycle"
 
 
 
@@ -20,13 +25,13 @@ const Dashboard = () => {
             </Header>
             <div className="">
                 <DashboardMenuItem menuItemImage={redFlag.src} menuItemTitle={"Red Flags"} menuUrl={"/redflags"} />
-                <DashboardMenuItem menuItemImage={""} menuItemTitle={"Products"} />
-                <DashboardMenuItem menuItemImage={""} menuItemTitle={"New Arrivals"} />
-                <DashboardMenuItem menuItemImage={""} menuItemTitle={"Request Products"} />
-                <DashboardMenuItem menuItemImage={""} menuItemTitle={"Money Flow"}/>
-                <DashboardMenuItem menuItemImage={""} menuItemTitle={"Account Reconcilliation"} />
-                <DashboardMenuItem menuItemImage={""} menuItemTitle={"Riders"} menuUrl="/riders" />
-                <DashboardMenuItem menuItemImage={""} menuItemTitle={"Agent Profile"} menuUrl="/agentprofile" />
+                <DashboardMenuItem menuItemImage={document.src} menuItemTitle={"Products"} />
+                <DashboardMenuItem menuItemImage={document.src} menuItemTitle={"New Arrivals"} />
+                <DashboardMenuItem menuItemImage={profile.src} menuItemTitle={"Request Products"} />
+                <DashboardMenuItem menuItemImage={wallet.src} menuItemTitle={"Money Flow"}/>
+                <DashboardMenuItem menuItemImage={document.src} menuItemTitle={"Account Reconcilliation"} />
+                <DashboardMenuItem menuItemImage={riders.src} menuItemTitle={"Riders"} menuUrl="/riders" />
+                <DashboardMenuItem menuItemImage={profile.src} menuItemTitle={"Agent Profile"} menuUrl="/agentprofile" />
             </div>
             <SliderContainer>
                 <Slider aria-label='slider-ex-1' size={"lg"} >
