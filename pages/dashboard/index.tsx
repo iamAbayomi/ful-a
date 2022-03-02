@@ -38,7 +38,7 @@ const Dashboard = () => {
                 <DashboardMenuItem menuItemImage={document.src} menuItemTitle={"New Arrivals"} />
                 <DashboardMenuItem menuItemImage={profile.src} menuItemTitle={"Request Products"} />
                 <DashboardMenuItem menuItemImage={wallet.src} menuItemTitle={"Money Flow"}/>
-                <DashboardMenuItem menuItemImage={document.src} menuItemTitle={"Account Reconcilliation"} />
+                <DashboardMenuItem menuItemImage={document.src} menuItemTitle={"Account Reconcilliation"} menuUrl="accountreconilliation" />
                 <DashboardMenuItem menuItemImage={riders.src} menuItemTitle={"Riders"} menuUrl="/riders" />
                 <DashboardMenuItem menuItemImage={profile.src} menuItemTitle={"Agent Profile"} menuUrl="/agentprofile" />
             </div>
@@ -49,6 +49,7 @@ const Dashboard = () => {
                     </SliderTrack>
                     <SliderThumb width={"25px"} height={"25px"}  />
                 </Slider>
+                <Status>YOU'RE ONLINE</Status>
             </SliderContainer>
             
         </Container>
@@ -79,7 +80,19 @@ const PageTitle = styled.p`
     color: #092443;
 `
 
-const SliderContainer= styled.p`
+const SliderContainer= styled.div`
     margin: 40px 0px;
-    max-width: 50px;
+    max-width: 290px;
+    display: flex;
+    justify-content: space-between;
+`
+
+const Status = styled.p`
+    width: 100%;
+    font-family: Mulish;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 15px;
+    color: #8F92A1;
+    margin: 0px 0px 0px 30px;
 `
