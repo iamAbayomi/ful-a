@@ -1,16 +1,20 @@
 //import pro
 
+import Link from "next/link"
 import styled from "styled-components"
 
 type props = {
     menuItemImage: any,
-    menuItemTitle: any
+    menuItemTitle: any,
+    menuUrl?: string
 }
-const DashboardMenuItem = ({menuItemImage, menuItemTitle} : props ) => {
+const DashboardMenuItem = ({menuItemImage, menuItemTitle, menuUrl ="/dashboard"} : props ) => {
     return(
         <Container className="dashboard-menu-item display-flex">
             <img src={menuItemImage} />
-            <MenuItemTitle>{menuItemTitle}</MenuItemTitle>
+            <Link href={menuUrl}>
+                <MenuItemTitle>{menuItemTitle}</MenuItemTitle>
+            </Link>
         </Container>
     )
 }
