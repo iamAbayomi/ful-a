@@ -1,25 +1,31 @@
 import styled from "styled-components"
 import Layout from "../../components/Layouts/DashboardLayout"
 import RedFlagCard from "../../components/ui/RedFlagOrder"
+import filter from "../../assets/images/filter.svg"
 import Title from "../../components/ui/Typography/Title"
+
+const HeaderElements = () => {
+    return (
+        <div>
+            <Header>
+                <p>FOR TODAY</p>
+                <p className="neworderno">3 red flags</p>
+            </Header>
+            <RedFlagMenu>
+                <img src={filter.src} />
+                <p className="menu-heading">All</p>
+                <p className="menu-heading">Delayed</p>
+                <p className="menu-heading">Postponed</p>
+                <p className="menu-heading">Cancelled</p>
+            </RedFlagMenu>
+        </div>
+    )
+}
 
 const RedFlag =() => {
     return(
-        <Layout>
+        <Layout title="Red Flags" headElements={<HeaderElements />}>
             <div>
-                <Header>
-                    <Title text={"Red Flags"} />
-                    <p>FOR TODAY</p>
-                    <p>3 red flags</p>
-                    <img src="" />
-                </Header>
-                <RedFlagMenu>
-                    <img src="" />
-                    <p>All</p>
-                    <p>Delayed</p>
-                    <p>Postponed</p>
-                    <p>Cancelled</p>
-                </RedFlagMenu>
                 <div>
                     
                     {
@@ -42,5 +48,7 @@ const Header = styled.div`
 `
 
 const RedFlagMenu = styled.div`
-
+    display: flex;
+    justify-content: space-between;
+    margin: 35px 0px;
 `
