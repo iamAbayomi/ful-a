@@ -1,4 +1,4 @@
-import { Input, InputGroup, InputLeftElement } from "@chakra-ui/react"
+import { Input, InputGroup, InputLeftElement, InputRightElement } from "@chakra-ui/react"
 import { Stack } from "@chakra-ui/layout"
 import SearchIcon from "../../icons/Search"
 
@@ -15,7 +15,11 @@ const Search = () => {
                         borderColor={"#8f92a152"}
                         focusBorderColor="gray.300" 
                         placeholder="Search Order"  
-                    />#8F92A1
+                    />
+                    <InputRightElement
+                        pointerEvents={"none"}
+                        children={<></>}
+                    />
                 </InputGroup>
         </Stack>
     )
