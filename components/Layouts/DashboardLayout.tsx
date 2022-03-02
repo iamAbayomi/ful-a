@@ -22,23 +22,26 @@ import BottomNavBar from '../ui/BottomNavBar'
 type Props = {
   head?: any,
   headElements?: ReactNode,
+  headIcon?: ReactNode,
   children?: ReactNode
   title?: string
 }
 
-const DashbordLayout = ({ headElements, children, title, head }: Props) => (
+const DashbordLayout = ({ headElements, headIcon , children, title, head }: Props) => (
   <div className='main dashboard'>
     <Header>
         <HeaderTitleContainer>
             <Title text={title} />
-            <div className='display-flex header-icon'>
+            {/* <div className='display-flex header-icon'>
                 <div className='display-flex icon-container'>
                     <img
                         className='red-flag-logo'
                         src={redflag.src}
                     />
+                    
                 </div>
-            </div>
+            </div> */}
+            {headIcon}
         </HeaderTitleContainer>
         <SearchContainer>
             {headElements}
