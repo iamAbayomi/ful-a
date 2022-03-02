@@ -36,9 +36,6 @@ const NewOrdersLayout = ({ children, title = 'This is the default title' }: Prop
     const router = useRouter()
     const dispatch = useAppDispatch()
     
-    function selectOrders (item: any){
-        eventBus.dispatch("closeNewOrders", { message: "close Orders"})
-    }
 
     return(
         <div className='main dashboard'>
@@ -52,17 +49,7 @@ const NewOrdersLayout = ({ children, title = 'This is the default title' }: Prop
             <Header>
                 <div className='display-flex'>
                     <Title text={'New Orders'} />
-                    <div className='display-flex header-icon'>
-                        <div className='display-flex icon-container'>
-                            <img
-                                className='red-flag-logo'
-                                src={redflag.src}
-                            />
-                        </div>
-                        <div className='icon-container' style={ {margin: '0px 20px 0px 0px'}}>
-                            <KebabMenuDropdown menuItems={['Select', 'Auto Batch Order']} menuItemMethod={selectOrders} />
-                        </div>
-                    </div>
+                    
                 </div>
                 <CheckboxSelectedComponent />
             </Header>
