@@ -20,23 +20,29 @@ import BottomNavBar from '../ui/BottomNavBar'
 
 
 type Props = {
-  head?: any
+  head?: any,
+  headElements?: ReactNode,
   children?: ReactNode
   title?: string
 }
 
-const DashbordLayout = ({ children, title, head }: Props) => (
+const DashbordLayout = ({ headElements, children, title, head }: Props) => (
   <div className='main dashboard'>
     <Header>
-        <Title text={title} />
-        <div className='display-flex header-icon'>
-            <div className='display-flex icon-container'>
-                <img
-                    className='red-flag-logo'
-                    src={redflag.src}
-                />
+        <HeaderTitleContainer>
+            <Title text={title} />
+            <div className='display-flex header-icon'>
+                <div className='display-flex icon-container'>
+                    <img
+                        className='red-flag-logo'
+                        src={redflag.src}
+                    />
+                </div>
             </div>
-        </div>
+        </HeaderTitleContainer>
+        <SearchContainer>
+            {headElements}
+        </SearchContainer>
     </Header>
 
     <div className=' dashboard-contents'>
@@ -50,17 +56,23 @@ export default DashbordLayout
 
 
 const Header = styled.div`
-    display: flex;
-    justify-content: space-between;
-    padding: 0px 20px 20px 20px;
     position: fixed;
     top: 0%;
     width: 100%;
+    padding: 0px 20px 20px 20px;
     box-sizing: border-box;
     max-width: 380px;
     background: #f6f5f5;
 `
 
+const HeaderTitleContainer = styled.div`
+    display: flex;
+    justify-content: space-between;
+`
+
 const NotificationText = styled.p`
     padding: 10px 30px 0px;
+`
+const SearchContainer = styled.div`
+    margin: 0px 0px 0px;
 `
