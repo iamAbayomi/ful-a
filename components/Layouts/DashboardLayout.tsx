@@ -21,7 +21,7 @@ import BottomNavBar from '../ui/BottomNavBar'
 
 type Props = {
   head?: any,
-  headElements?: ReactNode,
+  headElements?: any,
   headIcon?: ReactNode,
   children?: ReactNode
   title?: string
@@ -32,22 +32,12 @@ const DashbordLayout = ({ headElements, headIcon , children, title, head }: Prop
     <Header>
         <HeaderTitleContainer>
             <Title text={title} />
-            {/* <div className='display-flex header-icon'>
-                <div className='display-flex icon-container'>
-                    <img
-                        className='red-flag-logo'
-                        src={redflag.src}
-                    />
-                    
-                </div>
-            </div> */}
             {headIcon}
         </HeaderTitleContainer>
         <SearchContainer>
             {headElements}
         </SearchContainer>
     </Header>
-
     <div className=' dashboard-contents'>
         {children}
     </div>
@@ -66,6 +56,7 @@ const Header = styled.div`
     box-sizing: border-box;
     max-width: 380px;
     background: #f6f5f5;
+    z-index: 12;
 `
 
 const HeaderTitleContainer = styled.div`
