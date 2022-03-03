@@ -53,6 +53,9 @@ line{
     stroke: #8F92A1;
 }
 
+.active{
+    color: #F55951!important;
+}
 
 .active svg{
     stroke: #F55951;
@@ -200,3 +203,10 @@ line{
 }
 
 
+.red-flag-menu p{
+    margin: 0px 10px 5px;
+}
+
+.menu-heading.active  {
+    border-bottom: 1px solid #F55951;
+}
