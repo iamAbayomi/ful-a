@@ -1,8 +1,9 @@
+import Layout from "../../components/Layouts/DashboardLayout"
 import Title from "../../components/ui/Typography/Title"
 
 const AgentProfile =() => {
     return (
-        <div className="main dashboard">
+        <Layout title="Agent">
             <div>
                 <Title text={"Agent"} />
                 <p>Oluwabumi Akinjide</p>
@@ -19,7 +20,7 @@ const AgentProfile =() => {
                 </div>
                 <p>Change Password</p>
             </div>
-        </div>
+        </Layout>
     )
 }
 
