@@ -62,6 +62,7 @@ const Header = styled.div`
 const HeaderTitleContainer = styled.div`
     display: flex;
     justify-content: space-between;
+    align-items: center;
 `
 
 const NotificationText = styled.p`
