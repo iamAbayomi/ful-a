@@ -13,10 +13,12 @@ const HeaderElements = () => {
             </Header>
             <RedFlagMenu>
                 <img src={filter.src} />
-                <p className="menu-heading">All</p>
-                <p className="menu-heading">Delayed</p>
-                <p className="menu-heading">Postponed</p>
-                <p className="menu-heading">Cancelled</p>
+                <RedFlagMenuContents className="red-flag-menu">
+                    <p className="menu-heading active">All</p>
+                    <p className="menu-heading">Delayed</p>
+                    <p className="menu-heading">Postponed</p>
+                    <p className="menu-heading">Cancelled</p>
+                </RedFlagMenuContents>
             </RedFlagMenu>
         </div>
     )
@@ -50,4 +52,11 @@ const RedFlagMenu = styled.div`
     display: flex;
     justify-content: space-between;
     margin: 35px 0px;
+`
+
+const RedFlagMenuContents = styled.div`
+    display: flex;
+    justify-content: space-between;
+    border: none;
+    border-bottom: 0.5px solid #8F92A1;
 `
