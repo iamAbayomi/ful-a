@@ -5,7 +5,6 @@ const AgentProfile =() => {
     return (
         <Layout title="Agent">
             <div>
-                <Title text={"Agent"} />
                 <p>Oluwabumi Akinjide</p>
                 <p>#A4650</p>
             </div>
