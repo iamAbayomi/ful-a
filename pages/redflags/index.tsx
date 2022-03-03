@@ -27,7 +27,6 @@ const RedFlag =() => {
         <Layout title="Red Flags" headElements={<HeaderElements />}>
             <div>
                 <div>
-                    
                     {
                         [1,2,3,5,,4,66].map((item) => {
                             return <RedFlagCard />

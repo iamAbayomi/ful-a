@@ -1,10 +1,17 @@
 import styled from "@emotion/styled"
-import DashbordLayout from "../../components/Layouts/DashboardLayout"
+import Layout from "../../components/Layouts/DashboardLayout"
 import rightArrow from "../../assets/images/right-arrow.svg"
+
+const HeadElements =() => {
+    return (
+         <AddNewRiderButton className="dashboard-red-button">Add New Rider</AddNewRiderButton>
+    )
+}
 
 const Riders = () => {
     return(
-        <DashbordLayout title="Riders">
+        <Layout title="Riders" headIcon={<HeadElements />}>
+            
             <div>
                 <p>FOR TODAY</p>
                 <img src="" />
@@ -53,13 +60,17 @@ const Riders = () => {
                     </table>
                 </RidersTable>
             </div>
-        </DashbordLayout>
+        </Layout>
     )
 }
 
 
 export default Riders
 
+const AddNewRiderButton = styled.button`
+    padding: 10px 20px 10px;
+    margin: 50px 0px 20px;
+`
 
 const RidersSection = styled.div`
 
