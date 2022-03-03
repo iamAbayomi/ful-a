@@ -17,7 +17,7 @@ export default Small
 
 const Text = styled.p`
     font-family: Mulish;
-    font-size: 20px;
+    font-size: 27px;
     font-style: normal;
     font-weight: 700;
     line-height: 34px;
