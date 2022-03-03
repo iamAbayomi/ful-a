@@ -15,28 +15,34 @@ import Notifications from "../../components/ui/Notifications"
 import Dashboard from "../../components/icons/Dashboard"
 
 
+type props ={
+    routingMethod: () => void
+}
+
+const HeaderElements = ({routingMethod} : props) => {
+    return(
+        <div className="header-section">
+            <button className="dashboard-red-button" onClick={routingMethod}>
+                <img className="add-icon" src={addIcon.src} />
+                <DashboardButtonText>Create New Batch</DashboardButtonText>
+            </button>
+            {/* <Notifications/> */}
+            <NotificationText className="highlight-text">2 batched orders </NotificationText>
+        </div>
+    )
+}
+
 const Batched = () => {
     const router = useRouter()
-
     function createNewBatch() {
         router.push('/createnewbatch')    
     }
 
     return(
-        <Layout title="Batched Orders">
-            <div className="header-section">
-                <button className="dashboard-red-button" onClick={createNewBatch}>
-                    <img className="add-icon" src={addIcon.src} />
-                    <DashboardButtonText>Create New Batch</DashboardButtonText>
-                </button>
-                <Notifications/>
-                <NotificationText className="highlight-text">2 batched orders </NotificationText>
-            </div>
+        <Layout title="Batched Orders" headElements={<HeaderElements routingMethod={createNewBatch} />}>
             <BatchedOrderCard />
             <BatchedOrderCard/>
         </Layout>
-
-        
     )
 }
 
