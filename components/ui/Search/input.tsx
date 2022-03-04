@@ -3,7 +3,11 @@ import { Stack } from "@chakra-ui/layout"
 import SearchIcon from "../../icons/Search"
 import styled from "@emotion/styled"
 
-const Search = () => {
+type props = {
+    placeholder: string
+}
+
+const Search = ({placeholder} : props) => {
     return(
         <SearchContainer>
             <Stack spacing={4}>
@@ -16,7 +20,7 @@ const Search = () => {
                             borderWidth={'2px'} 
                             borderColor={"#8f92a152"}
                             focusBorderColor="gray.300" 
-                            placeholder="Search Order"  
+                            placeholder={placeholder}  
                         />
                         <InputRightElement
                             pointerEvents={"none"}
