@@ -4,15 +4,13 @@ import RedFlagCard from "../../components/ui/RedFlagOrder"
 import filter from "../../assets/images/filter.svg"
 import downArrow from "../../assets/images/down-arrow.svg"
 import Title from "../../components/ui/Typography/Title"
+import FilterDateComponent from "../../components/ui/FilterDateComponent"
 
 const HeaderElements = () => {
     return (
         <div>
             <Header>
-                <div className="display-flex">
-                    <HeaderNormalText className="body-normal-text">FOR TODAY</HeaderNormalText>
-                    <img src={downArrow.src} />
-                </div>
+                <FilterDateComponent />
                 <p className="neworderno">3 red flags</p>
             </Header>
             <RedFlagMenu>
