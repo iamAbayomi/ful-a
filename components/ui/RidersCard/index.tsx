@@ -9,7 +9,7 @@ type props ={
 
 const RidersCard: React.FC<props> = (props) =>{
     return(
-        <Container className="riders-card">
+        <Container style={ { backgroundColor: props.backgroundColor}} className="riders-card">
             <p>{props.ridersText}</p>
             <RidersNoSection className="display-flex">
                 <p>{props.ridersNo}</p>
