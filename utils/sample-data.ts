@@ -11,8 +11,8 @@ export const sampleUserData: User[] = [
 
 
 export const sampleRiderData = [
-  { ridersSectionTitle: 'Online Riders', ridersNo: 20 },
-  { ridersSectionTitle: 'Offline Riders', ridersNo: 6},
-  { ridersSectionTitle: 'New riders', ridersNo: 7, backgroundColor: "#FBCCC2"},
+  { ridersSectionTitle: 'Online Riders', ridersNo: 20, backgroundColor: "#DFDFDF" },
+  { ridersSectionTitle: 'Offline Riders', ridersNo: 6, backgroundColor: "#FBCCC2"},
+  { ridersSectionTitle: 'New riders', ridersNo: 7, backgroundColor: "#DFDFDF"},
   { ridersSectionTitle: 'Suspended riders', ridersNo: 0, backgroundColor: "#FBCCC2"}
 ]

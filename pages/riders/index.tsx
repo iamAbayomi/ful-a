@@ -4,6 +4,7 @@ import rightArrow from "../../assets/images/right-arrow.svg"
 import FilterDateComponent from "../../components/ui/FilterDateComponent"
 import RidersCard from "../../components/ui/RidersCard"
 import { sampleRiderData } from "../../utils/sample-data"
+import Search from "../../components/ui/Search/input"
 
 
 
@@ -24,25 +25,24 @@ const Riders = () => {
                             <RidersCard 
                                 ridersText={item.ridersSectionTitle} 
                                 ridersNo={item.ridersNo} 
+                                backgroundColor={item.backgroundColor}
                             />
                         )) 
                         }
                     </RidersCardSection>
                 
                 <RidersSection>
-                    <p>RIDERS LIST</p>
-                    <div>
-                        <img src={""} />
-                        <p> Rider by name or ID</p>
-                    </div>
+                    <RiderList className="body-normal-text">RIDERS LIST</RiderList>
+                    <Search placeholder={"Rider by name or ID"} />
                 </RidersSection>
+
                 <RidersTable>
-                    <table style={{width: '100%'}}>
+                    <table className="riders-table" style={{width: '100%'}}>
                         <tr>
-                            <th><p>ID</p></th>
-                            <th>Name</th>
-                            <th>Status</th>
-                            <th>More Details</th>
+                            <th className="riders-table-heading">ID</th>
+                            <th className="riders-table-heading">Name</th>
+                            <th className="riders-table-heading">Status</th>
+                            <th className="riders-table-heading">More Details</th>
                         </tr>
                         <tr>
                             <td> #R2456 </td>
@@ -78,8 +78,12 @@ const AddNewRiderButton = styled.button`
     border-radius: 10.4348px;
 `
 
-const RidersSection = styled.div`
+const RiderList = styled.div`
+    margin: 20px 0px;
+`
 
+const RidersSection = styled.div`
+    margin: 20px 0px 40px;
 `
 
 const RidersTable = styled.div`
