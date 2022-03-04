@@ -1,6 +1,11 @@
 import styled from "@emotion/styled"
 import Layout from "../../components/Layouts/DashboardLayout"
 import rightArrow from "../../assets/images/right-arrow.svg"
+import FilterDateComponent from "../../components/ui/FilterDateComponent"
+import RidersCard from "../../components/ui/RidersCard"
+import { sampleRiderData } from "../../utils/sample-data"
+
+
 
 const HeadElements =() => {
     return (
@@ -11,19 +16,19 @@ const HeadElements =() => {
 const Riders = () => {
     return(
         <Layout title="Riders" headIcon={<HeadElements />}>
-            
-            <div>
-                <p>FOR TODAY</p>
-                <img src="" />
-            </div>
-            <div>
-                <div className="riders-card">
-                    <p>Online Riders</p>
-                    <div>
-                        <p>20</p>
-                        <img src="" />
-                    </div>
-                </div>
+            <Container>
+                <FilterDateComponent />
+                    <RidersCardSection>
+                        { 
+                        sampleRiderData.map((item) => (
+                            <RidersCard 
+                                ridersText={item.ridersSectionTitle} 
+                                ridersNo={item.ridersNo} 
+                            />
+                        )) 
+                        }
+                    </RidersCardSection>
+                
                 <RidersSection>
                     <p>RIDERS LIST</p>
                     <div>
@@ -59,7 +64,7 @@ const Riders = () => {
                         </tr>
                     </table>
                 </RidersTable>
-            </div>
+            </Container>
         </Layout>
     )
 }
@@ -70,6 +75,7 @@ export default Riders
 const AddNewRiderButton = styled.button`
     padding: 10px 20px 10px;
     margin: 50px 0px 20px;
+    border-radius: 10.4348px;
 `
 
 const RidersSection = styled.div`
@@ -77,5 +83,17 @@ const RidersSection = styled.div`
 `
 
 const RidersTable = styled.div`
+
+`
+
+
+const Container = styled.div`
+    margin: 120px 0px;
+`
+
+
+const RidersCardSection = styled.div`
+    display: grid;
+    grid-template-columns: auto auto;
 
 `
