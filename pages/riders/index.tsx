@@ -93,6 +93,8 @@ const RidersTable = styled.div`
 
 const Container = styled.div`
     margin: 120px 0px;
+    background: #F6F5F5;
+
 `
 
 
