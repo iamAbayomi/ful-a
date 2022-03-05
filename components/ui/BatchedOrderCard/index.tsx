@@ -9,7 +9,11 @@ import OrderRow from '../OrderRow'
 import { useRouter } from 'next/router'
 import KebabMenuDropdownVert from '../KebabMenuDropdownVert'
 
-const BatchedOrderCard = () => {
+type props = {
+    showOrderRow?: boolean
+}
+
+const BatchedOrderCard = ({showOrderRow = false} : props) => {
     const router = useRouter()
     function moveToBatchedDetails(){
         router.push("/batchedorderdetails")
@@ -35,7 +39,7 @@ const BatchedOrderCard = () => {
                 <img src={downArrow.src} />
                 {/* <img src={upArrow.src} /> */}
             </RidersNameContainer>
-            <OrderRowContainer onClick={moveToBatchedDetails} >
+            <OrderRowContainer className={`${showOrderRow ? '' : 'hide'}`} onClick={moveToBatchedDetails} >
                 <OrderRow />
                 <OrderRow/>
             </OrderRowContainer>
