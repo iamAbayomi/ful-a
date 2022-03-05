@@ -40,8 +40,12 @@ const Batched = () => {
 
     return(
         <Layout title="Batched Orders" headElements={<HeaderElements routingMethod={createNewBatch} />}>
-            <BatchedOrderCard />
-            <BatchedOrderCard/>
+            
+            {[1,2,3,4].map((item) => 
+                 <BatchedOrderCard />    
+            )}
+            <BatchedOrderCard showOrderRow={true} />
+            <BatchedOrderCard showOrderRow={true} />
         </Layout>
     )
 }
