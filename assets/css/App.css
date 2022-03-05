@@ -56,10 +56,8 @@ input:focus, textarea:focus, select:focus{
 .dashboard{
     /* background-color: #a59e9e8a; */
     background: #F6F5F5;
-    height: auto;
     /* max-width: none; */
     max-width: 380px;
-    height: auto;
     margin: 0px auto;
     box-sizing: border-box;
 }
