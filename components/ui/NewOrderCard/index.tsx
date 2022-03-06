@@ -1,3 +1,4 @@
+
 import { ChangeEvent, useEffect, useRef, useState } from "react"
 import styled from "styled-components"
 import rightArrow from '../../../assets/images/right-arrow.svg'
@@ -13,6 +14,7 @@ import {  changeSingleCheckboxState,
           toggleNewOrdersCheckbox,
           resetNoOfOrder,} from "../../../redux/reducers/NewOrderSlice"
 import eventBus from "../../../utils/eventBus"
+import Badge from "../Badge"
 
 const NewOrderCard = () => {
     const [checkboxState, setCheckboxState ] = useState<boolean>(false)
@@ -67,6 +69,7 @@ const NewOrderCard = () => {
                     <p className="neworderheading" >Order</p>
                     <div className="display-flex">
                         <p className="neworderno">#1259</p>
+                        <Badge badgeText={"Delayed"} badgeColor="#FFE3CD" />
                         <RightArrowImage  src={rightArrow.src} />
                     </div>
                 </NewOrderCardHeader>
