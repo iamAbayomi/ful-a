@@ -21,8 +21,8 @@ const SentOutOrdersCard = () => {
                 <div className='display-flex batched-order-no-container'>
                     <p className='batched-order-heading'>Batch 2</p>
                     <p className='batched-order-no'>#C267</p>
-                    <Badge badgeColor="#B7F1B687" badgeText={"Sent Out"} />
                 </div>
+                <Badge badgeColor="#B7F1B687" badgeText={"Sent Out"} />
             </BatchedOrderHeader>
             <div className="order-section display-flex-withoutspace">
                 <img src={bag.src} />
