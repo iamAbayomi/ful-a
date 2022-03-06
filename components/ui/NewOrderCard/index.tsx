@@ -1,4 +1,5 @@
 
+import Router, { useRouter } from "next/router"
 import { ChangeEvent, useEffect, useRef, useState } from "react"
 import styled from "styled-components"
 import rightArrow from '../../../assets/images/right-arrow.svg'
@@ -17,6 +18,7 @@ import eventBus from "../../../utils/eventBus"
 import Badge from "../Badge"
 
 const NewOrderCard = () => {
+    const router = useRouter()
     const [checkboxState, setCheckboxState ] = useState<boolean>(false)
     const newOrderCheckbox = useAppSelector(getNewOrderCheckbox)
     const allOrderSelectedState = useAppSelector(getAllOrderSelectedState)
@@ -67,9 +69,14 @@ const NewOrderCard = () => {
                         <span className="checkmark"></span>
                     </label>
                     <p className="neworderheading" >Order</p>
+
                     <div className="display-flex">
                         <p className="neworderno">#1259</p>
-                        <Badge badgeText={"Delayed"} badgeColor="#FFE3CD" />
+                        {
+                            router.pathname == "/redflags" ? <Badge badgeText={"Delayed"} badgeColor="#FFE3CD" badgeTextColor="#DC3D1E" />
+                              : <div/>
+                        }
+                        
                         <RightArrowImage  src={rightArrow.src} />
                     </div>
                 </NewOrderCardHeader>
