@@ -44,8 +44,8 @@ const Batched = () => {
             {[1,2,3,4].map((item) => 
                  <BatchedOrderCard />    
             )}
-            <BatchedOrderCard showOrderRow={true} />
-            <BatchedOrderCard showOrderRow={true} />
+            {/* <BatchedOrderCard showOrderRow={true} />
+            <BatchedOrderCard showOrderRow={true} /> */}
         </Layout>
     )
 }
