@@ -49,10 +49,7 @@ const NewOrderCard = () => {
         temp == false ? dispatch(increaseNoOfOrder(true)) : dispatch(reduceNoOfOrder(false))
     }
 
-    function onCheckboxState(){
 
-    }
-    
     
     return(
         <div ref={highNewOrderRef} className={`card ${checkboxState ? "card-highlight" : ''}` } >
