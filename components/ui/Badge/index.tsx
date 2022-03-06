@@ -4,16 +4,18 @@ import styled from "styled-components"
 
 type props = {
     badgeColor?: string,
-    badgeText: string
+    badgeText: string,
+    badgeTextColor? : string
 }
 
-const Badge =({badgeColor, badgeText} : props) =>{
+const Badge =({badgeColor, badgeText, badgeTextColor= "#247322"} : props) =>{
     return (
         <Container style={{backgroundColor: `${badgeColor}`}} className=''>
-            <p style={{color: `#247322`}} className="badge-text"> {badgeText} </p>
+            <p style={{color: `${badgeTextColor}`}} className="badge-text"> {badgeText} </p>
         </Container>
     )
 }
+
 
 export default Badge
 
