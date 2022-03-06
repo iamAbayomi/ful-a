@@ -1,5 +1,6 @@
 import styled from "styled-components"
 import Layout from "../../components/Layouts/DashboardLayout"
+import BatchedOrderCard from "../../components/ui/BatchedOrderCard"
 import Search from "../../components/ui/Search/input"
 import SentOutOrdersCard from "../../components/ui/SentOutOrdersCard"
 
@@ -9,7 +10,7 @@ const SentOut = () => {
         <Layout title="Sent Out Orders" headElements={<Search placeholder={"Search Order"}/>}>
             <SentOutContainer>
                 {[1,2,3,4,5,6].map((item: any) => (
-                    <SentOutOrdersCard />  
+                    <BatchedOrderCard />  
                 ))}
             </SentOutContainer>
         </Layout>
