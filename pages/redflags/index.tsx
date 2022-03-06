@@ -5,6 +5,7 @@ import filter from "../../assets/images/filter.svg"
 import downArrow from "../../assets/images/down-arrow.svg"
 import Title from "../../components/ui/Typography/Title"
 import FilterDateComponent from "../../components/ui/FilterDateComponent"
+import NewOrderCard from "../../components/ui/NewOrderCard"
 
 const HeaderElements = () => {
     return (
@@ -33,7 +34,7 @@ const RedFlag =() => {
                 <div>
                     {
                         [1,2,3,5,,4,66].map((item) => {
-                            return <RedFlagCard />
+                            return <NewOrderCard />
                         })
                     
                     }
