@@ -1,18 +1,14 @@
 
-import Router, { useRouter } from "next/router"
-import { ChangeEvent, useEffect, useRef, useState } from "react"
+import { useRouter } from "next/router"
+import { useEffect, useRef, useState } from "react"
 import styled from "styled-components"
 import rightArrow from '../../../assets/images/right-arrow.svg'
 import { useAppDispatch, useAppSelector } from "../../../redux/hook"
-import {  changeSingleCheckboxState, 
+import {  
           getNewOrderCheckbox, 
           getAllOrderSelectedState, 
-          getRef, 
-          getSingleCheckboxState, 
           increaseNoOfOrder, 
           reduceNoOfOrder,
-          clearAllOrderSelected,
-          toggleNewOrdersCheckbox,
           resetNoOfOrder,} from "../../../redux/reducers/NewOrderSlice"
 import eventBus from "../../../utils/eventBus"
 import Badge from "../Badge"
@@ -21,9 +17,7 @@ const NewOrderCard = () => {
     const router = useRouter()
     const [checkboxState, setCheckboxState ] = useState<boolean>(false)
     const newOrderCheckbox = useAppSelector(getNewOrderCheckbox)
-    const allOrderSelectedState = useAppSelector(getAllOrderSelectedState)
     const dispatch = useAppDispatch()
-    // const checkboxRef = useAppSelector(getRef)
     const closeButtonRef = useRef(null)
     const highNewOrderRef = useRef(null)
 
