@@ -13,7 +13,8 @@ const initialState = newOrderAdapter.getInitialState({
     noOfOrdersSelected: 0,
     clearAllOrderSelected: false,
     useRef: "",
-    singleCheckboxState: false
+    singleCheckboxState: false,
+    selectedMenuState: false,
 })
 
 
@@ -41,6 +42,9 @@ const newOrderSlice = createSlice({
         },
         changeSingleCheckboxState(state){
             state.singleCheckboxState = !state.singleCheckboxState
+        },
+        toggleSelectedMenuState(state){
+            state.selectedMenuState = !state.selectedMenuState
         }
     }
 })
@@ -51,7 +55,8 @@ export const {
     reduceNoOfOrder,
     resetNoOfOrder,
     clearAllOrderSelected,
-    changeSingleCheckboxState
+    changeSingleCheckboxState,
+    toggleSelectedMenuState
 } = newOrderSlice.actions
 
 export const getNewOrderCheckbox = (state : any) => {
@@ -72,6 +77,10 @@ export const getRef = (state: any) =>{
 
 export const getSingleCheckboxState = (state: any) => {
     return state.newOrders.singleCheckboxState
+}
+
+export const getSelectedMenuState = (state: any) => {
+    return state.newOrders.selectedMenuState
 }
 
 export default newOrderSlice.reducer
