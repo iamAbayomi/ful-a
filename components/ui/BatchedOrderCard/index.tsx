@@ -35,7 +35,7 @@ const BatchedOrderCard = () => {
     }
 
     return (
-        <div className="card-elevated">
+        <Container className="card-elevated">
             <BatchedOrderHeader className="display-flex">
                 <div className='batched-order-no-container'>
                     <p className='batched-order-heading'>Batch 2</p>
@@ -49,26 +49,30 @@ const BatchedOrderCard = () => {
                 <img src={bag.src} />
                 <p className="orders-notification">3 orders</p>
             </div>
-            <RidersNameContainer className={"display-flex"}>
+            <RidersNameContainer onClick={showOrders} className={"display-flex"}>
                 <div className="display-flex-withoutspace">
                     <img src={bicycle.src} />
                     <RidersName className="orders-notification">Timi Busola</RidersName>
                 </div>
                 {/* <img  src={downArrow.src} /> */}
-                <Image onClick={showOrders} src={`${showOrderRow ?  upArrowSrc : downArrowSrc}`} />
+                <Image  src={`${showOrderRow ?  upArrowSrc : downArrowSrc}`} />
                 {/* <img src={upArrow.src} /> */}
             </RidersNameContainer>
             <OrderRowContainer ref={showOrdersRef} className={`${showOrderRow ? '' : 'hide'}`} onClick={moveToBatchedDetails} >
                 <OrderRow />
                 <OrderRow/>
             </OrderRowContainer>
-        </div>
+        </Container>
     )
 }
 
 
 export default BatchedOrderCard
 
+
+const Container = styled.div`
+    margin: 20px 0px;
+`
 
 const NewOrderNo = styled.p`
     margin: 10px 0px 20px;
@@ -89,5 +93,5 @@ const RidersNameContainer = styled.div`
 `
 
 const BatchedOrderHeader = styled.div`
-    margin: 20px 0px;
+    margin: 20px -10px 10px 0px;
 `
