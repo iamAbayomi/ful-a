@@ -40,10 +40,11 @@ const Batched = () => {
 
     return(
         <Layout title="Batched Orders" headElements={<HeaderElements routingMethod={createNewBatch} />}>
-            
+            <Container>
             {[1,2,3,4].map((item) => 
                  <BatchedOrderCard />    
             )}
+            </Container>
             {/* <BatchedOrderCard showOrderRow={true} />
             <BatchedOrderCard showOrderRow={true} /> */}
         </Layout>
@@ -52,6 +53,11 @@ const Batched = () => {
 
 export default Batched
 
+
+const Container = styled.div`
+    margin: 176px 0px;
+    padding: 0px 0px 20px;
+`
 
 const Header = styled.div`
 `
