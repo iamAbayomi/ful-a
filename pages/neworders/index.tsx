@@ -13,19 +13,16 @@ function selectOrders (item: any){
 
 const NewOrdersIcon = () => {
     return(
-        <div>
-            <div className='display-flex header-icon'>
-                <div className='display-flex icon-container'>
-                    <img
-                        className='red-flag-logo'
-                        src={redflag.src}
-                    />
-                </div>
-                <div className='icon-container' style={ {margin: '0px 20px 0px 0px'}}>
-                    <KebabMenuDropdown menuItems={['Select', 'Auto Batch Order']} menuItemMethod={selectOrders} />
-                </div>
+        <div className='display-flex header-icon'>
+            <div className='display-flex icon-container'>
+                <img
+                    className='red-flag-logo'
+                    src={redflag.src}
+                />
             </div>
-            {/* <CheckboxSelectedComponent /> */}
+            <div className='icon-container' style={ {margin: '0px 20px 0px 0px'}}>
+                <KebabMenuDropdown menuItems={['Select', 'Auto Batch Order']} menuItemMethod={selectOrders} />
+            </div>
         </div>
     )
 }
