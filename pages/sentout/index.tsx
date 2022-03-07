@@ -8,7 +8,7 @@ const SentOutHeaderElements = () => {
     return(
         <div>
             <Search placeholder={"Search Order"}/>
-            <p className="highlight-text">12 sent out bathces </p>
+            <NotificationText className="highlight-text">12 sent out batches </NotificationText>
         </div>
     )
 }
@@ -30,4 +30,8 @@ export default SentOut
 const SentOutContainer = styled.div`
     margin: 140px 0px 0px;
     padding: 20px 0px 20px;
+`
+
+const NotificationText = styled.div`
+    margin: 10px 0px 0px;
 `
