@@ -33,5 +33,5 @@ const SentOutContainer = styled.div`
 `
 
 const NotificationText = styled.div`
-    margin: 10px 0px 0px;
+    margin: 15px 0px 0px;
 `
