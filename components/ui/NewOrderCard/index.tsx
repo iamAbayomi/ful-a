@@ -9,7 +9,9 @@ import {
           getAllOrderSelectedState, 
           increaseNoOfOrder, 
           reduceNoOfOrder,
-          resetNoOfOrder,} from "../../../redux/reducers/NewOrderSlice"
+          resetNoOfOrder,
+          toggleSelectedMenuState,
+          getSelectedMenuState,} from "../../../redux/reducers/NewOrderSlice"
 import eventBus from "../../../utils/eventBus"
 import Badge from "../Badge"
 
@@ -17,48 +19,54 @@ const NewOrderCard = () => {
     const router = useRouter()
     const [checkboxState, setCheckboxState ] = useState<boolean>(false)
     const newOrderCheckbox = useAppSelector(getNewOrderCheckbox)
+    const menuState = useAppSelector(getSelectedMenuState)
     const dispatch = useAppDispatch()
-    const closeButtonRef = useRef(null)
+    const checkBoxRef = useRef(null)
     const highNewOrderRef = useRef(null)
 
     const checkboxContainerRef = useRef(null)
 
     useEffect(()=> {
-        console.log('checkbox ', checkboxState + ' newOrderCheckbox ', newOrderCheckbox)
+        //console.log('checkbox ', checkboxState + ' newOrderCheckbox ', newOrderCheckbox)
 
         
 
         eventBus.on("closeNewOrders", (data: any)=> {
-            closeButtonRef.current.checked = false
+            checkBoxRef.current.checked = false
             checkboxContainerRef.current.classList.toggle("hide-checkbox")
             highNewOrderRef.current.classList.remove("card-highlight")
             dispatch(resetNoOfOrder())
-            //closeButtonRef.current.classList.toggle("hide-checkbox")
-            //dispatch(toggleNewOrdersCheckbox())
-            console.log('checkbox ', checkboxState + ' newOrderCheckbox ', newOrderCheckbox)
+            dispatch(toggleSelectedMenuState())
+            console.log("menuState ", menuState)
+            //console.log('checkbox ', checkboxState + ' newOrderCheckbox ', newOrderCheckbox)
             // console.log("This is the data", data)
         })
     })
 
     function changeOrdersState() {
         let temp = checkboxState
-        // allOrderSelectedState && checkboxState == true ? setCheckboxState(false) : setCheckboxState(!temp)
+        checkBoxRef.current.checked = !temp
         setCheckboxState(!temp)
         temp == false ? dispatch(increaseNoOfOrder(true)) : dispatch(reduceNoOfOrder(false))
+        // console.log("temp ", temp, " checkbox ", checkboxState)
     }
 
 
+    function goToCheckDetails (){
+        menuState ? changeOrdersState() : router.push("/batchedorderdetails")  
+    }
+
     
     return(
-        <div ref={highNewOrderRef} className={`card ${checkboxState ? "card-highlight" : ''}` } >
+        <div ref={highNewOrderRef} onClick={goToCheckDetails} className={`card ${checkboxState ? "card-highlight" : ''}` } >
             <div className="card-container">
                 <NewOrderCardHeader className="display-flex">
                     <label ref={checkboxContainerRef} className="container hide-checkbox">
                         <input 
                             id="checkbox"
                             type="checkbox" 
-                            ref={closeButtonRef}
-                            onClick={changeOrdersState}
+                            ref={checkBoxRef}
+                            // onClick={changeOrdersState}
                               />
                         <span className="checkmark"></span>
                     </label>
@@ -66,8 +74,7 @@ const NewOrderCard = () => {
 
                     <div className="display-flex">
                         <p className="neworderno">#1259</p>
-                        {
-                            router.pathname == "/redflags" ? <Badge badgeText={"Delayed"} badgeColor="#FFE3CD" badgeTextColor="#DC3D1E" />
+                        {router.pathname == "/redflags" ? <Badge badgeText={"Delayed"} badgeColor="#FFE3CD" badgeTextColor="#DC3D1E" />
                               : <div/>
                         }
                         
