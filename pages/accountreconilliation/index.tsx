@@ -22,6 +22,7 @@ const AccountReconcilliation = () => {
                         <Image 
                             src={"/close-button.svg"}
                             style={{float: "right"}}
+                            onClick={onClose}
                         />
                         <Image 
                             src="/check.svg"
