@@ -4,6 +4,7 @@ import {Image} from '@chakra-ui/react'
 import styled from "styled-components"
 import OrderDescription from "../../components/ui/OrderDescription"
 import ReconcileMoney from "../../components/ui/ReconcileMoney"
+import ModalContainer from "../../components/ui/Modals/ModalContainer"
 
 const AccountReconcilliation = () => {
     const {isOpen, onOpen, onClose } = useDisclosure()
@@ -16,22 +17,10 @@ const AccountReconcilliation = () => {
         
         <Modal isOpen={isOpen} onClose={onClose}>
                 <ModalOverlay/>
-                <ModalContent w={"300px"} p={[0,0,0,0]} >
-                    <ModalBody w={"300px"} >
-                    <Container className="card-div">
-                        <Image 
-                            src={"/close-button.svg"}
-                            style={{float: "right"}}
-                            onClick={onClose}
-                        />
-                        <Image 
-                            src="/check.svg"
-                            className="check-image"
-                        />
-                        <Text>Are you done fufiling orders for that day</Text>
-                        <button className="button-red">Yes! I'm done</button>
-                        <button className="button-white">No, going for a short break</button>
-                    </Container>
+                <ModalContent w={"390px"} p={[0,0,0,0]} >
+                    <ModalBody w={"390px"} >
+                        {/* <ModalContainer closeMethod={onClose} /> */}
+                        <ReconcileMoney/>
                     </ModalBody>
                 </ModalContent>
         </Modal>

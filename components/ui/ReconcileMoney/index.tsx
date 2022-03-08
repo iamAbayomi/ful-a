@@ -14,13 +14,16 @@ const ReconcileCash  = () =>{
 
 const ReconcileMoney= () => {
     return(
-        <div>
-            <p>Reconcile money</p>
-            <p>What do you want to reconcile first</p>
-            <button className="red-button">CAsh</button>
-            <button className="red-button">Continue</button>
+        <div className="backdropdown">
+            <div className="backdropdown-line"></div>
+            <p className="order-title">Reconcile money</p>
+            <p className="order-subtitle">What do you want to reconcile first</p>
+            <button className="button-red button-pink">Cash</button>
+            <button className="button-red">Continue</button>
         </div>
     )
 }
 
 export default ReconcileMoney
+
+//const s
