@@ -11,6 +11,7 @@ import { useRouter } from 'next/router'
 import KebabMenuDropdownVert from '../KebabMenuDropdownVert'
 import { useEffect, useRef, useState } from 'react'
 import Badge from '../Badge'
+import KebabMenuDropdown from '../KebabMenuDropdown'
 
 type props = {
     // showOrderRow?: boolean
@@ -42,7 +43,7 @@ const BatchedOrderCard = () => {
                     <p className='batched-order-no'>#C267</p>
                 </div>
                 { router.pathname == "/sentout" ? <Badge badgeColor="#B7F1B687" badgeText={"Sent Out"} /> :
-                    <KebabMenuDropdownVert menuItems={['Edit Batch', 'Confirm Sent Out']} menuItemMethod={() => {}} />}
+                    <KebabMenuDropdown menuItems={['Edit Batch', 'Confirm Sent Out']} menuItemMethod={() => {}} />}
                 
             </BatchedOrderHeader>
             <div className="order-section display-flex-withoutspace">
