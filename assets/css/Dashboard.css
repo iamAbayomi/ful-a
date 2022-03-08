@@ -215,3 +215,10 @@ line{
     border-bottom: 3px solid #F55951;
     padding: 0px 0px 5px;
 }
+
+.check-image {
+    clear: both;
+    display: block;
+    max-width: 46px;
+    margin: auto;
+}
