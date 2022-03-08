@@ -29,8 +29,6 @@ const NewOrderCard = () => {
     useEffect(()=> {
         //console.log('checkbox ', checkboxState + ' newOrderCheckbox ', newOrderCheckbox)
 
-        
-
         eventBus.on("closeNewOrders", (data: any)=> {
             checkBoxRef.current.checked = false
             checkboxContainerRef.current.classList.toggle("hide-checkbox")
