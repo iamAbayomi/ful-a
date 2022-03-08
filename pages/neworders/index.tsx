@@ -5,6 +5,8 @@ import NewOrderCard from "../../components/ui/NewOrderCard";
 import redflag from '../../assets/images/red-flag.svg'
 import eventBus from "../../utils/eventBus";
 import CheckboxSelectedComponent from "../../components/ui/CheckboxSelectedComponent";
+import { useAppSelector } from "../../redux/hook";
+import { getNoOfOrdersSelected } from "../../redux/reducers/NewOrderSlice";
 
 function selectOrders (item: any){
     eventBus.dispatch("closeNewOrders", { message: "close Orders"})
@@ -27,17 +29,20 @@ const NewOrdersIcon = () => {
     )
 }
 
-const NewOrders = () => (
-    <Layout title="New Orders" headIcon={<NewOrdersIcon/>} headElements={<CheckboxSelectedComponent />} >
-        <NewOrderContainer >
-       { [1,2,3,4,3].map((item) => (<NewOrderCard />))}
-            
-        </NewOrderContainer>
-    </Layout>
-)
+const NewOrders = () => {
+    const noOfOrders = useAppSelector(getNoOfOrdersSelected)
+
+    return(
+        <Layout title="New Orders" headIcon={<NewOrdersIcon/>} headElements={<CheckboxSelectedComponent />} >
+                <NewOrderContainer className={`${noOfOrders > 0 ? "add-padding": "" }`} >
+                    { [1,2,3,4,3].map((item) => (<NewOrderCard />))}
+                </NewOrderContainer>
+        </Layout>
+    )
+}
 
 export default NewOrders
 
-const NewOrderContainer = styled.p`
-//    margin: 20px;
+const NewOrderContainer = styled.div`
+   margin: 0px 0px;
 `
