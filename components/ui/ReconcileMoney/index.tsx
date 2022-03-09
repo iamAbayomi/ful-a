@@ -43,7 +43,7 @@ const CashReconciliationError = () => {
                 <Image 
                     src="/dangercircle.svg"
                     className=""
-                    style={{  width: "40px" }}
+                    style={{  width: "25px" }}
                 />
                 <p className="order-subtitle">Cash account not balanced</p>
             </ErrorContainer>
@@ -104,5 +104,6 @@ const ErrorContainer = styled.div`
     display: flex;
     justify-content: space-between;
     margin: 72px auto 0px;
-    max-width: 180px;
+    max-width: 190px;
+    align-items: center;
 `
