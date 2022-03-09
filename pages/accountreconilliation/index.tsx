@@ -47,4 +47,5 @@ const Text = styled.div`
     text-align: center;
     color: #092443;
     max-width: 180px;
+    
 `
