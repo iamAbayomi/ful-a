@@ -17,8 +17,8 @@ const AccountReconcilliation = () => {
         
         <Modal isOpen={isOpen} onClose={onClose}>
                 <ModalOverlay/>
-                <ModalContent w={"390px"} p={[0,0,0,0]} >
-                    <ModalBody w={"390px"} >
+                <ModalContent w={"370px"} p={[0,0,0,0]} borderRadius={"10px"} >
+                    <ModalBody w={"370px"} p={[0,0,0,0]}>
                         {/* <ModalContainer closeMethod={onClose} /> */}
                         <ReconcileMoney/>
                     </ModalBody>
