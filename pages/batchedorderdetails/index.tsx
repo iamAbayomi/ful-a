@@ -110,8 +110,7 @@ const BatchedOrderDetails = () => {
                      : verifyPackageStep == 3 ? <ConfirmBatch  onClose={onClose}  /> 
                      : <div />
                     }
-                    {/* <OrderDescription />
-                    <ConfirmBatch /> */}
+                    
                 </ModalLayout>
         </Container>
     )
