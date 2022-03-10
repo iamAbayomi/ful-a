@@ -51,7 +51,8 @@ const NewOrderCard = () => {
 
 
     function goToCheckDetails (){
-        menuState ? changeOrdersState() : router.push("/batchedorderdetails")  
+        router.pathname == "/selectorder" ? changeOrdersState() :
+        menuState  ? changeOrdersState() : router.push("/batchedorderdetails")  
     }
 
     
