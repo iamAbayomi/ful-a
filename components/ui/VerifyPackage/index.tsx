@@ -29,14 +29,7 @@ const index = ({method}: props) => {
             <div className='center-div'>
                 <button onClick={method} className="red-button">Verify</button>
             </div>
-            {/* <Modal blockScrollOnMount={true} isOpen={isOpen} onClose={onClose}>
-                    <ModalOverlay />
-                    <ModalContent>
-                        <ModalBody>
-                            <OrderDescription />
-                        </ModalBody>
-                    </ModalContent>
-            </Modal> */}
+            
             
         </Container>
     )
