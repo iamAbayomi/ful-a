@@ -4,14 +4,13 @@ import styled from "styled-components"
 import redBag from '../../../assets/images/red-bag.svg'
 import ConfirmBatch from "../ConfirmBatch"
 
-const OrderDescription = () => {
+type props = {
+    onClick: any
+}
+
+const OrderDescription = ({onClick}: props) => {
     const router = useRouter()
-    const {isOpen, onOpen, onClose } = useDisclosure()
     
-    function confirmBatch(){
-        //router.push('/confirmbatch')
-        onOpen()
-    }
     return(
         <Container className="main">
             <ImageContainer className="">
@@ -48,18 +47,18 @@ const OrderDescription = () => {
                 <p className="info-link">Print Package list</p>
                 <p className="green-text">You have packaged all the order in this batch</p>
                 <div className="center-div">
-                    <RedButton onClick={confirmBatch} className="red-button">Proceed to next order</RedButton>
+                    <RedButton onClick={onClick} className="red-button">Proceed to next order</RedButton>
                 </div>
                 <p className="info-link">Back to batched orders</p>
             </NextOrderContainer>
-            <Modal blockScrollOnMount={true} isOpen={isOpen} onClose={onClose}>
+            {/* <Modal blockScrollOnMount={true} isOpen={isOpen} onClose={onClose}>
                 <ModalOverlay />
                 <ModalContent>
                     <ModalBody>
                         <ConfirmBatch method={onClose} />
                     </ModalBody>
                 </ModalContent>
-            </Modal>
+            </Modal> */}
         </Container>
         
     )

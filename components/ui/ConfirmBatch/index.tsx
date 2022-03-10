@@ -4,10 +4,11 @@ import checkedBag from "../../../assets/images/checked-bag.svg"
 import closeButton from "../../../assets/images/close-button.svg"
 
 type props ={
-    method?: any
+    method?: any,
+    onClose: any
 }
 
-const ConfirmBatch =({method}: props) => {
+const ConfirmBatch =({method, onClose}: props) => {
     const router = useRouter()
 
     function confirmBatch(){
@@ -17,14 +18,14 @@ const ConfirmBatch =({method}: props) => {
     return(
         <Container className="main">
             <div>
-                <Close onClick={method} src={closeButton.src} />
+                <Close onClick={onClose} src={closeButton.src} />
                 <div className="center-div clear-float">
                     <img src={checkedBag.src} />
                 </div>
                 <p className="heading-text">Confirm Batch 3 has been sent out</p>
             </div>
             <div className="center-div">
-                <RedButton onClick={confirmBatch} className="red-button">Yes! I confirm</RedButton>
+                <RedButton onClick={onClose} className="red-button">Yes! I confirm</RedButton>
             </div>
         </Container>
     )

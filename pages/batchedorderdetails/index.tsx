@@ -5,21 +5,19 @@ import menuOptions from '../../assets/images/options-menu.svg'
 import styled from 'styled-components'
 import { useRouter } from 'next/router'
 import KebabMenuDropdownVert from '../../components/ui/KebabMenuDropdownVert'
-import { useRef } from 'react'
+import { useRef, useState } from 'react'
 import Modals from '../../components/ui/Modals'
 import VerifyPackage from '../../components/ui/VerifyPackage'
 import { Modal, ModalOverlay, ModalContent, ModalBody, useDisclosure } from '@chakra-ui/react'
+import ModalLayout from '../../components/Layouts/ModalLayout'
+import OrderDescription from '../../components/ui/OrderDescription'
+import ConfirmBatch from '../../components/ui/ConfirmBatch'
 
 const BatchedOrderDetails = () => {
     const router = useRouter()
     const modalRef = useRef(null)
     const {isOpen, onOpen, onClose } = useDisclosure()
-
-    function verifypackage() {
-        // router.push('/verifypackage')
-        modalRef.current.classList.toggle('hide')
-        
-    }
+    const [verifyPackageStep, setVerifyPackageStep] = useState<any>(1)
 
 
     function moveBack(){
@@ -104,16 +102,17 @@ const BatchedOrderDetails = () => {
             <div className='center-div'>
                 <button onClick={onOpen} className='red-button'>Order Package</button>
             </div>
-            {/* <div ref={modalRef} className='hide'> */}
-                <Modal blockScrollOnMount={true} isOpen={isOpen} onClose={onClose}>
-                    <ModalOverlay />
-                    <ModalContent>
-                        <ModalBody>
-                            <VerifyPackage method={onClose}/>
-                        </ModalBody>
-                    </ModalContent>
-                </Modal>
-            {/* </div> */}
+            
+                <ModalLayout isOpen={isOpen} onClose={onClose} >
+                    
+                    {verifyPackageStep ==1 ? <VerifyPackage method={() => { setVerifyPackageStep(2)}} /> 
+                     : verifyPackageStep == 2 ? <OrderDescription onClick={() => setVerifyPackageStep(3)} />
+                     : verifyPackageStep == 3 ? <ConfirmBatch  onClose={onClose}  /> 
+                     : <div />
+                    }
+                    {/* <OrderDescription />
+                    <ConfirmBatch /> */}
+                </ModalLayout>
         </Container>
     )
 }

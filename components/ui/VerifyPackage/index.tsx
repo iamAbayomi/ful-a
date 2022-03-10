@@ -27,16 +27,16 @@ const index = ({method}: props) => {
             <input className="input-text" type="name" placeholder="Type item here" />
             <OrderItemsComponent />
             <div className='center-div'>
-                <button onClick={proceedToNextOrder} className="red-button">Verify</button>
+                <button onClick={method} className="red-button">Verify</button>
             </div>
-            <Modal blockScrollOnMount={true} isOpen={isOpen} onClose={onClose}>
+            {/* <Modal blockScrollOnMount={true} isOpen={isOpen} onClose={onClose}>
                     <ModalOverlay />
                     <ModalContent>
                         <ModalBody>
                             <OrderDescription />
                         </ModalBody>
                     </ModalContent>
-            </Modal>
+            </Modal> */}
             
         </Container>
     )
