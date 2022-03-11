@@ -53,7 +53,7 @@ const CashReconciliationError = () => {
     )
 }
 
-export default CashReconciledSuccesful
+// export default CashReconciledSuccesful
 
 // const CashReconciledSuccesful
 
@@ -78,7 +78,7 @@ const ReconcileMoney= () => {
     )
 }
 
-// export default ReconcileMoney
+export default ReconcileMoney
 
 //const s
 

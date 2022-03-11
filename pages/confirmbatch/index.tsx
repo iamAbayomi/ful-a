@@ -3,7 +3,7 @@ import ConfirmBatch from "../../components/ui/ConfirmBatch"
 const index =()=> {
     return (
         <div>
-            <ConfirmBatch />
+            <ConfirmBatch onClose={undefined} />
         </div>
     )
 }
