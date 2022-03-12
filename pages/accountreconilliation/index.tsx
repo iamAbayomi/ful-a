@@ -1,29 +1,32 @@
 import { Modal, ModalBody, ModalContent, ModalOverlay, useDisclosure } from "@chakra-ui/react"
-import { useEffect } from "react"
+import { useEffect, useState } from "react"
 import {Image} from '@chakra-ui/react'
 import styled from "styled-components"
 import OrderDescription from "../../components/ui/OrderDescription"
 import ReconcileMoney from "../../components/ui/ReconcileMoney"
 import ModalContainer from "../../components/ui/Modals/ModalContainer"
+import ModalLayout from "../../components/Layouts/ModalLayout"
+import CashReconciliation from "../../components/ui/CashReconcillation"
+import { useRouter } from "next/router"
 
 const AccountReconcilliation = () => {
+    const router = useRouter()
     const {isOpen, onOpen, onClose } = useDisclosure()
-
+    const [reconileAccountStep, setReconcileAccountStep] = useState<any>(1)
     useEffect(()=> {
         onOpen()
     })
 
     return(
-        
-        <Modal isOpen={isOpen} onClose={onClose}>
-                <ModalOverlay/>
-                <ModalContent w={"370px"} p={[0,0,0,0]} borderRadius={"10px"} >
-                    <ModalBody w={"370px"} p={[0,0,0,0]}>
-                        {/* <ModalContainer closeMethod={onClose} /> */}
-                        <ReconcileMoney/>
-                    </ModalBody>
-                </ModalContent>
-        </Modal>
+        <ModalLayout isOpen={isOpen} onClick={() => {router.push("/dashboard")}}   onClose={onClose}>
+            {
+                reconileAccountStep == 1 ? <ReconcileMoney onClick={() => {setReconcileAccountStep(2)}} /> : 
+                <CashReconciliation 
+                    showErrorState={reconileAccountStep == 3 ? true : false} 
+                    onClick={() => {setReconcileAccountStep(reconileAccountStep == 2 ? 3: 1)}}
+                     /> 
+            }
+        </ModalLayout>
     )
 }
 
