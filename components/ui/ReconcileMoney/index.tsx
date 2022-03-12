@@ -1,5 +1,36 @@
 import styled from "styled-components"
 import {Image} from "@chakra-ui/react"
+import { useState } from "react"
+
+type props = { 
+    onClick? : () => void
+}
+
+const ReconcileMoney= ({onClick} : props) => {
+    const [showInputField, setShowInputField] = useState<any>(1)
+    return(
+        <div className="backdropdown">
+            <div className="backdropdown-line"></div>
+            {/* <Image 
+                src={"/close-button.svg"}
+                style={{float: "right"}}
+                // onClick={closeMethod}
+            /> */}
+            <p className="order-title">Reconcile money</p>
+            <p className="order-subtitle">What do you want to reconcile first</p>
+            {/* <p className="order-title">Reconcile Cash</p>
+            <p className="order-subtitle">Input cash amount </p> */}
+            {
+                showInputField ==1 ? <button className="button-red button-pink"  onClick={()=> {setShowInputField(2)}}>Cash</button>  :
+                showInputField ==  2 ? <InputText type={"name"} className="input-text" placeholder="N20,000" /> : <div />
+            }   
+            <button onClick={onClick} className="red-button">Continue</button>
+        </div>
+    )
+}
+
+export default ReconcileMoney
+
 
 const ReconcileCash  = () =>{
     return(
@@ -11,6 +42,8 @@ const ReconcileCash  = () =>{
         </div>
     )
 }
+
+
 
 const CashReconciledSuccesful = () => {
     return(
@@ -57,28 +90,6 @@ const CashReconciliationError = () => {
 
 // const CashReconciledSuccesful
 
-const ReconcileMoney= () => {
-    return(
-        <div className="backdropdown">
-            <div className="backdropdown-line"></div>
-            <Image 
-                src={"/close-button.svg"}
-                style={{float: "right"}}
-                // onClick={closeMethod}
-            />
-            <p className="order-title">Reconcile money</p>
-            <p className="order-subtitle">What do you want to reconcile first</p>
-            {/* <p className="order-title">Reconcile Cash</p>
-            <p className="order-subtitle">Input cash amount </p> */}
-
-            <button className="button-red button-pink">Cash</button>
-            {/* <InputText type={"name"} className="input-text" placeholder="N20,000" /> */}
-            <button className="red-button">Continue</button>
-        </div>
-    )
-}
-
-export default ReconcileMoney
 
 //const s
 
