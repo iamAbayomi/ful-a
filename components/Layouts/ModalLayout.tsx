@@ -6,11 +6,12 @@ type props = {
     isOpen?: any,
     onOpen?: any,
     onClose?: any,
-    children: ReactNode
+    children: ReactNode,
+    onClick ?: () => void
 }
 
-const ModalLayout = ({modalContents, isOpen, onOpen, onClose, children} : props) => (
-        <Modal isOpen= {isOpen} onClose = {onClose} >
+const ModalLayout = ({modalContents, isOpen,onClick  ,onOpen, onClose, children} : props) => (
+        <Modal onOverlayClick={onClick } isOpen= {isOpen} onClose = {onClose} >
             <ModalOverlay />
             <ModalContent w={"370px"} p={[0,0,0,0]} borderRadius={"10px"} >
                 <ModalBody w={"370px"} p={[0,0,0,0]}>
