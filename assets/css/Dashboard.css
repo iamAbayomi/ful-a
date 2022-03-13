@@ -1,0 +1,252 @@
+
+.bottom-navbar {
+    background-color: white;
+    padding: 10px 20px 10px;
+    display: flex;
+    width: 100%;
+    max-width: 380px;
+    justify-content: space-between;
+    position: fixed;
+    bottom: 0%;
+    /* right: 0%; */
+    box-sizing: border-box;
+}
+
+
+.bottom-navbar li {
+    list-style-type: none;
+}
+
+.bottom-navbar a{
+    text-decoration: none;
+}
+
+.bottom-navbar-icon{
+    margin: 10px 0px 0px 10px;
+} 
+
+.bottom-navbar-text{
+    font-size: 10px;
+    margin: 5px 0px 0px 0px;
+    color: #8F92A1;;
+    
+}
+/* 
+.bottom-navbar-container{
+    display: inline;
+    border-bottom: 1px solid #F55951;
+    border-bottom-width: 10px;
+    width: max-content;
+} */
+
+svg {
+    stroke: #8F92A1;
+}
+
+path{
+    /* stroke: #F55951; */
+    stroke: #8F92A1;
+}
+
+line{
+    /* stroke: #F55951; */
+    stroke: #8F92A1;
+}
+
+.active{
+    color: #F55951!important;
+}
+
+.active svg{
+    stroke: #F55951;
+}
+
+.active path{
+    stroke: #F55951;
+}
+
+.active line{
+    stroke: #F55951;
+}
+
+.active p {
+    color: #F55951;
+}
+
+.active a {
+    text-decoration: none;
+    /* text-decoration-color: #F55951;
+    text-decoration-thickness: 3px; */
+}
+
+.dashboard-red-button{
+    display: flex;
+    background: #FF1B03;
+    border: 1px solid #FF1B03;
+    border-radius: 5px;
+    max-width: max-content;
+    font-family: 'Mulish';
+    color: white;
+    padding: 0px 20px 0px 20px;
+    margin: 10px 0px 0px;
+    font-family: Mulish;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 12px;
+}
+
+.header-section{
+    margin: 10px 0px 0px 0px;
+}
+
+.add-icon{
+    margin: 12px 10px 0px 0px
+}
+
+
+.dashboard-contents{
+    margin: 100px 20px 75px;
+}
+
+.add-padding{
+    padding: 45px 0px;
+}
+
+.contents{
+    margin: 10px 20px;
+}
+.batched-order-no-container{
+    display: flex;
+    max-width: max-content;
+}
+
+.batched-order-heading{
+    /* H6 semibold */
+    font-family: Mulish;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 20px;
+    /* line-height: 25px; */
+    /* identical to box height */
+    color: #092443;
+}
+
+.batched-order-no{
+    font-weight: normal;
+    font-size: 15px;
+    /* line-height: 16px; */
+    /* identical to box height, or 107% */
+    margin: 0px 10px 0px 30px;
+    display: flex;
+    align-items: center;
+    /* Navy/300 */
+    color: #777E96;
+}
+
+.order-section{
+    margin: 10px 0px 20px 0px;
+}
+
+.order-row{
+    margin: 10px 0px 10px;
+    /* border-bottom: 1px solid gray; */
+}
+
+.badge{
+    max-width: max-content;
+    height: 15px;
+    margin: 10px 0px 0px;
+    padding: 5px 10px 5px 10px;
+    background: rgba(255, 213, 211, 0.37);
+    border-radius: 30px;
+    box-sizing: content-box;
+}
+
+.badge-text{
+    margin: 0px;
+    color: #F55951;
+    font-size: 12px;
+}
+
+
+.input-text{
+    width: 100%;
+    height: 44px;
+    margin: 10px 0px 10px;
+    padding: 18px 16px 18px;
+    border: 1px solid #DFDFDF;
+    box-sizing: border-box;
+    border-radius: 5px;
+}
+
+.input-text:disabled{
+    background: #DFDFDF;
+}
+   
+.navigation-arrow {
+    width: 21px;
+    margin: 40px -5px 0px;
+}
+
+
+.notifications-container {
+    /* width: 100%; */
+    height: 18px;
+    margin: 30px 0px 0px;
+    padding: 10px 10px 10px 10px;
+    background: rgba(183, 241, 182, 0.53);
+    border-radius: 5px;
+    box-sizing: content-box;
+}
+
+.notifications-text{
+    margin: 0px;
+    color: #4EA14D;
+    font-size: 14px;
+    text-align: center;
+}
+
+
+.red-flag-menu p{
+    margin: 0px 10px 0px;
+}
+
+.menu-heading.active  {
+    border-bottom: 3px solid #F55951;
+    padding: 0px 0px 5px;
+}
+
+.check-image {
+    clear: both;
+    display: block;
+    max-width: 46px;
+    margin: auto;
+}
+
+
+.order-title{
+    font-family: Mulish;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 25px;
+    /* identical to box height */
+    margin: 10px 0px;
+    letter-spacing: 0.02em;
+    color: #092443;
+    text-align: center;
+
+}
+
+.order-subtitle{
+    font-family: Mulish;
+    font-style: normal;
+    font-size: 12px;
+    line-height: 19px;
+    /* identical to box height */
+    text-align: center;
+
+    /* grey bold */
+
+    color: #596273;
+}

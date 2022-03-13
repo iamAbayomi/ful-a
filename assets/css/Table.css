@@ -1,0 +1,43 @@
+
+.table-div {
+    /* height: 40px; */
+}
+
+.medium-text{
+    /* margin: 20px; */
+}
+
+table tr{
+    height: 40px;
+}
+
+table, th, tr, td{
+    /* border: 1px solid black; */
+    font-size: 13px;
+}
+
+.table-text{
+    font-family: Mulish;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 15px;
+    line-height: 19px;
+    /* identical to box height */
+    text-align: left;
+    /* Header txt color */
+    color: #092443;
+    margin: 16px 0px 0px
+}
+
+.riders-table-heading{
+    text-align: left;
+    /* border: 1px solid #D1CFD7; */
+    border-left: 1px solid white;
+    border-right: 1px solid white;
+    border-bottom: 1px solid #D1CFD7;
+}
+
+.riders-table{
+    border: 1px solid #D1CFD7;
+    border-top: none;
+}

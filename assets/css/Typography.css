@@ -1,0 +1,42 @@
+.subtitle{
+    font-size: 12px;
+    color: #8F92A1;
+}
+
+
+.heading-text{
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 30px;
+    text-align: center;
+    color: #092443;
+    max-width: 260px;
+    margin: auto;
+}
+
+
+.green-text{
+    font-size: 15px;
+    color: #4EA14D;
+    text-align: center;
+    margin: 16px 0px;
+}
+
+.table-light-text{
+    font-size: 15px;
+    color: #8F92A1;
+}
+
+.menu-heading{
+    font-family: Mulish;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 15px;
+    line-height: 19px;
+    /* identical to box height */
+
+
+    /* grey bold */
+
+    color: #596273;
+}

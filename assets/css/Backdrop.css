@@ -1,0 +1,27 @@
+
+.backdropdown{
+    background: #F5F5F5;
+    border-radius: 20px 20px 0px 0px;
+    padding: 20px 30px;
+    height: 100vh;
+}
+
+.backdropdown-line{
+    max-width: 67px;
+    margin: 0px auto;
+    max-width: 67px;
+    margin: 0px auto;
+    border: none;
+    border-bottom: 4px solid #596273;
+}
+
+.backdropdown-text{
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 25px;
+    /* identical to box height */
+    letter-spacing: 0.02em;
+    text-align: center;
+    color: #092443;
+    margin: 16px;
+}
