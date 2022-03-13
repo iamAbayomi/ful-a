@@ -20,11 +20,13 @@ const AccountReconcilliation = () => {
     return(
         <ModalLayout isOpen={isOpen} onClick={() => {router.push("/dashboard")}}   onClose={onClose}>
             {
-                reconileAccountStep == 1 ? <ReconcileMoney onClick={() => {setReconcileAccountStep(2)}} /> : 
-                <CashReconciliation 
-                    showErrorState={reconileAccountStep == 3 ? true : false} 
-                    onClick={() => {setReconcileAccountStep(reconileAccountStep == 2 ? 3: 1)}}
-                     /> 
+                reconileAccountStep == 1 ? 
+                    <ReconcileMoney 
+                        onClick={() => {setReconcileAccountStep(2)}} /> : 
+                    <CashReconciliation 
+                        showErrorState={reconileAccountStep == 3 ? true : false} 
+                        onClick={() => {setReconcileAccountStep(reconileAccountStep == 2 ? 3: 1)}}
+                    /> 
             }
         </ModalLayout>
     )
