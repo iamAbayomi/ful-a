@@ -31,14 +31,11 @@ const RedFlag =() => {
     return(
         <Layout title="Red Flags" headElements={<HeaderElements />}>
             <div>
-                <div>
-                    {
-                        [1,2,3,5,,4,66].map((item) => {
-                            return <NewOrderCard />
-                        })
-                    
+                <Contents>
+                    {[1,2,3,5,,4,66].map((item) => (
+                        <NewOrderCard />))
                     }
-                </div>
+                </Contents>
             </div>
         </Layout>
     )
@@ -58,7 +55,7 @@ const HeaderNormalText = styled.p`
 const RedFlagMenu = styled.div`
     display: flex;
     justify-content: space-between;
-    margin: 35px 0px;
+    margin: 35px 0px 0px;
 `
 
 const RedFlagMenuContents = styled.div`
@@ -66,4 +63,9 @@ const RedFlagMenuContents = styled.div`
     justify-content: space-between;
     border: none;
     border-bottom: 0.5px solid #8F92A1;
+`
+
+const Contents = styled.div`
+    margin: 230px 0px 0px;
+    padding: 5px 5px 25px;
 `
