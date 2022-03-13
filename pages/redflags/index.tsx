@@ -6,8 +6,10 @@ import downArrow from "../../assets/images/down-arrow.svg"
 import Title from "../../components/ui/Typography/Title"
 import FilterDateComponent from "../../components/ui/FilterDateComponent"
 import NewOrderCard from "../../components/ui/NewOrderCard"
+import { useState } from "react"
 
 const HeaderElements = () => {
+    const [menu, setMenu] = useState<any>("all")
     return (
         <div>
             <Header>
@@ -17,10 +19,22 @@ const HeaderElements = () => {
             <RedFlagMenu>
                 <img src={filter.src} />
                 <RedFlagMenuContents className="red-flag-menu">
-                    <p className="menu-heading active">All</p>
-                    <p className="menu-heading ">Delayed</p>
-                    <p className="menu-heading">Postponed</p>
-                    <p className="menu-heading">Cancelled</p>
+                    <p 
+                        className={`menu-heading ${menu == "all" ? "active" : ""} `}
+                        onClick={()=> {setMenu("all")}}>
+                        All</p>
+                    <p 
+                        className={`menu-heading ${menu == "delayed" ? "active": ""} `}
+                        onClick={()=> {setMenu("delayed")}}>
+                        Delayed</p>
+                    <p 
+                        className={`menu-heading ${menu == "postponed" ? "active": ""} `}
+                        onClick={()=> {setMenu("postponed")}}>
+                        Postponed</p>
+                    <p 
+                        className={`menu-heading ${menu == "cancelled" ? "active": ""} `}
+                        onClick={()=> {setMenu("cancelled")}}>
+                        Cancelled</p>
                 </RedFlagMenuContents>
             </RedFlagMenu>
         </div>
@@ -62,7 +76,8 @@ const RedFlagMenuContents = styled.div`
     display: flex;
     justify-content: space-between;
     border: none;
-    border-bottom: 0.5px solid #8F92A1;
+    margin: 0px 0px 0px 10px;
+    // border-bottom: 0.5px solid #8F92A1;
 `
 
 const Contents = styled.div`

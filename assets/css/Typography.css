@@ -34,9 +34,8 @@
     font-size: 15px;
     line-height: 19px;
     /* identical to box height */
-
-
     /* grey bold */
-
+    border-bottom: 1px solid #8f92a15e;
+    padding: 0px 15px 5px;
     color: #596273;
 }

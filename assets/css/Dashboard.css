@@ -53,6 +53,7 @@ line{
     stroke: #8F92A1;
 }
 
+
 .active{
     color: #F55951!important;
 }
@@ -206,14 +207,14 @@ line{
     text-align: center;
 }
 
-
+/* 
 .red-flag-menu p{
     margin: 0px 10px 0px;
-}
+} */
 
 .menu-heading.active  {
     border-bottom: 3px solid #F55951;
-    padding: 0px 0px 5px;
+    padding: 0px 15px 5px;
 }
 
 .check-image {
